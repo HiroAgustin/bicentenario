@@ -90,7 +90,9 @@ module.exports = function (grunt) {
             dist: {
                 options: {
                     remote: 'git@heroku.com:bicentenario.git',
-                    branch: 'master'
+                    branch: 'master',
+                    commit: true,
+                    push: true
                 }
             }
         },
