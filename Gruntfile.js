@@ -86,16 +86,6 @@ module.exports = function (grunt) {
             },
             server: '.tmp'
         },
-        buildcontrol: {
-            dist: {
-                options: {
-                    remote: 'git@heroku.com:bicentenario.git',
-                    branch: 'master',
-                    commit: true,
-                    push: true
-                }
-            }
-        },
         jshint: {
             options: {
                 jshintrc: '.jshintrc',
@@ -352,7 +342,6 @@ module.exports = function (grunt) {
         'jshint',
         'test',
         'build',
-        'buildcontrol'
     ]);
 
     grunt.registerTask('default', [
