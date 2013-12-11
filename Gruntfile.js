@@ -45,7 +45,7 @@ module.exports = function (grunt) {
                 port: 9000,
                 livereload: 35729,
                 // change this to '0.0.0.0' to access the server from outside
-                hostname: 'localhost'
+                hostname: '0.0.0.0'
             },
             livereload: {
                 options: {
@@ -86,6 +86,16 @@ module.exports = function (grunt) {
             },
             server: '.tmp'
         },
+        buildcontrol: {
+            dist: {
+                options: {
+                    remote: 'git@heroku.com:bicentenario.git',
+                    branch: 'master',
+                    commit: true,
+                    push: true
+                }
+            }
+        },
         jshint: {
             options: {
                 jshintrc: '.jshintrc',
@@ -123,7 +133,7 @@ module.exports = function (grunt) {
             },
             dist: {
                 options: {
-                    generatedImagesDir: '<%= yeoman.dist %>/images/generated'
+                    generatedImagesDir: '<%= yeoman.dist %>/public/images/generated'
                 }
             },
             server: {
@@ -166,26 +176,26 @@ module.exports = function (grunt) {
             dist: {
                 files: {
                     src: [
-                        '<%= yeoman.dist %>/scripts/{,*/}*.js',
-                        '<%= yeoman.dist %>/styles/{,*/}*.css',
-                        '<%= yeoman.dist %>/images/{,*/}*.{gif,jpeg,jpg,png,webp}',
-                        '<%= yeoman.dist %>/styles/fonts/{,*/}*.*'
+                        '<%= yeoman.dist %>/public/scripts/{,*/}*.js',
+                        '<%= yeoman.dist %>/public/styles/{,*/}*.css',
+                        '<%= yeoman.dist %>/public/images/{,*/}*.{gif,jpeg,jpg,png,webp}',
+                        '<%= yeoman.dist %>/public/styles/fonts/{,*/}*.*'
                     ]
                 }
             }
         },
         useminPrepare: {
             options: {
-                dest: '<%= yeoman.dist %>'
+                dest: '<%= yeoman.dist %>/public'
             },
             html: '<%= yeoman.app %>/index.html'
         },
         usemin: {
             options: {
-                assetsDirs: ['<%= yeoman.dist %>']
+                assetsDirs: ['<%= yeoman.dist %>/public']
             },
-            html: ['<%= yeoman.dist %>/{,*/}*.html'],
-            css: ['<%= yeoman.dist %>/styles/{,*/}*.css']
+            html: ['<%= yeoman.dist %>/views/{,*/}*.html'],
+            css: ['<%= yeoman.dist %>/public/styles/{,*/}*.css']
         },
         imagemin: {
             dist: {
@@ -193,7 +203,7 @@ module.exports = function (grunt) {
                     expand: true,
                     cwd: '<%= yeoman.app %>/images',
                     src: '{,*/}*.{gif,jpeg,jpg,png}',
-                    dest: '<%= yeoman.dist %>/images'
+                    dest: '<%= yeoman.dist %>/public/images'
                 }]
             }
         },
@@ -203,7 +213,7 @@ module.exports = function (grunt) {
                     expand: true,
                     cwd: '<%= yeoman.app %>/images',
                     src: '{,*/}*.svg',
-                    dest: '<%= yeoman.dist %>/images'
+                    dest: '<%= yeoman.dist %>/public/images'
                 }]
             }
         },
@@ -240,7 +250,7 @@ module.exports = function (grunt) {
                     expand: true,
                     cwd: '<%= yeoman.app %>',
                     src: '*.html',
-                    dest: '<%= yeoman.dist %>'
+                    dest: '<%= yeoman.dist %>/views'
                 }]
             }
         },
@@ -253,11 +263,10 @@ module.exports = function (grunt) {
                     cwd: '<%= yeoman.app %>',
                     dest: '<%= yeoman.dist %>',
                     src: [
-                        '*.{ico,png,txt}',
-                        '.htaccess',
-                        'images/{,*/}*.{webp,gif}',
-                        'styles/fonts/{,*/}*.*',
-                        'bower_components/sass-bootstrap/fonts/*.*'
+                        '*.{ico,png,txt}'
+                    // ,   'public/images/{,*/}*.{webp,gif}'
+                    // ,   'public/styles/fonts/{,*/}*.*'
+                    // ,   'public/bower_components/sass-bootstrap/fonts/*.*'
                     ]
                 }]
             },
@@ -271,11 +280,11 @@ module.exports = function (grunt) {
         },
         modernizr: {
             devFile: '<%= yeoman.app %>/bower_components/modernizr/modernizr.js',
-            outputFile: '<%= yeoman.dist %>/bower_components/modernizr/modernizr.js',
+            outputFile: '<%= yeoman.dist %>/public/bower_components/modernizr/modernizr.js',
             files: [
-                '<%= yeoman.dist %>/scripts/{,*/}*.js',
-                '<%= yeoman.dist %>/styles/{,*/}*.css',
-                '!<%= yeoman.dist %>/scripts/vendor/*'
+                '<%= yeoman.dist %>/public/scripts/{,*/}*.js',
+                '<%= yeoman.dist %>/public/styles/{,*/}*.css',
+                '!<%= yeoman.dist %>/public/scripts/vendor/*'
             ],
             uglify: true
         },
@@ -339,9 +348,10 @@ module.exports = function (grunt) {
     ]);
 
     grunt.registerTask('deploy', [
-        'jshint',
-        'test',
-        'build',
+        'jshint'
+    ,   'test'
+    ,   'build'
+    ,   'buildcontrol'
     ]);
 
     grunt.registerTask('default', [
