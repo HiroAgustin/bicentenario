@@ -1,14 +1,10 @@
 var express = require('express')
-,   app = module.exports = express()
-,   dirName = __dirname + '/../dist';
+,   app = module.exports = express();
 
-app.set('views', dirName + '/views');
 app.set('view engine', 'html');
 app.engine('html', require('ejs').renderFile);
 
-app.use(express.static(dirName + '/public'));
-
-app.use(express.favicon(dirName + '/favicon.ico'));
+app.use(express.static(__dirname + '/public'));
 
 app.set('strict routing', true);
 app.enable('verbose errors');
@@ -46,18 +42,18 @@ app.use(function (req, res, next)
     res.type('txt').send('Not found');
 });
 
-app.use(function (err, req, res, next)
-{
-  // we may use properties of the error object
-  // here and next(err) appropriately, or if
-  // we possibly recovered from the error, simply next().
-  res.status(err.status || 500);
-  res.render('500', { error: err });
-});
+// app.use(function (err, req, res, next)
+// {
+//   // we may use properties of the error object
+//   // here and next(err) appropriately, or if
+//   // we possibly recovered from the error, simply next().
+//   res.status(err.status || 500);
+//   res.render('500', { error: err });
+// });
 
 app.get('/', function (req, res)
 {
-    res.render('index', {
+    res.render(__dirname + '/landings/index', {
         title: '\'Allo, \'Allo!'
     });
 });
