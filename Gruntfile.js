@@ -27,6 +27,7 @@ module.exports = function (grunt)
             options: {
                 commit: true
             ,   push: true
+            ,   dir: '.'
             ,   message: 'Built %sourceName% from commit %sourceCommit% on branch %sourceBranch%'
             }
         ,   heroku: {
@@ -38,16 +39,16 @@ module.exports = function (grunt)
         }
     });
 
-    grunt.registerTask('build', {
+    grunt.registerTask('build', [
         'clean'
     ,   'compass'
     ,   'cssmin'
-    });
+    ]);
 
-    grunt.registerTask('deploy', {
+    grunt.registerTask('deploy', [
         'build'
     ,   'buildcontrol'
-    });
+    ]);
 
     grunt.registerTask('default', [
         'build'
