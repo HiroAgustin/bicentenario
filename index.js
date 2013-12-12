@@ -1,6 +1,7 @@
 var express = require('express')
 ,   app = module.exports = express();
 
+app.set('views', __dirname + '/views');
 app.set('view engine', 'html');
 app.engine('html', require('ejs').renderFile);
 
@@ -53,7 +54,7 @@ app.use(function (req, res, next)
 
 app.get('/', function (req, res)
 {
-    res.render(__dirname + '/landings/index', {
+    res.render('index', {
         title: '\'Allo, \'Allo!'
     });
 });
