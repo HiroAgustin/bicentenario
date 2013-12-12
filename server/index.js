@@ -8,7 +8,9 @@ app.engine('html', require('ejs').renderFile);
 app.use(express.static(__dirname + '/../public'));
 
 app.set('strict routing', true);
-app.enable('verbose errors');
+// app.enable('verbose errors');
+
+app.use(require(__dirname + '/controllers/ley'));
 
 // "app.router" positions our routes 
 // above the middleware defined below,
@@ -61,27 +63,24 @@ app.get('/', function (req, res)
 
 app.get('/404', function (req, res, next)
 {
-  // trigger a 404 since no other middleware
-  // will match /404 after this one, and we're not
-  // responding here
-  next();
+    // trigger a 404 since no other middleware
+    // will match /404 after this one, and we're not
+    // responding here
+    next();
 });
 
-app.get('/403', function (req, res, next)
-{
-  // trigger a 403 error
-  var err = new Error('not allowed!');
-  err.status = 403;
-  next(err);
-});
+// app.get('/403', function (req, res, next)
+// {
+//   // trigger a 403 error
+//   var err = new Error('not allowed!');
+//   err.status = 403;
+//   next(err);
+// });
 
-app.get('/500', function (req, res, next)
-{
-  // trigger a generic (500) error
-  next(new Error('keyboard cat!'));
-});
+// app.get('/500', function (req, res, next)
+// {
+//   // trigger a generic (500) error
+//   next(new Error('keyboard cat!'));
+// });
 
-if (!module.parent)
-{
-    app.listen(process.env.PORT || 9000);
-}
+app.listen(process.env.PORT || 9000);
