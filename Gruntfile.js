@@ -32,7 +32,7 @@ module.exports = function (grunt)
             }
         ,   heroku: {
                 options: {
-                    remote: 'git@heroku.com:bicentenario.git'
+                    remote: 'heroku'
                 ,   branch: 'master'
                 }
             }
