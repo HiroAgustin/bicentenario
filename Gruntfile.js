@@ -23,11 +23,33 @@ module.exports = function (grunt)
                 }
             }
         }
+    ,   buildcontrol: {
+            options: {
+                commit: true
+            ,   push: true
+            ,   message: 'Built %sourceName% from commit %sourceCommit% on branch %sourceBranch%'
+            }
+        ,   heroku: {
+                options: {
+                    remote: 'git@heroku.com:bicentenario.git'
+                ,   branch: 'master'
+                }
+            }
+        }
     });
 
-    grunt.registerTask('default', [
+    grunt.registerTask('build', {
         'clean'
     ,   'compass'
     ,   'cssmin'
+    });
+
+    grunt.registerTask('deploy', {
+        'build'
+    ,   'buildcontrol'
+    });
+
+    grunt.registerTask('default', [
+        'build'
     ]);
 };
