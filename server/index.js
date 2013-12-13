@@ -1,16 +1,10 @@
-var express = require('express')
-,   app = module.exports = express();
+var controller = require(__dirname + '/lib/controller.js')
+,   app = module.exports = controller(__dirname);
 
-app.set('views', __dirname + '/views');
-app.set('view engine', 'html');
-app.engine('html', require('ejs').renderFile);
-
-app.use(express.static(__dirname + '/../public'));
-
-app.set('strict routing', true);
+app.use(controller.static(__dirname + '/../public'));
 // app.enable('verbose errors');
-
-app.use(require(__dirname + '/controllers/ley'));
+// app.use(require('./controllers/ley'));
+app.use(require(__dirname + '/controllers/landing'));
 
 // "app.router" positions our routes 
 // above the middleware defined below,
@@ -45,20 +39,13 @@ app.use(function (req, res, next)
     res.type('txt').send('Not found');
 });
 
-// app.use(function (err, req, res, next)
-// {
-//   // we may use properties of the error object
-//   // here and next(err) appropriately, or if
-//   // we possibly recovered from the error, simply next().
-//   res.status(err.status || 500);
-//   res.render('500', { error: err });
-// });
-
-app.get('/', function (req, res)
+app.use(function (err, req, res, next)
 {
-    res.render('index', {
-        title: 'Bicentenario'
-    });
+  // we may use properties of the error object
+  // here and next(err) appropriately, or if
+  // we possibly recovered from the error, simply next().
+  res.status(err.status || 500);
+  res.render('500', { error: err });
 });
 
 app.get('/404', function (req, res, next)
@@ -69,18 +56,18 @@ app.get('/404', function (req, res, next)
     next();
 });
 
-// app.get('/403', function (req, res, next)
-// {
-//   // trigger a 403 error
-//   var err = new Error('not allowed!');
-//   err.status = 403;
-//   next(err);
-// });
+app.get('/403', function (req, res, next)
+{
+  // trigger a 403 error
+  var err = new Error('not allowed!');
+  err.status = 403;
+  next(err);
+});
 
-// app.get('/500', function (req, res, next)
-// {
-//   // trigger a generic (500) error
-//   next(new Error('keyboard cat!'));
-// });
+app.get('/500', function (req, res, next)
+{
+  // trigger a generic (500) error
+  next(new Error('keyboard cat!'));
+});
 
 app.listen(process.env.PORT || 9000);
