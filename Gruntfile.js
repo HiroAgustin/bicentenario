@@ -4,23 +4,44 @@ module.exports = function (grunt)
     require('load-grunt-tasks')(grunt);
 
     grunt.initConfig({
-        clean: ['.tmp']
+        clean: ['public/styles', 'public/fonts']
     ,   compass: {
-            options: {
-                sassDir: 'public/sass'
-            ,   cssDir: '.tmp/css'
-            }
-        ,   dist: {
+            main: {
                 options: {
-
+                    sassDir: 'public/scss'
+                ,   cssDir: 'public/styles'
+                ,   importPath: ['public/bower_components/sass-bootstrap/lib/']
+                ,   specify: ['public/scss/main.scss']
                 }
             }
         }
-    ,   cssmin: {
-            dist: {
-                files: {
-                    'public/styles/main.css': ['.tmp/css/main.css']
+    ,   express: {
+            serve: {
+                options: {
+                    script: 'server'
+                ,   port: 9000
+                ,   delay: 5
                 }
+            }
+        }
+    ,   watch: {
+            compass: {
+                files: ['public/scss/*.scss']
+            ,   tasks: ['compass']
+            ,   options: {
+                    livereload: true
+                ,   spawn: false
+                }
+            }
+        }
+    ,   copy: {
+            icons: {
+                files: [{
+                    expand: true
+                ,   src: 'public/bower_components/sass-bootstrap/fonts/*'
+                ,   dest: 'public/fonts'
+                ,   filter: 'isFile'
+                }]
             }
         }
     ,   buildcontrol: {
@@ -42,7 +63,7 @@ module.exports = function (grunt)
     grunt.registerTask('build', [
         'clean'
     ,   'compass'
-    ,   'cssmin'
+    ,   'copy'
     ]);
 
     grunt.registerTask('deploy', [
@@ -50,7 +71,13 @@ module.exports = function (grunt)
     ,   'buildcontrol'
     ]);
 
-    grunt.registerTask('default', [
+    grunt.registerTask('server', [
         'build'
+    ,   'express'
+    ,   'watch'
+    ]);
+
+    grunt.registerTask('default', [
+        'server'
     ]);
 };

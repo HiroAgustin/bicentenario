@@ -6,10 +6,9 @@ var fs = require('fs')
 app.engine('ejs', ejs.renderFile);
 app.set('view engine', 'ejs');
 app.set('views', __dirname + '/views');
-
 app.use(express.static(__dirname + '/../public'));
 
-app.enable('verbose errors');
+app.enable('verbose errors');;
 
 fs.readdirSync(__dirname + '/controllers').forEach(function (name)
 {

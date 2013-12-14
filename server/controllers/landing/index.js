@@ -7,3 +7,10 @@ app.get('/', function (req, res)
         title: 'Bicentenario'
     });
 });
+
+app.get('/timeline', function (req, res)
+{
+    res.render('timeline', {
+        title: 'Timeline'
+    });
+});
