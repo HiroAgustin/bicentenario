@@ -1,10 +1,21 @@
-var controller = require(__dirname + '/lib/controller.js')
-,   app = module.exports = controller(__dirname);
+var fs = require('fs')
+,   ejs = require('ejs')
+,   express = require('express')
+,   app = module.exports = express();
 
-app.use(controller.static(__dirname + '/../public'));
-// app.enable('verbose errors');
-// app.use(require('./controllers/ley'));
-app.use(require(__dirname + '/controllers/landing'));
+app.engine('ejs', ejs.renderFile);
+app.set('view engine', 'ejs');
+app.set('views', __dirname + '/views');
+
+app.use(express.static(__dirname + '/../public'));
+
+app.enable('verbose errors');
+
+fs.readdirSync(__dirname + '/controllers').forEach(function (name)
+{
+    if (name !== 'error')
+    app.use(require('./controllers/' + name));
+});
 
 // "app.router" positions our routes 
 // above the middleware defined below,
@@ -20,7 +31,7 @@ app.use(app.router);
 app.use(function (req, res, next)
 {
     res.status(404);
-  
+
     // respond with html page
     if (req.accepts('html'))
     {

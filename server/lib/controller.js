@@ -1,15 +1,12 @@
-var express = require('express')
-
-module.exports = function (path)
+module.exports = function (dirname)
 {
-    var app = express();
+    var express = require('express')
+    ,   engine = require('ejs-locals')
+    ,   app = express();
 
-    app.set('views', path + '/views');
+    app.engine('ejs', engine);
+    app.set('views', dirname + '/views');
     app.set('view engine', 'ejs');
-    app.engine('ejs', require('ejs').renderFile);
-    app.set('strict routing', true);
 
     return app;
 };
-
-module.exports.static = express.static;
