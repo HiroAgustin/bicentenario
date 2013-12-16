@@ -26,7 +26,7 @@ module.exports = function (grunt)
         }
     ,   watch: {
             compass: {
-                files: ['public/scss/*.scss']
+                files: ['public/scss/*.scss', 'server/**/*.ejs']
             ,   tasks: ['compass']
             ,   options: {
                     livereload: true

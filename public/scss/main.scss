@@ -1,1 +1,26 @@
+@import "vars";
 @import "bootstrap";
+
+.d-b {
+    display: block;
+}
+
+.pt-0 {
+    padding-top: 0
+}
+
+.block-center {
+    margin: 0 auto;
+}
+
+.btn-facebook {
+  @include button-variant($btn-facebook-color, $btn-facebook-bg, $btn-facebook-border);
+}
+
+.container-sm {
+    width: 480px;
+}
+
+.container-md {
+    width: 768px;
+}

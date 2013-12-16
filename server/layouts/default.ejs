@@ -1,12 +1,12 @@
 <!doctype html>
-<!--[if lt IE 10]> <html class="no-js lt-ie10"> <![endif]-->
-<!--[if gt IE 10]><!--> <html class="no-js"> <!--<![endif]-->
+<!--[if lt IE 10]> <html class="no-js lt-ie10" lang="es"> <![endif]-->
+<!--[if gt IE 10]><!--> <html class="no-js" lang="es"> <!--<![endif]-->
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title><%= title %></title>
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="styles/main.css">
 </head>
@@ -15,13 +15,11 @@
         <p class="browsehappy">Usted esta usando un navegador <strong>viejo</strong>. Por favor <a href="http://browsehappy.com/">actualize su navegador</a> para mejorar su experiencia.</p>
     <![endif]-->
 
-    <div class="container">
-        <% include header %>
-    
-        <main role="main">
-            <%- body -%>
-        <main>
-    </div>
+    <% include header %>
+
+    <main role="main">
+        <%- body -%>
+    <main>
 
     <!-- Google Analytics -->
     <script>

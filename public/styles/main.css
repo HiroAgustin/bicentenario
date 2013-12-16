@@ -420,7 +420,7 @@ img {
 
 /* line 71, ../bower_components/sass-bootstrap/lib/_scaffolding.scss */
 .img-rounded {
-  border-radius: 6px;
+  border-radius: 0;
 }
 
 /* line 78, ../bower_components/sass-bootstrap/lib/_scaffolding.scss */
@@ -826,7 +826,7 @@ code {
   color: #c7254e;
   background-color: #f9f2f4;
   white-space: nowrap;
-  border-radius: 4px;
+  border-radius: 0;
 }
 
 /* line 25, ../bower_components/sass-bootstrap/lib/_code.scss */
@@ -841,7 +841,7 @@ pre {
   color: #333333;
   background-color: whitesmoke;
   border: 1px solid #cccccc;
-  border-radius: 4px;
+  border-radius: 0;
 }
 /* line 39, ../bower_components/sass-bootstrap/lib/_code.scss */
 pre code {
@@ -2412,7 +2412,7 @@ input[type="checkbox"],
   padding: 5px 10px;
   font-size: 12px;
   line-height: 1.5;
-  border-radius: 3px;
+  border-radius: 0;
 }
 
 /* line 853, ../bower_components/sass-bootstrap/lib/_mixins.scss */
@@ -2438,7 +2438,7 @@ textarea.input-sm, .input-group-sm > textarea.form-control,
   padding: 10px 16px;
   font-size: 18px;
   line-height: 1.33;
-  border-radius: 6px;
+  border-radius: 0;
 }
 
 /* line 853, ../bower_components/sass-bootstrap/lib/_mixins.scss */
@@ -2633,7 +2633,7 @@ textarea.input-lg, .input-group-lg > textarea.form-control,
   padding: 6px 12px;
   font-size: 14px;
   line-height: 1.42857;
-  border-radius: 4px;
+  border-radius: 0;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -2894,7 +2894,7 @@ textarea.input-lg, .input-group-lg > textarea.form-control,
   padding: 10px 16px;
   font-size: 18px;
   line-height: 1.33;
-  border-radius: 6px;
+  border-radius: 0;
 }
 
 /* line 127, ../bower_components/sass-bootstrap/lib/_buttons.scss */
@@ -2904,7 +2904,7 @@ textarea.input-lg, .input-group-lg > textarea.form-control,
   padding: 5px 10px;
   font-size: 12px;
   line-height: 1.5;
-  border-radius: 3px;
+  border-radius: 0;
 }
 
 /* line 131, ../bower_components/sass-bootstrap/lib/_buttons.scss */
@@ -4023,7 +4023,7 @@ input[type="button"].btn-block {
   background-color: white;
   border: 1px solid #cccccc;
   border: 1px solid rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
+  border-radius: 0;
   -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
   background-clip: padding-box;
@@ -4344,13 +4344,13 @@ input[type="button"].btn-block {
 }
 /* line 209, ../bower_components/sass-bootstrap/lib/_button-groups.scss */
 .btn-group-vertical > .btn:first-child:not(:last-child) {
-  border-top-right-radius: 4px;
+  border-top-right-radius: 0;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
 /* line 213, ../bower_components/sass-bootstrap/lib/_button-groups.scss */
 .btn-group-vertical > .btn:last-child:not(:first-child) {
-  border-bottom-left-radius: 4px;
+  border-bottom-left-radius: 0;
   border-top-right-radius: 0;
   border-top-left-radius: 0;
 }
@@ -4442,7 +4442,7 @@ input[type="button"].btn-block {
   text-align: center;
   background-color: #eeeeee;
   border: 1px solid #cccccc;
-  border-radius: 4px;
+  border-radius: 0;
 }
 /* line 71, ../bower_components/sass-bootstrap/lib/_input-groups.scss */
 .input-group-addon.input-sm,
@@ -4450,7 +4450,7 @@ input[type="button"].btn-block {
 .input-group-sm > .input-group-btn > .input-group-addon.btn {
   padding: 5px 10px;
   font-size: 12px;
-  border-radius: 3px;
+  border-radius: 0;
 }
 /* line 76, ../bower_components/sass-bootstrap/lib/_input-groups.scss */
 .input-group-addon.input-lg,
@@ -4458,7 +4458,7 @@ input[type="button"].btn-block {
 .input-group-lg > .input-group-btn > .input-group-addon.btn {
   padding: 10px 16px;
   font-size: 18px;
-  border-radius: 6px;
+  border-radius: 0;
 }
 /* line 84, ../bower_components/sass-bootstrap/lib/_input-groups.scss */
 .input-group-addon input[type="radio"],
@@ -4603,7 +4603,7 @@ input[type="button"].btn-block {
   margin-right: 2px;
   line-height: 1.42857;
   border: 1px solid transparent;
-  border-radius: 4px 4px 0 0;
+  border-radius: 0 0 0 0;
 }
 /* line 94, ../bower_components/sass-bootstrap/lib/_navs.scss */
 .nav-tabs > li > a:hover {
@@ -4688,7 +4688,7 @@ input[type="button"].btn-block {
 /* line 203, ../bower_components/sass-bootstrap/lib/_navs.scss */
 .nav-tabs-justified > li > a, .nav-tabs.nav-justified > li > a {
   margin-right: 0;
-  border-radius: 4px;
+  border-radius: 0;
 }
 /* line 211, ../bower_components/sass-bootstrap/lib/_navs.scss */
 .nav-tabs-justified > .active > a, .nav-tabs.nav-justified > .active > a,
@@ -4702,7 +4702,7 @@ input[type="button"].btn-block {
   /* line 216, ../bower_components/sass-bootstrap/lib/_navs.scss */
   .nav-tabs-justified > li > a, .nav-tabs.nav-justified > li > a {
     border-bottom: 1px solid #dddddd;
-    border-radius: 4px 4px 0 0;
+    border-radius: 0 0 0 0;
   }
   /* line 222, ../bower_components/sass-bootstrap/lib/_navs.scss */
   .nav-tabs-justified > .active > a, .nav-tabs.nav-justified > .active > a,
@@ -4746,7 +4746,7 @@ input[type="button"].btn-block {
 .navbar {
   position: relative;
   min-height: 50px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   border: 1px solid transparent;
 }
 /* line 21, ../bower_components/sass-bootstrap/lib/_mixins.scss */
@@ -4926,7 +4926,7 @@ input[type="button"].btn-block {
   margin-bottom: 8px;
   background-color: transparent;
   border: 1px solid transparent;
-  border-radius: 4px;
+  border-radius: 0;
 }
 /* line 187, ../bower_components/sass-bootstrap/lib/_navbar.scss */
 .navbar-toggle .icon-bar {
@@ -5216,7 +5216,7 @@ input[type="button"].btn-block {
 /* line 526, ../bower_components/sass-bootstrap/lib/_navbar.scss */
 .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
   color: white;
-  background-color: #090909;
+  background-color: #3c3c3c;
 }
 /* line 534, ../bower_components/sass-bootstrap/lib/_navbar.scss */
 .navbar-inverse .navbar-nav > .disabled > a, .navbar-inverse .navbar-nav > .disabled > a:hover, .navbar-inverse .navbar-nav > .disabled > a:focus {
@@ -5242,7 +5242,7 @@ input[type="button"].btn-block {
 }
 /* line 563, ../bower_components/sass-bootstrap/lib/_navbar.scss */
 .navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
-  background-color: #090909;
+  background-color: #3c3c3c;
   color: white;
 }
 /* line 568, ../bower_components/sass-bootstrap/lib/_navbar.scss */
@@ -5277,7 +5277,7 @@ input[type="button"].btn-block {
   /* line 604, ../bower_components/sass-bootstrap/lib/_navbar.scss */
   .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a, .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a:focus {
     color: white;
-    background-color: #090909;
+    background-color: #3c3c3c;
   }
   /* line 612, ../bower_components/sass-bootstrap/lib/_navbar.scss */
   .navbar-inverse .navbar-nav .open .dropdown-menu > .disabled > a, .navbar-inverse .navbar-nav .open .dropdown-menu > .disabled > a:hover, .navbar-inverse .navbar-nav .open .dropdown-menu > .disabled > a:focus {
@@ -5300,7 +5300,7 @@ input[type="button"].btn-block {
   margin-bottom: 20px;
   list-style: none;
   background-color: whitesmoke;
-  border-radius: 4px;
+  border-radius: 0;
 }
 /* line 12, ../bower_components/sass-bootstrap/lib/_breadcrumbs.scss */
 .breadcrumb > li {
@@ -5322,7 +5322,7 @@ input[type="button"].btn-block {
   display: inline-block;
   padding-left: 0;
   margin: 20px 0;
-  border-radius: 4px;
+  border-radius: 0;
 }
 /* line 10, ../bower_components/sass-bootstrap/lib/_pagination.scss */
 .pagination > li {
@@ -5344,14 +5344,14 @@ input[type="button"].btn-block {
 .pagination > li:first-child > a,
 .pagination > li:first-child > span {
   margin-left: 0;
-  border-bottom-left-radius: 4px;
-  border-top-left-radius: 4px;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
 }
 /* line 32, ../bower_components/sass-bootstrap/lib/_pagination.scss */
 .pagination > li:last-child > a,
 .pagination > li:last-child > span {
-  border-bottom-right-radius: 4px;
-  border-top-right-radius: 4px;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
 }
 /* line 41, ../bower_components/sass-bootstrap/lib/_pagination.scss */
 .pagination > li > a:hover, .pagination > li > a:focus,
@@ -5392,14 +5392,14 @@ input[type="button"].btn-block {
 /* line 521, ../bower_components/sass-bootstrap/lib/_mixins.scss */
 .pagination-lg > li:first-child > a,
 .pagination-lg > li:first-child > span {
-  border-bottom-left-radius: 6px;
-  border-top-left-radius: 6px;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
 }
 /* line 527, ../bower_components/sass-bootstrap/lib/_mixins.scss */
 .pagination-lg > li:last-child > a,
 .pagination-lg > li:last-child > span {
-  border-bottom-right-radius: 6px;
-  border-top-right-radius: 6px;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
 }
 
 /* line 515, ../bower_components/sass-bootstrap/lib/_mixins.scss */
@@ -5411,14 +5411,14 @@ input[type="button"].btn-block {
 /* line 521, ../bower_components/sass-bootstrap/lib/_mixins.scss */
 .pagination-sm > li:first-child > a,
 .pagination-sm > li:first-child > span {
-  border-bottom-left-radius: 3px;
-  border-top-left-radius: 3px;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
 }
 /* line 527, ../bower_components/sass-bootstrap/lib/_mixins.scss */
 .pagination-sm > li:last-child > a,
 .pagination-sm > li:last-child > span {
-  border-bottom-right-radius: 3px;
-  border-top-right-radius: 3px;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
 }
 
 /* line 6, ../bower_components/sass-bootstrap/lib/_pager.scss */
@@ -5603,13 +5603,13 @@ a.list-group-item.active > .badge,
 
 /* line 6, ../bower_components/sass-bootstrap/lib/_jumbotron.scss */
 .jumbotron {
-  padding: 30px;
-  margin-bottom: 30px;
+  padding: 20px;
+  margin-bottom: 20px;
   font-size: 21px;
   font-weight: 200;
   line-height: 2.14286;
   color: inherit;
-  background-color: #eeeeee;
+  background-color: white;
 }
 /* line 15, ../bower_components/sass-bootstrap/lib/_jumbotron.scss */
 .jumbotron h1 {
@@ -5622,18 +5622,18 @@ a.list-group-item.active > .badge,
 }
 /* line 23, ../bower_components/sass-bootstrap/lib/_jumbotron.scss */
 .container .jumbotron {
-  border-radius: 6px;
+  border-radius: 0;
 }
 @media screen and (min-width: 768px) {
   /* line 6, ../bower_components/sass-bootstrap/lib/_jumbotron.scss */
   .jumbotron {
-    padding-top: 48px;
-    padding-bottom: 48px;
+    padding-top: 32px;
+    padding-bottom: 32px;
   }
   /* line 31, ../bower_components/sass-bootstrap/lib/_jumbotron.scss */
   .container .jumbotron {
-    padding-left: 60px;
-    padding-right: 60px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
   /* line 36, ../bower_components/sass-bootstrap/lib/_jumbotron.scss */
   .jumbotron h1 {
@@ -5819,7 +5819,7 @@ a.thumbnail.active {
   height: 20px;
   margin-bottom: 20px;
   background-color: whitesmoke;
-  border-radius: 4px;
+  border-radius: 0;
   -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
 }
@@ -6335,7 +6335,7 @@ a.list-group-item.active .list-group-item-text, a.list-group-item.active:hover .
   margin-bottom: 20px;
   background-color: whitesmoke;
   border: 1px solid #e3e3e3;
-  border-radius: 4px;
+  border-radius: 0;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
 }
@@ -6348,13 +6348,13 @@ a.list-group-item.active .list-group-item-text, a.list-group-item.active:hover .
 /* line 22, ../bower_components/sass-bootstrap/lib/_wells.scss */
 .well-lg {
   padding: 24px;
-  border-radius: 6px;
+  border-radius: 0;
 }
 
 /* line 26, ../bower_components/sass-bootstrap/lib/_wells.scss */
 .well-sm {
   padding: 9px;
-  border-radius: 3px;
+  border-radius: 0;
 }
 
 /* line 6, ../bower_components/sass-bootstrap/lib/_close.scss */
@@ -6386,635 +6386,6 @@ button.close {
   -webkit-appearance: none;
 }
 
-/* line 11, ../bower_components/sass-bootstrap/lib/_modals.scss */
-.modal-open {
-  overflow: hidden;
-}
-
-/* line 16, ../bower_components/sass-bootstrap/lib/_modals.scss */
-.modal {
-  display: none;
-  overflow: auto;
-  overflow-y: scroll;
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 1040;
-}
-/* line 28, ../bower_components/sass-bootstrap/lib/_modals.scss */
-.modal.fade .modal-dialog {
-  -webkit-transform: translate(0, -25%);
-  -ms-transform: translate(0, -25%);
-  transform: translate(0, -25%);
-  -webkit-transition: -webkit-transform 0.3s ease-out;
-  -moz-transition: -moz-transform 0.3s ease-out;
-  -o-transition: -o-transform 0.3s ease-out;
-  transition: transform 0.3s ease-out;
-}
-/* line 32, ../bower_components/sass-bootstrap/lib/_modals.scss */
-.modal.in .modal-dialog {
-  -webkit-transform: translate(0, 0);
-  -ms-transform: translate(0, 0);
-  transform: translate(0, 0);
-}
-
-/* line 36, ../bower_components/sass-bootstrap/lib/_modals.scss */
-.modal-dialog {
-  position: relative;
-  margin-left: auto;
-  margin-right: auto;
-  width: auto;
-  padding: 10px;
-  z-index: 1050;
-}
-
-/* line 46, ../bower_components/sass-bootstrap/lib/_modals.scss */
-.modal-content {
-  position: relative;
-  background-color: white;
-  border: 1px solid #999999;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  border-radius: 6px;
-  -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
-  box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
-  background-clip: padding-box;
-  outline: none;
-}
-
-/* line 59, ../bower_components/sass-bootstrap/lib/_modals.scss */
-.modal-backdrop {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 1030;
-  background-color: black;
-}
-/* line 68, ../bower_components/sass-bootstrap/lib/_modals.scss */
-.modal-backdrop.fade {
-  opacity: 0;
-  filter: alpha(opacity=0);
-}
-/* line 69, ../bower_components/sass-bootstrap/lib/_modals.scss */
-.modal-backdrop.in {
-  opacity: 0.5;
-  filter: alpha(opacity=50);
-}
-
-/* line 74, ../bower_components/sass-bootstrap/lib/_modals.scss */
-.modal-header {
-  padding: 15px;
-  border-bottom: 1px solid #e5e5e5;
-  min-height: 16.42857px;
-}
-
-/* line 80, ../bower_components/sass-bootstrap/lib/_modals.scss */
-.modal-header .close {
-  margin-top: -2px;
-}
-
-/* line 85, ../bower_components/sass-bootstrap/lib/_modals.scss */
-.modal-title {
-  margin: 0;
-  line-height: 1.42857;
-}
-
-/* line 92, ../bower_components/sass-bootstrap/lib/_modals.scss */
-.modal-body {
-  position: relative;
-  padding: 20px;
-}
-
-/* line 98, ../bower_components/sass-bootstrap/lib/_modals.scss */
-.modal-footer {
-  margin-top: 15px;
-  padding: 19px 20px 20px;
-  text-align: right;
-  border-top: 1px solid #e5e5e5;
-}
-/* line 21, ../bower_components/sass-bootstrap/lib/_mixins.scss */
-.modal-footer:before, .modal-footer:after {
-  content: " ";
-  /* 1 */
-  display: table;
-  /* 2 */
-}
-/* line 25, ../bower_components/sass-bootstrap/lib/_mixins.scss */
-.modal-footer:after {
-  clear: both;
-}
-/* line 106, ../bower_components/sass-bootstrap/lib/_modals.scss */
-.modal-footer .btn + .btn {
-  margin-left: 5px;
-  margin-bottom: 0;
-}
-/* line 111, ../bower_components/sass-bootstrap/lib/_modals.scss */
-.modal-footer .btn-group .btn + .btn {
-  margin-left: -1px;
-}
-/* line 115, ../bower_components/sass-bootstrap/lib/_modals.scss */
-.modal-footer .btn-block + .btn-block {
-  margin-left: 0;
-}
-
-@media screen and (min-width: 768px) {
-  /* line 123, ../bower_components/sass-bootstrap/lib/_modals.scss */
-  .modal-dialog {
-    width: 600px;
-    padding-top: 30px;
-    padding-bottom: 30px;
-  }
-
-  /* line 128, ../bower_components/sass-bootstrap/lib/_modals.scss */
-  .modal-content {
-    -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-  }
-}
-/* line 7, ../bower_components/sass-bootstrap/lib/_tooltip.scss */
-.tooltip {
-  position: absolute;
-  z-index: 1030;
-  display: block;
-  visibility: visible;
-  font-size: 12px;
-  line-height: 1.4;
-  opacity: 0;
-  filter: alpha(opacity=0);
-}
-/* line 16, ../bower_components/sass-bootstrap/lib/_tooltip.scss */
-.tooltip.in {
-  opacity: 0.9;
-  filter: alpha(opacity=90);
-}
-/* line 17, ../bower_components/sass-bootstrap/lib/_tooltip.scss */
-.tooltip.top {
-  margin-top: -3px;
-  padding: 5px 0;
-}
-/* line 18, ../bower_components/sass-bootstrap/lib/_tooltip.scss */
-.tooltip.right {
-  margin-left: 3px;
-  padding: 0 5px;
-}
-/* line 19, ../bower_components/sass-bootstrap/lib/_tooltip.scss */
-.tooltip.bottom {
-  margin-top: 3px;
-  padding: 5px 0;
-}
-/* line 20, ../bower_components/sass-bootstrap/lib/_tooltip.scss */
-.tooltip.left {
-  margin-left: -3px;
-  padding: 0 5px;
-}
-
-/* line 24, ../bower_components/sass-bootstrap/lib/_tooltip.scss */
-.tooltip-inner {
-  max-width: 200px;
-  padding: 3px 8px;
-  color: white;
-  text-align: center;
-  text-decoration: none;
-  background-color: black;
-  border-radius: 4px;
-}
-
-/* line 35, ../bower_components/sass-bootstrap/lib/_tooltip.scss */
-.tooltip-arrow {
-  position: absolute;
-  width: 0;
-  height: 0;
-  border-color: transparent;
-  border-style: solid;
-}
-
-/* line 43, ../bower_components/sass-bootstrap/lib/_tooltip.scss */
-.tooltip.top .tooltip-arrow {
-  bottom: 0;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px 5px 0;
-  border-top-color: black;
-}
-/* line 50, ../bower_components/sass-bootstrap/lib/_tooltip.scss */
-.tooltip.top-left .tooltip-arrow {
-  bottom: 0;
-  left: 5px;
-  border-width: 5px 5px 0;
-  border-top-color: black;
-}
-/* line 56, ../bower_components/sass-bootstrap/lib/_tooltip.scss */
-.tooltip.top-right .tooltip-arrow {
-  bottom: 0;
-  right: 5px;
-  border-width: 5px 5px 0;
-  border-top-color: black;
-}
-/* line 62, ../bower_components/sass-bootstrap/lib/_tooltip.scss */
-.tooltip.right .tooltip-arrow {
-  top: 50%;
-  left: 0;
-  margin-top: -5px;
-  border-width: 5px 5px 5px 0;
-  border-right-color: black;
-}
-/* line 69, ../bower_components/sass-bootstrap/lib/_tooltip.scss */
-.tooltip.left .tooltip-arrow {
-  top: 50%;
-  right: 0;
-  margin-top: -5px;
-  border-width: 5px 0 5px 5px;
-  border-left-color: black;
-}
-/* line 76, ../bower_components/sass-bootstrap/lib/_tooltip.scss */
-.tooltip.bottom .tooltip-arrow {
-  top: 0;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 0 5px 5px;
-  border-bottom-color: black;
-}
-/* line 83, ../bower_components/sass-bootstrap/lib/_tooltip.scss */
-.tooltip.bottom-left .tooltip-arrow {
-  top: 0;
-  left: 5px;
-  border-width: 0 5px 5px;
-  border-bottom-color: black;
-}
-/* line 89, ../bower_components/sass-bootstrap/lib/_tooltip.scss */
-.tooltip.bottom-right .tooltip-arrow {
-  top: 0;
-  right: 5px;
-  border-width: 0 5px 5px;
-  border-bottom-color: black;
-}
-
-/* line 6, ../bower_components/sass-bootstrap/lib/_popovers.scss */
-.popover {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1010;
-  display: none;
-  max-width: 276px;
-  padding: 1px;
-  text-align: left;
-  background-color: white;
-  background-clip: padding-box;
-  border: 1px solid #cccccc;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  border-radius: 6px;
-  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-  white-space: normal;
-}
-/* line 26, ../bower_components/sass-bootstrap/lib/_popovers.scss */
-.popover.top {
-  margin-top: -10px;
-}
-/* line 27, ../bower_components/sass-bootstrap/lib/_popovers.scss */
-.popover.right {
-  margin-left: 10px;
-}
-/* line 28, ../bower_components/sass-bootstrap/lib/_popovers.scss */
-.popover.bottom {
-  margin-top: 10px;
-}
-/* line 29, ../bower_components/sass-bootstrap/lib/_popovers.scss */
-.popover.left {
-  margin-left: -10px;
-}
-
-/* line 32, ../bower_components/sass-bootstrap/lib/_popovers.scss */
-.popover-title {
-  margin: 0;
-  padding: 8px 14px;
-  font-size: 14px;
-  font-weight: normal;
-  line-height: 18px;
-  background-color: #f7f7f7;
-  border-bottom: 1px solid #ebebeb;
-  border-radius: 5px 5px 0 0;
-}
-
-/* line 43, ../bower_components/sass-bootstrap/lib/_popovers.scss */
-.popover-content {
-  padding: 9px 14px;
-}
-
-/* line 53, ../bower_components/sass-bootstrap/lib/_popovers.scss */
-.popover .arrow, .popover .arrow:after {
-  position: absolute;
-  display: block;
-  width: 0;
-  height: 0;
-  border-color: transparent;
-  border-style: solid;
-}
-
-/* line 62, ../bower_components/sass-bootstrap/lib/_popovers.scss */
-.popover .arrow {
-  border-width: 11px;
-}
-
-/* line 65, ../bower_components/sass-bootstrap/lib/_popovers.scss */
-.popover .arrow:after {
-  border-width: 10px;
-  content: "";
-}
-
-/* line 71, ../bower_components/sass-bootstrap/lib/_popovers.scss */
-.popover.top .arrow {
-  left: 50%;
-  margin-left: -11px;
-  border-bottom-width: 0;
-  border-top-color: #999999;
-  border-top-color: rgba(0, 0, 0, 0.25);
-  bottom: -11px;
-}
-/* line 78, ../bower_components/sass-bootstrap/lib/_popovers.scss */
-.popover.top .arrow:after {
-  content: " ";
-  bottom: 1px;
-  margin-left: -10px;
-  border-bottom-width: 0;
-  border-top-color: white;
-}
-/* line 86, ../bower_components/sass-bootstrap/lib/_popovers.scss */
-.popover.right .arrow {
-  top: 50%;
-  left: -11px;
-  margin-top: -11px;
-  border-left-width: 0;
-  border-right-color: #999999;
-  border-right-color: rgba(0, 0, 0, 0.25);
-}
-/* line 93, ../bower_components/sass-bootstrap/lib/_popovers.scss */
-.popover.right .arrow:after {
-  content: " ";
-  left: 1px;
-  bottom: -10px;
-  border-left-width: 0;
-  border-right-color: white;
-}
-/* line 101, ../bower_components/sass-bootstrap/lib/_popovers.scss */
-.popover.bottom .arrow {
-  left: 50%;
-  margin-left: -11px;
-  border-top-width: 0;
-  border-bottom-color: #999999;
-  border-bottom-color: rgba(0, 0, 0, 0.25);
-  top: -11px;
-}
-/* line 108, ../bower_components/sass-bootstrap/lib/_popovers.scss */
-.popover.bottom .arrow:after {
-  content: " ";
-  top: 1px;
-  margin-left: -10px;
-  border-top-width: 0;
-  border-bottom-color: white;
-}
-/* line 117, ../bower_components/sass-bootstrap/lib/_popovers.scss */
-.popover.left .arrow {
-  top: 50%;
-  right: -11px;
-  margin-top: -11px;
-  border-right-width: 0;
-  border-left-color: #999999;
-  border-left-color: rgba(0, 0, 0, 0.25);
-}
-/* line 124, ../bower_components/sass-bootstrap/lib/_popovers.scss */
-.popover.left .arrow:after {
-  content: " ";
-  right: 1px;
-  border-right-width: 0;
-  border-left-color: white;
-  bottom: -10px;
-}
-
-/* line 7, ../bower_components/sass-bootstrap/lib/_carousel.scss */
-.carousel {
-  position: relative;
-}
-
-/* line 11, ../bower_components/sass-bootstrap/lib/_carousel.scss */
-.carousel-inner {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-}
-/* line 16, ../bower_components/sass-bootstrap/lib/_carousel.scss */
-.carousel-inner > .item {
-  display: none;
-  position: relative;
-  -webkit-transition: 0.6s ease-in-out left;
-  transition: 0.6s ease-in-out left;
-}
-/* line 23, ../bower_components/sass-bootstrap/lib/_carousel.scss */
-.carousel-inner > .item > img,
-.carousel-inner > .item > a > img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-  line-height: 1;
-}
-/* line 31, ../bower_components/sass-bootstrap/lib/_carousel.scss */
-.carousel-inner > .active,
-.carousel-inner > .next,
-.carousel-inner > .prev {
-  display: block;
-}
-/* line 33, ../bower_components/sass-bootstrap/lib/_carousel.scss */
-.carousel-inner > .active {
-  left: 0;
-}
-/* line 38, ../bower_components/sass-bootstrap/lib/_carousel.scss */
-.carousel-inner > .next,
-.carousel-inner > .prev {
-  position: absolute;
-  top: 0;
-  width: 100%;
-}
-/* line 44, ../bower_components/sass-bootstrap/lib/_carousel.scss */
-.carousel-inner > .next {
-  left: 100%;
-}
-/* line 47, ../bower_components/sass-bootstrap/lib/_carousel.scss */
-.carousel-inner > .prev {
-  left: -100%;
-}
-/* line 51, ../bower_components/sass-bootstrap/lib/_carousel.scss */
-.carousel-inner > .next.left,
-.carousel-inner > .prev.right {
-  left: 0;
-}
-/* line 55, ../bower_components/sass-bootstrap/lib/_carousel.scss */
-.carousel-inner > .active.left {
-  left: -100%;
-}
-/* line 58, ../bower_components/sass-bootstrap/lib/_carousel.scss */
-.carousel-inner > .active.right {
-  left: 100%;
-}
-
-/* line 67, ../bower_components/sass-bootstrap/lib/_carousel.scss */
-.carousel-control {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  width: 15%;
-  opacity: 0.5;
-  filter: alpha(opacity=50);
-  font-size: 20px;
-  color: white;
-  text-align: center;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
-}
-/* line 82, ../bower_components/sass-bootstrap/lib/_carousel.scss */
-.carousel-control.left {
-  background-image: -webkit-gradient(linear, 0% top, 100% top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.0001)));
-  background-image: -webkit-linear-gradient(left, color-stop(rgba(0, 0, 0, 0.5) 0%), color-stop(rgba(0, 0, 0, 0.0001) 100%));
-  background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0001) 100%);
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0001) 100%);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=1);
-}
-/* line 85, ../bower_components/sass-bootstrap/lib/_carousel.scss */
-.carousel-control.right {
-  left: auto;
-  right: 0;
-  background-image: -webkit-gradient(linear, 0% top, 100% top, from(rgba(0, 0, 0, 0.0001)), to(rgba(0, 0, 0, 0.5)));
-  background-image: -webkit-linear-gradient(left, color-stop(rgba(0, 0, 0, 0.0001) 0%), color-stop(rgba(0, 0, 0, 0.5) 100%));
-  background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=1);
-}
-/* line 93, ../bower_components/sass-bootstrap/lib/_carousel.scss */
-.carousel-control:hover, .carousel-control:focus {
-  color: white;
-  text-decoration: none;
-  opacity: 0.9;
-  filter: alpha(opacity=90);
-}
-/* line 103, ../bower_components/sass-bootstrap/lib/_carousel.scss */
-.carousel-control .icon-prev,
-.carousel-control .icon-next,
-.carousel-control .glyphicon-chevron-left,
-.carousel-control .glyphicon-chevron-right {
-  position: absolute;
-  top: 50%;
-  z-index: 5;
-  display: inline-block;
-}
-/* line 110, ../bower_components/sass-bootstrap/lib/_carousel.scss */
-.carousel-control .icon-prev,
-.carousel-control .glyphicon-chevron-left {
-  left: 50%;
-}
-/* line 114, ../bower_components/sass-bootstrap/lib/_carousel.scss */
-.carousel-control .icon-next,
-.carousel-control .glyphicon-chevron-right {
-  right: 50%;
-}
-/* line 118, ../bower_components/sass-bootstrap/lib/_carousel.scss */
-.carousel-control .icon-prev,
-.carousel-control .icon-next {
-  width: 20px;
-  height: 20px;
-  margin-top: -10px;
-  margin-left: -10px;
-  font-family: serif;
-}
-/* line 127, ../bower_components/sass-bootstrap/lib/_carousel.scss */
-.carousel-control .icon-prev:before {
-  content: '\2039';
-}
-/* line 132, ../bower_components/sass-bootstrap/lib/_carousel.scss */
-.carousel-control .icon-next:before {
-  content: '\203a';
-}
-
-/* line 143, ../bower_components/sass-bootstrap/lib/_carousel.scss */
-.carousel-indicators {
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  z-index: 15;
-  width: 60%;
-  margin-left: -30%;
-  padding-left: 0;
-  list-style: none;
-  text-align: center;
-}
-/* line 154, ../bower_components/sass-bootstrap/lib/_carousel.scss */
-.carousel-indicators li {
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  margin: 1px;
-  text-indent: -999px;
-  border: 1px solid white;
-  border-radius: 10px;
-  cursor: pointer;
-  background-color: #000 \9;
-  background-color: rgba(0, 0, 0, 0);
-}
-/* line 175, ../bower_components/sass-bootstrap/lib/_carousel.scss */
-.carousel-indicators .active {
-  margin: 0;
-  width: 12px;
-  height: 12px;
-  background-color: white;
-}
-
-/* line 186, ../bower_components/sass-bootstrap/lib/_carousel.scss */
-.carousel-caption {
-  position: absolute;
-  left: 15%;
-  right: 15%;
-  bottom: 20px;
-  z-index: 10;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  color: white;
-  text-align: center;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
-}
-/* line 197, ../bower_components/sass-bootstrap/lib/_carousel.scss */
-.carousel-caption .btn {
-  text-shadow: none;
-}
-
-@media screen and (min-width: 768px) {
-  /* line 211, ../bower_components/sass-bootstrap/lib/_carousel.scss */
-  .carousel-control .glyphicons-chevron-left,
-  .carousel-control .glyphicons-chevron-right,
-  .carousel-control .icon-prev,
-  .carousel-control .icon-next {
-    width: 30px;
-    height: 30px;
-    margin-top: -15px;
-    margin-left: -15px;
-    font-size: 30px;
-  }
-
-  /* line 221, ../bower_components/sass-bootstrap/lib/_carousel.scss */
-  .carousel-caption {
-    left: 20%;
-    right: 20%;
-    padding-bottom: 30px;
-  }
-
-  /* line 228, ../bower_components/sass-bootstrap/lib/_carousel.scss */
-  .carousel-indicators {
-    bottom: 20px;
-  }
-}
 /* line 21, ../bower_components/sass-bootstrap/lib/_mixins.scss */
 .clearfix:before, .clearfix:after {
   content: " ";
@@ -7627,4 +6998,60 @@ td.visible-print {
   td.hidden-print {
     display: none !important;
   }
+}
+/* line 4, ../scss/main.scss */
+.d-b {
+  display: block;
+}
+
+/* line 8, ../scss/main.scss */
+.pt-0 {
+  padding-top: 0;
+}
+
+/* line 12, ../scss/main.scss */
+.block-center {
+  margin: 0 auto;
+}
+
+/* line 16, ../scss/main.scss */
+.btn-facebook {
+  color: white;
+  background-color: #3b5998;
+  border-color: #344e86;
+}
+/* line 470, ../bower_components/sass-bootstrap/lib/_mixins.scss */
+.btn-facebook:hover, .btn-facebook:focus, .btn-facebook:active, .btn-facebook.active {
+  color: white;
+  background-color: #30487b;
+  border-color: #23345a;
+}
+/* line 475, ../bower_components/sass-bootstrap/lib/_mixins.scss */
+.open .btn-facebook.dropdown-toggle {
+  color: white;
+  background-color: #30487b;
+  border-color: #23345a;
+}
+/* line 481, ../bower_components/sass-bootstrap/lib/_mixins.scss */
+.btn-facebook:active, .btn-facebook.active {
+  background-image: none;
+}
+/* line 484, ../bower_components/sass-bootstrap/lib/_mixins.scss */
+.open .btn-facebook.dropdown-toggle {
+  background-image: none;
+}
+/* line 494, ../bower_components/sass-bootstrap/lib/_mixins.scss */
+.btn-facebook.disabled, .btn-facebook.disabled:hover, .btn-facebook.disabled:focus, .btn-facebook.disabled:active, .btn-facebook.disabled.active, .btn-facebook[disabled], .btn-facebook[disabled]:hover, .btn-facebook[disabled]:focus, .btn-facebook[disabled]:active, .btn-facebook[disabled].active, fieldset[disabled] .btn-facebook, fieldset[disabled] .btn-facebook:hover, fieldset[disabled] .btn-facebook:focus, fieldset[disabled] .btn-facebook:active, fieldset[disabled] .btn-facebook.active {
+  background-color: #3b5998;
+  border-color: #344e86;
+}
+
+/* line 20, ../scss/main.scss */
+.container-sm {
+  width: 480px;
+}
+
+/* line 24, ../scss/main.scss */
+.container-md {
+  width: 768px;
 }
