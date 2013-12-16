@@ -1,15 +1,9 @@
-var express = require('express')
-,   app = module.exports = express();
+var controller = require(__dirname + '/../../lib/controller.js')
+,   app = module.exports = controller(__dirname);
 
-app.set('views', __dirname + '/views');
-app.set('view engine', 'html');
-app.engine('html', require('ejs').renderFile);
-
-app.set('strict routing', true);
-
-app.get('/leyes', function (req, res)
+app.get('/user', function (req, res)
 {
-    res.render('list', {
-        leyes: ['asd', 'vxc', 'erw']
+    res.render('user', {
+        title: 'User'
     });
 });

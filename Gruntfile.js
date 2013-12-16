@@ -35,12 +35,31 @@ module.exports = function (grunt)
             }
         }
     ,   copy: {
-            icons: {
+            bootstrapIcons: {
                 files: [{
                     expand: true
-                ,   src: 'public/bower_components/sass-bootstrap/fonts/*'
-                ,   dest: 'public/fonts'
+                ,   src: ['public/bower_components/sass-bootstrap/fonts/**']
+                ,   dest: 'public/fonts/'
+                ,   flatten: true
                 ,   filter: 'isFile'
+                }]
+            }
+        ,   fontAwesomeIcons: {
+                files: [{
+                    expand: true
+                ,   flatten: true
+                ,   filter: 'isFile'
+                ,   src: ['public/bower_components/font-awesome/fonts/**']
+                ,   dest: 'public/fonts/'
+                }]
+            }
+        ,   fontAwesomeStlyes: {
+                files: [{
+                    expand: true
+                ,   flatten: true
+                ,   filter: 'isFile'
+                ,   src: ['public/bower_components/font-awesome/css/font-awesome.css']
+                ,   dest: 'public/styles/'
                 }]
             }
         }
@@ -63,7 +82,8 @@ module.exports = function (grunt)
     grunt.registerTask('build', [
         'clean'
     ,   'compass'
-    ,   'copy'
+    ,   'copy:fontAwesomeIcons'
+    ,   'copy:fontAwesomeStlyes'
     ]);
 
     grunt.registerTask('deploy', [

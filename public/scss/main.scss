@@ -1,6 +1,13 @@
 @import "vars";
 @import "bootstrap";
 
+body {
+    padding-bottom: $line-height-computed * 2;
+}
+
+// Helper Classes
+// -------------------------
+
 .d-b {
     display: block;
 }
@@ -13,13 +20,22 @@
     margin: 0 auto;
 }
 
-.btn-facebook {
-  @include button-variant($btn-facebook-color, $btn-facebook-bg, $btn-facebook-border);
+.dashed {
+    border-style: dashed;
 }
 
-.btn-twitter {
-  @include button-variant($btn-twitter-color, $btn-twitter-bg, $btn-twitter-border);
+.bd-strong {
+    border-color: $gray-dark;
 }
+
+
+// Components
+// -------------------------
+
+@import "circle";
+
+// Sub Containers
+// -------------------------
 
 .container-sm {
     width: 480px;
@@ -28,3 +44,22 @@
 .container-md {
     width: 768px;
 }
+
+
+// Social Buttons
+// -------------------------
+
+.btn-social {
+    font-size: 30px;
+    width: 100px;
+}
+
+.btn-facebook {
+  @include button-variant($btn-facebook-color, $btn-facebook-bg, $btn-facebook-border);
+}
+
+.btn-twitter {
+  @include button-variant($btn-twitter-color, $btn-twitter-bg, $btn-twitter-border);
+}
+
+

@@ -7000,21 +7000,63 @@ td.visible-print {
   }
 }
 /* line 4, ../scss/main.scss */
+body {
+  padding-bottom: 40px;
+}
+
+/* line 11, ../scss/main.scss */
 .d-b {
   display: block;
 }
 
-/* line 8, ../scss/main.scss */
+/* line 15, ../scss/main.scss */
 .pt-0 {
   padding-top: 0;
 }
 
-/* line 12, ../scss/main.scss */
+/* line 19, ../scss/main.scss */
 .block-center {
   margin: 0 auto;
 }
 
-/* line 16, ../scss/main.scss */
+/* line 23, ../scss/main.scss */
+.dashed {
+  border-style: dashed;
+}
+
+/* line 27, ../scss/main.scss */
+.bd-strong {
+  border-color: #333333;
+}
+
+/* line 1, ../scss/circle.scss */
+.circle {
+  border-radius: 50%;
+}
+
+/* line 5, ../scss/circle.scss */
+.circle-xl {
+  height: 300px;
+  width: 300px;
+}
+
+/* line 40, ../scss/main.scss */
+.container-sm {
+  width: 480px;
+}
+
+/* line 44, ../scss/main.scss */
+.container-md {
+  width: 768px;
+}
+
+/* line 52, ../scss/main.scss */
+.btn-social {
+  font-size: 30px;
+  width: 100px;
+}
+
+/* line 57, ../scss/main.scss */
 .btn-facebook {
   color: white;
   background-color: #3b5998;
@@ -7046,7 +7088,7 @@ td.visible-print {
   border-color: #344e86;
 }
 
-/* line 20, ../scss/main.scss */
+/* line 61, ../scss/main.scss */
 .btn-twitter {
   color: white;
   background-color: #4099ff;
@@ -7076,14 +7118,4 @@ td.visible-print {
 .btn-twitter.disabled, .btn-twitter.disabled:hover, .btn-twitter.disabled:focus, .btn-twitter.disabled:active, .btn-twitter.disabled.active, .btn-twitter[disabled], .btn-twitter[disabled]:hover, .btn-twitter[disabled]:focus, .btn-twitter[disabled]:active, .btn-twitter[disabled].active, fieldset[disabled] .btn-twitter, fieldset[disabled] .btn-twitter:hover, fieldset[disabled] .btn-twitter:focus, fieldset[disabled] .btn-twitter:active, fieldset[disabled] .btn-twitter.active {
   background-color: #4099ff;
   border-color: #268bff;
-}
-
-/* line 24, ../scss/main.scss */
-.container-sm {
-  width: 480px;
-}
-
-/* line 28, ../scss/main.scss */
-.container-md {
-  width: 768px;
 }
