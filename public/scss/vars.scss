@@ -4,6 +4,7 @@
 // -------------------------
 
 $facebook: #3B5998;
+$twitter: #4099FF;
 
 // Components
 // -------------------------
@@ -19,6 +20,10 @@ $border-radius-small: 0;
 $btn-facebook-color: #fff;
 $btn-facebook-bg: $facebook;
 $btn-facebook-border: darken($btn-facebook-bg, 5%);
+
+$btn-twitter-color: #fff;
+$btn-twitter-bg: $twitter;
+$btn-twitter-border: darken($btn-twitter-bg, 5%);
 
 
 // Navbar
