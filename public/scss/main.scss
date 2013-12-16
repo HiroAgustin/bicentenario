@@ -26,8 +26,15 @@ body {
 
 .bd-strong {
     border-color: $gray-dark;
+    border-width: 2px;
 }
 
+// Bootstrap Tweeks
+// -------------------------
+
+.popover {
+  @include box-shadow(none);
+}
 
 // Components
 // -------------------------
