@@ -26,11 +26,10 @@ module.exports = function (grunt)
         }
     ,   watch: {
             compass: {
-                files: ['public/scss/*.scss', 'server/**/*.ejs']
+                files: ['public/scss/*.scss', 'public/scripts/*.js', 'server/**/*.ejs']
             ,   tasks: ['compass']
             ,   options: {
                     livereload: true
-                ,   spawn: false
                 }
             }
         }
@@ -62,6 +61,15 @@ module.exports = function (grunt)
                 ,   dest: 'public/styles/'
                 }]
             }
+        ,   jsLibs: {
+                files: [{
+                    expand: true
+                ,   flatten: true
+                ,   filter: 'isFile'
+                ,   src: ['public/bower_components/meny/js/meny.js']
+                ,   dest: 'public/scripts/'
+                }]
+            }
         }
     ,   buildcontrol: {
             options: {
@@ -84,6 +92,7 @@ module.exports = function (grunt)
     ,   'compass'
     ,   'copy:fontAwesomeIcons'
     ,   'copy:fontAwesomeStlyes'
+    ,   'copy:jsLibs'
     ]);
 
     grunt.registerTask('deploy', [

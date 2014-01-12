@@ -1,72 +1,34 @@
 @import "vars";
 @import "bootstrap";
 
+html {
+    height: 100%;
+}
+
 body {
+    height: 100%;
+    -webkit-font-smoothing: antialiased;
+}
+
+.main {
+    height: 100%;
     padding-bottom: $line-height-computed * 2;
+}
+
+a {
+    text-transform: uppercase;
 }
 
 // Helper Classes
 // -------------------------
 
-.d-b {
-    display: block;
-}
-
-.pt-0 {
-    padding-top: 0
-}
-
-.block-center {
-    margin: 0 auto;
-}
-
-.dashed {
-    border-style: dashed;
-}
-
-.bd-strong {
-    border-color: $gray-dark;
-    border-width: 2px;
-}
-
-// Bootstrap Tweeks
-// -------------------------
-
-.popover {
-  @include box-shadow(none);
+.container-sm {
+    width: 750px;
 }
 
 // Components
 // -------------------------
 
-@import "circle";
-
-// Sub Containers
-// -------------------------
-
-.container-sm {
-    width: 480px;
-}
-
-.container-md {
-    width: 768px;
-}
-
-
-// Social Buttons
-// -------------------------
-
-.btn-social {
-    font-size: 30px;
-    width: 100px;
-}
-
-.btn-facebook {
-  @include button-variant($btn-facebook-color, $btn-facebook-bg, $btn-facebook-border);
-}
-
-.btn-twitter {
-  @include button-variant($btn-twitter-color, $btn-twitter-bg, $btn-twitter-border);
-}
-
-
+@import "btns";
+// @import "circle";
+@import "meny";

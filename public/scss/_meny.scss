@@ -1,0 +1,16 @@
+.meny-header {
+    height: $navbar-height;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+}
+
+.meny-body {
+    padding-top: $navbar-height / 2;
+}
+
+.meny-indicator {
+    cursor: pointer;
+    margin-bottom: $navbar-height / 2;
+    z-index: 1;
+}

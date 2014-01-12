@@ -1,17 +1,12 @@
-var fs = require('fs')
-,   express = require('express')
+var express = require('express')
 ,   app = module.exports = express();
 
 app.use(express.static(__dirname + '/../public'));
 
-app.enable('verbose errors');;
+app.enable('verbose errors');
 
-fs.readdirSync(__dirname + '/controllers').forEach(function (name)
-{
-    if (name !== 'error')
-        app.use(require('./controllers/' + name));
-});
-
+app.use(require('./controllers/landing'));
+app.use(require('./controllers/law'));
 app.use(require('./controllers/error'));
 
 app.listen(process.env.PORT || 9000);
