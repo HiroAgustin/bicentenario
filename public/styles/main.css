@@ -3402,6 +3402,11 @@ a {
   width: 750px;
 }
 
+/* line 40, ../scss/main.scss */
+.container-home {
+  padding-top: 40px;
+}
+
 /* line 27, ../scss/_btns.scss */
 .btn-inverse {
   color: white;
