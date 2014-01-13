@@ -1,7 +1,8 @@
 (function (win, doc, undefined)
 {
     var meny = null
-    ,   latch = doc.querySelector('.js-meny-indicator');
+    ,   background = null
+    ,   latch = doc.getElementById('js-meny-indicator');
 
     latch.addEventListener('click', function ()
     {
@@ -11,11 +12,20 @@
     win.addEventListener('load', function ()
     {
         meny = Meny.create({
-            menuElement: doc.querySelector('.js-meny-header')
-        ,   contentsElement: doc.querySelector('.js-meny-body')
+            menuElement: doc.getElementById('js-meny-header')
+        ,   contentsElement: doc.getElementById('js-meny-body')
         ,   position: 'top'
         ,   height: 62
         });
+
+        background = new confetti.Context('js-confetti-background');
+        background.start();
+
+    }, false);
+
+    win.addEventListener('resize', function ()
+    {
+        background && background.resize();
     }, false);
 
 }(window, document))

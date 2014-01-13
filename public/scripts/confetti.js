@@ -1,5 +1,5 @@
  /* Confetti by Patrik Svensson (http://metervara.net) */
- (function ()
+ (function (win, doc, undefined)
  {
     var frameRate = 30;
     var dt = 1.0 / frameRate;
@@ -319,8 +319,8 @@
     confetti.Context = function(parent) 
     {
         var i = 0;
-        var canvasParent = document.getElementById(parent);
-        var canvas = document.createElement('canvas');
+        var canvasParent = doc.getElementById(parent);
+        var canvas = doc.createElement('canvas');
         canvas.width = canvasParent.offsetWidth;
         canvas.height = canvasParent.offsetHeight;
         canvasParent.appendChild(canvas);
@@ -371,9 +371,6 @@
         }
     }
 
-    window.addEventListener('load', function ()
-    {
-        var test = new confetti.Context('background');
-        test.start();
-    }, false);
- }());
+    win.confetti = confetti;
+    
+ }(window, document));
