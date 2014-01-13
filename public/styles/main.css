@@ -3375,17 +3375,29 @@ body {
 }
 
 /* line 13, ../scss/main.scss */
-.main {
-  height: 100%;
-  padding-bottom: 40px;
+#background {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1;
 }
 
-/* line 18, ../scss/main.scss */
+/* line 22, ../scss/main.scss */
+.main {
+  height: 100%;
+  position: relative;
+  padding-bottom: 40px;
+  z-index: 2;
+}
+
+/* line 29, ../scss/main.scss */
 a {
   text-transform: uppercase;
 }
 
-/* line 25, ../scss/main.scss */
+/* line 36, ../scss/main.scss */
 .container-sm {
   width: 750px;
 }

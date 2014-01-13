@@ -10,9 +10,20 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
+#background {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+}
+
 .main {
     height: 100%;
+    position: relative;
     padding-bottom: $line-height-computed * 2;
+    z-index: 2;
 }
 
 a {
