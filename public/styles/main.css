@@ -3450,17 +3450,16 @@ a {
   height: 62px;
   position: fixed;
   width: 100%;
-  z-index: 2;
+  z-index: 3;
 }
 
 /* line 8, ../scss/_meny.scss */
 .meny-body {
-  padding-top: 31px;
+  padding-top: 29px;
 }
 
 /* line 12, ../scss/_meny.scss */
 .meny-indicator {
   cursor: pointer;
   margin-bottom: 31px;
-  z-index: 1;
 }
