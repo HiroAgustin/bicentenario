@@ -3406,7 +3406,7 @@ body {
 /* line 18, ../scss/main.scss */
 .site-footer {
   background: #2F3452;
-  padding: 10px 0;
+  padding: 12px 0;
   position: relative;
   z-index: 2;
 }
