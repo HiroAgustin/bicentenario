@@ -24,6 +24,15 @@ a {
     // text-transform: uppercase;
 }
 
+.link {
+    border-bottom: 1px solid $link-color;
+
+    &:hover {
+        border-bottom: none;
+        text-decoration: none;
+    }
+}
+
 // Helper Classes
 // -------------------------
 
