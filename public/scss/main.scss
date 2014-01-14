@@ -1,24 +1,6 @@
 @import "vars";
 @import "bootstrap";
-
-body {
-    -webkit-font-smoothing: antialiased;
-}
-
-.confetti-background {
-    bottom: 0;
-    left: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-    z-index: 1; // lowest
-}
-
-.main {
-    position: relative;
-    padding-bottom: $line-height-computed * 2;
-    z-index: 2; // higher than background
-}
+@import "base";
 
 a {
     // text-transform: uppercase;
@@ -33,26 +15,15 @@ a {
     }
 }
 
-// Helper Classes
-// -------------------------
-
-.container-sm {
-    max-width: 750px;
+.site-footer {
+    background: #2F3452;
+    padding: $padding-large-vertical 0;
+    position: relative;
+    z-index: 2;
 }
 
-.container-home {
-    padding-top: $line-height-computed * 2;
-}
-
-.header-container {
-    padding: 0;
-    margin: 0 auto;
-    max-width: 800px;
-}
-
-// Components
-// -------------------------
-
+@import "container";
+@import "confetti";
 @import "btns";
-// @import "circle";
+@import "circle";
 @import "meny";

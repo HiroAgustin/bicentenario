@@ -1,0 +1,19 @@
+@import "compass/css3";
+
+html {
+    height: 100%;
+}
+ 
+body {
+    @include display-box;
+    @include box-orient(vertical);
+    min-height: 100%;
+    -webkit-font-smoothing: antialiased;
+}
+
+.main {
+    @include box-flex(1);
+    position: relative;
+    padding-bottom: $line-height-computed * 2;
+    z-index: 2; // higher than background
+}

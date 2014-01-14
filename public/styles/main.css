@@ -3363,12 +3363,72 @@ input[type="button"].btn-block {
   position: fixed;
 }
 
-/* line 4, ../scss/main.scss */
+/* line 3, ../scss/_base.scss */
+html {
+  height: 100%;
+}
+
+/* line 7, ../scss/_base.scss */
 body {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-box;
+  display: box;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -ms-box-orient: vertical;
+  box-orient: vertical;
+  min-height: 100%;
   -webkit-font-smoothing: antialiased;
 }
 
-/* line 8, ../scss/main.scss */
+/* line 14, ../scss/_base.scss */
+.main {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -ms-box-flex: 1;
+  box-flex: 1;
+  position: relative;
+  padding-bottom: 40px;
+  z-index: 2;
+}
+
+/* line 9, ../scss/main.scss */
+.link {
+  border-bottom: 1px solid white;
+}
+/* line 12, ../scss/main.scss */
+.link:hover {
+  border-bottom: none;
+  text-decoration: none;
+}
+
+/* line 18, ../scss/main.scss */
+.site-footer {
+  background: #2F3452;
+  padding: 10px 0;
+  position: relative;
+  z-index: 2;
+}
+
+/* line 1, ../scss/_container.scss */
+.container-sm {
+  max-width: 750px;
+}
+
+/* line 5, ../scss/_container.scss */
+.container-home {
+  padding-top: 40px;
+}
+
+/* line 9, ../scss/_container.scss */
+.fixed-container {
+  padding: 0;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+/* line 1, ../scss/_confetti.scss */
 .confetti-background {
   bottom: 0;
   left: 0;
@@ -3376,40 +3436,6 @@ body {
   right: 0;
   top: 0;
   z-index: 1;
-}
-
-/* line 17, ../scss/main.scss */
-.main {
-  position: relative;
-  padding-bottom: 40px;
-  z-index: 2;
-}
-
-/* line 27, ../scss/main.scss */
-.link {
-  border-bottom: 1px solid white;
-}
-/* line 30, ../scss/main.scss */
-.link:hover {
-  border-bottom: none;
-  text-decoration: none;
-}
-
-/* line 39, ../scss/main.scss */
-.container-sm {
-  max-width: 750px;
-}
-
-/* line 43, ../scss/main.scss */
-.container-home {
-  padding-top: 40px;
-}
-
-/* line 47, ../scss/main.scss */
-.header-container {
-  padding: 0;
-  margin: 0 auto;
-  max-width: 800px;
 }
 
 /* line 27, ../scss/_btns.scss */
@@ -3455,6 +3481,12 @@ body {
   margin-top: 5px;
 }
 
+/* line 1, ../scss/_circle.scss */
+.circle {
+  border: 2px solid white;
+  border-radius: 50%;
+}
+
 /* line 1, ../scss/_meny.scss */
 .meny-header {
   height: 62px;
@@ -3470,8 +3502,6 @@ body {
 
 /* line 12, ../scss/_meny.scss */
 .meny-indicator {
-  border: 2px white solid;
-  border-radius: 50%;
   cursor: pointer;
   display: block;
   margin: 0 auto 31px;
