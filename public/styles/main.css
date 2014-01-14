@@ -3364,17 +3364,11 @@ input[type="button"].btn-block {
 }
 
 /* line 4, ../scss/main.scss */
-html {
-  height: 100%;
-}
-
-/* line 8, ../scss/main.scss */
 body {
-  height: 100%;
   -webkit-font-smoothing: antialiased;
 }
 
-/* line 13, ../scss/main.scss */
+/* line 8, ../scss/main.scss */
 .confetti-background {
   bottom: 0;
   left: 0;
@@ -3384,22 +3378,28 @@ body {
   z-index: 1;
 }
 
-/* line 22, ../scss/main.scss */
+/* line 17, ../scss/main.scss */
 .main {
-  height: 100%;
   position: relative;
   padding-bottom: 40px;
   z-index: 2;
 }
 
-/* line 36, ../scss/main.scss */
+/* line 30, ../scss/main.scss */
 .container-sm {
   max-width: 750px;
 }
 
-/* line 40, ../scss/main.scss */
+/* line 34, ../scss/main.scss */
 .container-home {
   padding-top: 40px;
+}
+
+/* line 38, ../scss/main.scss */
+.header-container {
+  padding: 0;
+  margin: 0 auto;
+  max-width: 800px;
 }
 
 /* line 27, ../scss/_btns.scss */

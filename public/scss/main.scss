@@ -1,12 +1,7 @@
 @import "vars";
 @import "bootstrap";
 
-html {
-    height: 100%;
-}
-
 body {
-    height: 100%;
     -webkit-font-smoothing: antialiased;
 }
 
@@ -20,7 +15,6 @@ body {
 }
 
 .main {
-    height: 100%;
     position: relative;
     padding-bottom: $line-height-computed * 2;
     z-index: 2; // higher than background
@@ -39,6 +33,12 @@ a {
 
 .container-home {
     padding-top: $line-height-computed * 2;
+}
+
+.header-container {
+    padding: 0;
+    margin: 0 auto;
+    max-width: 800px;
 }
 
 // Components
