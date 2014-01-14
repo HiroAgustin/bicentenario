@@ -6,7 +6,7 @@
     var DEG_TO_RAD = Math.PI / 180;
     var RAD_TO_DEG = 180 / Math.PI;
     // var colors = [["#FF4136", "#900"], ["#0074D9", "#001F3F"], ["#FFDC00", "#FF851B"]];
-    var colors = [["#FF4136", "#FF4136"], ["#0074D9", "#0074D9"], ["#FFDC00", "#FFDC00"], ["#001F3F", "#001F3F"]];
+    var colors = [["#FF4136", "#900"], ["#FFDC00", "orange"], ["blue", "#001F3F"]];
     function Vector2(_x, _y) 
     {
         this.x = _x, this.y = _y;

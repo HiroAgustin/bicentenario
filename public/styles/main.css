@@ -3392,14 +3392,9 @@ body {
   z-index: 2;
 }
 
-/* line 29, ../scss/main.scss */
-a {
-  text-transform: uppercase;
-}
-
 /* line 36, ../scss/main.scss */
 .container-sm {
-  width: 750px;
+  max-width: 750px;
 }
 
 /* line 40, ../scss/main.scss */
