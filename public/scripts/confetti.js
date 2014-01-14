@@ -336,7 +336,7 @@
         for (i = 0; i < confettiRibbonCount; i++) {
             confettiRibbons[i] = new ConfettiRibbon(Math.random() * canvas.width, -Math.random() * canvas.height * 2, rpCount, rpDist, rpThick, 45, 1, 0.05);
         }
-        var confettiPaperCount = 25;
+        var confettiPaperCount = 10;
         var confettiPapers = new Array();
         ConfettiPaper.bounds = new Vector2(canvas.width, canvas.height);
         for (i = 0; i < confettiPaperCount; i++) {
