@@ -5,7 +5,8 @@
     var dt = 1.0 / frameRate;
     var DEG_TO_RAD = Math.PI / 180;
     var RAD_TO_DEG = 180 / Math.PI;
-    var colors = [["#FF4136", "#900"], ["#0074D9", "#001F3F"], ["#FFDC00", "#FF851B"]];
+    // var colors = [["#FF4136", "#900"], ["#0074D9", "#001F3F"], ["#FFDC00", "#FF851B"]];
+    var colors = [["#FF4136", "#FF4136"], ["#0074D9", "#0074D9"], ["#FFDC00", "#FFDC00"], ["#001F3F", "#001F3F"]];
     function Vector2(_x, _y) 
     {
         this.x = _x, this.y = _y;
@@ -120,7 +121,7 @@
         this.angle = DEG_TO_RAD * Math.random() * 360;
         this.rotation = DEG_TO_RAD * Math.random() * 360;
         this.cosA = 1.0;
-        this.size = 5.0;
+        this.size = 8;
         this.oscillationSpeed = Math.random() * 1.5 + 0.5;
         this.xSpeed = 40.0;
         this.ySpeed = Math.random() * 60 + 50.0;
@@ -326,7 +327,7 @@
         canvasParent.appendChild(canvas);
         var context = canvas.getContext('2d');
         var interval = null;
-        var confettiRibbonCount = 7;
+        var confettiRibbonCount = 0;
         var rpCount = 30;
         var rpDist = 8.0;
         var rpThick = 8.0;
