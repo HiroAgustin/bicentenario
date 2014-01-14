@@ -10,6 +10,12 @@
 }
 
 .meny-indicator {
+    border: 2px white solid;
+    border-radius: 50%;
     cursor: pointer;
-    margin-bottom: $navbar-height / 2;
+    display: block;
+    margin: 0 auto $navbar-height / 2;
+    height: 30px;
+    text-align: center;
+    width: 30px;
 }

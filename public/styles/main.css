@@ -3470,6 +3470,12 @@ body {
 
 /* line 12, ../scss/_meny.scss */
 .meny-indicator {
+  border: 2px white solid;
+  border-radius: 50%;
   cursor: pointer;
-  margin-bottom: 31px;
+  display: block;
+  margin: 0 auto 31px;
+  height: 30px;
+  text-align: center;
+  width: 30px;
 }
