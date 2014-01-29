@@ -3700,32 +3700,37 @@ body {
   text-align: left;
   text-indent: 10px;
   font-weight: bold;
+  font-family: "Dosis", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-/* line 42, ../scss/_shame.scss */
+/* line 43, ../scss/_shame.scss */
 .data .Mb-10 {
   margin-bottom: 10px;
 }
-/* line 46, ../scss/_shame.scss */
+/* line 47, ../scss/_shame.scss */
 .data .Mb-20 {
   margin-bottom: 20px;
 }
-/* line 50, ../scss/_shame.scss */
+/* line 51, ../scss/_shame.scss */
 .data .section {
   border-top: 1px solid #31395b;
   padding: 12px 24px;
 }
-/* line 54, ../scss/_shame.scss */
+/* line 55, ../scss/_shame.scss */
 .data .section:first-child {
   border-top: none;
 }
-/* line 59, ../scss/_shame.scss */
+/* line 60, ../scss/_shame.scss */
 .data .lead {
   color: white;
   font-size: 50px;
   font-weight: bold;
   margin-bottom: 10px;
 }
-/* line 66, ../scss/_shame.scss */
+/* line 67, ../scss/_shame.scss */
+.data li {
+  color: #A6CEF2;
+}
+/* line 71, ../scss/_shame.scss */
 .data .heading {
   color: #A6CEF2;
   font-weight: bold;
