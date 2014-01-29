@@ -3662,20 +3662,30 @@ body {
   margin: 0 1em;
 }
 
-/* line 6, ../scss/_shame.scss */
+/* line 8, ../scss/_shame.scss */
 .minita {
   display: block;
   margin: 0 auto;
+  -webkit-transform: translateX(-30px);
+  -moz-transform: translateX(-30px);
+  -ms-transform: translateX(-30px);
+  -o-transform: translateX(-30px);
+  transform: translateX(-30px);
 }
 
-/* line 11, ../scss/_shame.scss */
+/* line 14, ../scss/_shame.scss */
+.mis-leyes {
+  padding-right: 25%;
+}
+
+/* line 18, ../scss/_shame.scss */
 .nombre {
   font-size: 4em;
   font-weight: bold;
   margin-bottom: 40px;
 }
 
-/* line 19, ../scss/_shame.scss */
+/* line 26, ../scss/_shame.scss */
 .data {
   background: #1F243A;
   bottom: 0;
@@ -3683,18 +3693,18 @@ body {
   right: 0;
   top: 0;
 }
-/* line 26, ../scss/_shame.scss */
+/* line 33, ../scss/_shame.scss */
 .data p {
   margin-bottom: 0;
 }
-/* line 30, ../scss/_shame.scss */
+/* line 37, ../scss/_shame.scss */
 .data .progress {
   -webkit-box-shadow: transparent 0 0 0;
   -moz-box-shadow: transparent 0 0 0;
   box-shadow: transparent 0 0 0;
   margin-bottom: 10px;
 }
-/* line 35, ../scss/_shame.scss */
+/* line 42, ../scss/_shame.scss */
 .data .progress-bar {
   margin-right: 10px;
   text-align: left;
@@ -3702,38 +3712,38 @@ body {
   font-weight: bold;
   font-family: "Dosis", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-/* line 43, ../scss/_shame.scss */
+/* line 50, ../scss/_shame.scss */
 .data .Mb-10 {
   margin-bottom: 10px;
 }
-/* line 47, ../scss/_shame.scss */
+/* line 54, ../scss/_shame.scss */
 .data .Mb-20 {
   margin-bottom: 20px;
 }
-/* line 51, ../scss/_shame.scss */
+/* line 58, ../scss/_shame.scss */
 .data .section {
   border-top: 1px solid #31395b;
   padding: 12px 24px;
 }
-/* line 55, ../scss/_shame.scss */
+/* line 62, ../scss/_shame.scss */
 .data .section:first-child {
   border-top: none;
 }
-/* line 60, ../scss/_shame.scss */
+/* line 67, ../scss/_shame.scss */
 .data .lead {
   color: white;
   font-size: 50px;
   font-weight: bold;
 }
-/* line 66, ../scss/_shame.scss */
+/* line 73, ../scss/_shame.scss */
 .data ul {
   margin-bottom: 0;
 }
-/* line 70, ../scss/_shame.scss */
+/* line 77, ../scss/_shame.scss */
 .data li {
   color: #A6CEF2;
 }
-/* line 74, ../scss/_shame.scss */
+/* line 81, ../scss/_shame.scss */
 .data .heading {
   color: #A6CEF2;
   font-weight: bold;

@@ -3,9 +3,16 @@
     margin: 0 1em;
 }
 
+@import "compass/css3/transform";
+
 .minita {
     display: block;
     margin: 0 auto;
+    @include translateX(-30px);
+}
+
+.mis-leyes {
+    padding-right: 25%;
 }
 
 .nombre {
