@@ -1,3 +1,28 @@
+ (function(win) {
+     var lastTime = 0;
+     var vendors = ['webkit', 'moz'];
+     for(var x = 0; x < vendors.length && !win.requestAnimationFrame; ++x) {
+         win.requestAnimationFrame = win[vendors[x]+'RequestAnimationFrame'];
+         win.cancelAnimationFrame =
+           win[vendors[x]+'CancelAnimationFrame'] || win[vendors[x]+'CancelRequestAnimationFrame'];
+     }
+
+     if (!win.requestAnimationFrame)
+         win.requestAnimationFrame = function(callback, element) {
+             var currTime = new Date().getTime();
+             var timeToCall = Math.max(0, 16 - (currTime - lastTime));
+             var id = win.setTimeout(function() { callback(currTime + timeToCall); },
+               timeToCall);
+             lastTime = currTime + timeToCall;
+             return id;
+         };
+
+     if (!win.cancelAnimationFrame)
+         win.cancelAnimationFrame = function(id) {
+             clearTimeout(id);
+         };
+ }(window));
+
  /* Confetti by Patrik Svensson (http://metervara.net) */
  (function (win, doc, undefined)
  {
@@ -336,7 +361,7 @@
         for (i = 0; i < confettiRibbonCount; i++) {
             confettiRibbons[i] = new ConfettiRibbon(Math.random() * canvas.width, -Math.random() * canvas.height * 2, rpCount, rpDist, rpThick, 45, 1, 0.05);
         }
-        var confettiPaperCount = 10;
+        var confettiPaperCount = 12;
         var confettiPapers = new Array();
         ConfettiPaper.bounds = new Vector2(canvas.width, canvas.height);
         for (i = 0; i < confettiPaperCount; i++) {

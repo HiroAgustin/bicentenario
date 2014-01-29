@@ -3299,6 +3299,144 @@ input[type="button"].btn-block {
   color: white;
 }
 
+@-webkit-keyframes progress-bar-stripes {
+  /* line 11, ../bower_components/sass-bootstrap/lib/_progress-bars.scss */
+  from {
+    background-position: 40px 0;
+  }
+
+  /* line 12, ../bower_components/sass-bootstrap/lib/_progress-bars.scss */
+  to {
+    background-position: 0 0;
+  }
+}
+
+@-moz-keyframes progress-bar-stripes {
+  /* line 17, ../bower_components/sass-bootstrap/lib/_progress-bars.scss */
+  from {
+    background-position: 40px 0;
+  }
+
+  /* line 18, ../bower_components/sass-bootstrap/lib/_progress-bars.scss */
+  to {
+    background-position: 0 0;
+  }
+}
+
+@-o-keyframes progress-bar-stripes {
+  /* line 23, ../bower_components/sass-bootstrap/lib/_progress-bars.scss */
+  from {
+    background-position: 0 0;
+  }
+
+  /* line 24, ../bower_components/sass-bootstrap/lib/_progress-bars.scss */
+  to {
+    background-position: 40px 0;
+  }
+}
+
+@keyframes progress-bar-stripes {
+  /* line 29, ../bower_components/sass-bootstrap/lib/_progress-bars.scss */
+  from {
+    background-position: 40px 0;
+  }
+
+  /* line 30, ../bower_components/sass-bootstrap/lib/_progress-bars.scss */
+  to {
+    background-position: 0 0;
+  }
+}
+
+/* line 39, ../bower_components/sass-bootstrap/lib/_progress-bars.scss */
+.progress {
+  overflow: hidden;
+  height: 20px;
+  margin-bottom: 20px;
+  background-color: transparent;
+  border-radius: 0;
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* line 49, ../bower_components/sass-bootstrap/lib/_progress-bars.scss */
+.progress-bar {
+  float: left;
+  width: 0%;
+  height: 100%;
+  font-size: 12px;
+  line-height: 20px;
+  color: white;
+  text-align: center;
+  background-color: #428bca;
+  -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+  -webkit-transition: width 0.6s ease;
+  transition: width 0.6s ease;
+}
+
+/* line 63, ../bower_components/sass-bootstrap/lib/_progress-bars.scss */
+.progress-striped .progress-bar {
+  background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, rgba(255, 255, 255, 0.15)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.15)), color-stop(0.75, rgba(255, 255, 255, 0.15)), color-stop(0.75, transparent), to(transparent));
+  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -moz-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-size: 40px 40px;
+}
+
+/* line 69, ../bower_components/sass-bootstrap/lib/_progress-bars.scss */
+.progress.active .progress-bar {
+  -webkit-animation: progress-bar-stripes 2s linear infinite;
+  animation: progress-bar-stripes 2s linear infinite;
+}
+
+/* line 78, ../bower_components/sass-bootstrap/lib/_progress-bars.scss */
+.progress-bar-success {
+  background-color: #5cb85c;
+}
+/* line 559, ../bower_components/sass-bootstrap/lib/_mixins.scss */
+.progress-striped .progress-bar-success {
+  background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, rgba(255, 255, 255, 0.15)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.15)), color-stop(0.75, rgba(255, 255, 255, 0.15)), color-stop(0.75, transparent), to(transparent));
+  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -moz-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+}
+
+/* line 82, ../bower_components/sass-bootstrap/lib/_progress-bars.scss */
+.progress-bar-info {
+  background-color: #5bc0de;
+}
+/* line 559, ../bower_components/sass-bootstrap/lib/_mixins.scss */
+.progress-striped .progress-bar-info {
+  background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, rgba(255, 255, 255, 0.15)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.15)), color-stop(0.75, rgba(255, 255, 255, 0.15)), color-stop(0.75, transparent), to(transparent));
+  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -moz-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+}
+
+/* line 86, ../bower_components/sass-bootstrap/lib/_progress-bars.scss */
+.progress-bar-warning {
+  background-color: #f0ad4e;
+}
+/* line 559, ../bower_components/sass-bootstrap/lib/_mixins.scss */
+.progress-striped .progress-bar-warning {
+  background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, rgba(255, 255, 255, 0.15)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.15)), color-stop(0.75, rgba(255, 255, 255, 0.15)), color-stop(0.75, transparent), to(transparent));
+  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -moz-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+}
+
+/* line 90, ../bower_components/sass-bootstrap/lib/_progress-bars.scss */
+.progress-bar-danger {
+  background-color: #d9534f;
+}
+/* line 559, ../bower_components/sass-bootstrap/lib/_mixins.scss */
+.progress-striped .progress-bar-danger {
+  background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, rgba(255, 255, 255, 0.15)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.15)), color-stop(0.75, rgba(255, 255, 255, 0.15)), color-stop(0.75, transparent), to(transparent));
+  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -moz-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+}
+
 /* line 21, ../bower_components/sass-bootstrap/lib/_mixins.scss */
 .clearfix:before, .clearfix:after {
   content: " ";
@@ -3479,8 +3617,14 @@ body {
 /* line 39, ../scss/_btns.scss */
 .btn-kry {
   border-width: 0 0 5px;
+  text-transform: uppercase;
 }
-/* line 42, ../scss/_btns.scss */
+/* line 43, ../scss/_btns.scss */
+.btn-kry:hover {
+  border-bottom-width: 3px;
+  margin-top: 2px;
+}
+/* line 48, ../scss/_btns.scss */
 .btn-kry:active {
   border-bottom-width: 0;
   margin-top: 5px;
@@ -3510,7 +3654,81 @@ body {
   cursor: pointer;
   display: block;
   margin: 0 auto 31px;
-  height: 30px;
-  text-align: center;
-  width: 30px;
+}
+
+/* line 1, ../scss/_shame.scss */
+.site-footer a {
+  display: block;
+  margin: 0 1em;
+}
+
+/* line 6, ../scss/_shame.scss */
+.minita {
+  display: block;
+  margin: 0 auto;
+}
+
+/* line 11, ../scss/_shame.scss */
+.nombre {
+  font-size: 4em;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+/* line 19, ../scss/_shame.scss */
+.data {
+  background: #1F243A;
+  bottom: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+/* line 26, ../scss/_shame.scss */
+.data p {
+  margin-bottom: 0;
+}
+/* line 30, ../scss/_shame.scss */
+.data .progress {
+  -webkit-box-shadow: transparent 0 0 0;
+  -moz-box-shadow: transparent 0 0 0;
+  box-shadow: transparent 0 0 0;
+  margin-bottom: 10px;
+}
+/* line 35, ../scss/_shame.scss */
+.data .progress-bar {
+  margin-right: 10px;
+  text-align: left;
+  text-indent: 10px;
+  font-weight: bold;
+}
+/* line 42, ../scss/_shame.scss */
+.data .Mb-10 {
+  margin-bottom: 10px;
+}
+/* line 46, ../scss/_shame.scss */
+.data .Mb-20 {
+  margin-bottom: 20px;
+}
+/* line 50, ../scss/_shame.scss */
+.data .section {
+  border-top: 1px solid #31395b;
+  padding: 12px 24px;
+}
+/* line 54, ../scss/_shame.scss */
+.data .section:first-child {
+  border-top: none;
+}
+/* line 59, ../scss/_shame.scss */
+.data .lead {
+  color: white;
+  font-size: 50px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+/* line 66, ../scss/_shame.scss */
+.data .heading {
+  color: #A6CEF2;
+  font-weight: bold;
+  font-family: "Dosis", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
 }

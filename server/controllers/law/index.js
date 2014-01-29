@@ -31,7 +31,7 @@ app.get('/mis-leyes', function (req, res)
     ,   comparten: 50000
     };
 
-    res.render('user', {
-        title: 'Leyes de ' + api.nombre
-    });
+    api.title = 'Leyes de ' + api.nombre;
+
+    res.render('user', api);
 });

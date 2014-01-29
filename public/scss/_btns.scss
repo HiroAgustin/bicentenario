@@ -38,6 +38,12 @@ $btn-kry-border-width: 5px;
 
 .btn-kry {
     border-width: 0 0 $btn-kry-border-width;
+    text-transform: uppercase;
+
+    &:hover {
+        border-bottom-width: $btn-kry-border-width - 2;
+        margin-top: 2px;
+    }
 
     &:active {
         border-bottom-width: 0;
