@@ -3634,6 +3634,39 @@ body {
 .circle {
   border: 2px solid white;
   border-radius: 50%;
+  padding: 4px;
+}
+
+/* line 7, ../scss/_circle.scss */
+.circle-sm {
+  height: 160px;
+  width: 160px;
+  position: absolute;
+}
+
+/* line 13, ../scss/_circle.scss */
+.circle-m {
+  height: 200px;
+  width: 200px;
+  position: absolute;
+}
+
+/* line 19, ../scss/_circle.scss */
+.circle-red {
+  background-color: #C31425;
+  border-color: #C31425;
+}
+
+/* line 24, ../scss/_circle.scss */
+.circle-green {
+  background-color: #13C394;
+  border-color: #13C394;
+}
+
+/* line 29, ../scss/_circle.scss */
+.circle-pink {
+  background-color: #D461C0;
+  border-color: #D461C0;
 }
 
 /* line 1, ../scss/_meny.scss */
@@ -3673,11 +3706,6 @@ body {
   transform: translateX(-30px);
 }
 
-/* line 14, ../scss/_shame.scss */
-.mis-leyes {
-  padding-right: 25%;
-}
-
 /* line 18, ../scss/_shame.scss */
 .nombre {
   font-size: 4em;
@@ -3685,7 +3713,32 @@ body {
   margin-bottom: 40px;
 }
 
-/* line 26, ../scss/_shame.scss */
+/* line 24, ../scss/_shame.scss */
+.Tt-u {
+  text-transform: uppercase;
+}
+
+/* line 28, ../scss/_shame.scss */
+.Mt-10 {
+  margin-top: 10px !important;
+}
+
+/* line 32, ../scss/_shame.scss */
+.Mt-20 {
+  margin-top: 20px !important;
+}
+
+/* line 36, ../scss/_shame.scss */
+.Mb-10 {
+  margin-bottom: 10px !important;
+}
+
+/* line 40, ../scss/_shame.scss */
+.Mb-20 {
+  margin-bottom: 20px !important;
+}
+
+/* line 46, ../scss/_shame.scss */
 .data {
   background: #1F243A;
   bottom: 0;
@@ -3693,18 +3746,18 @@ body {
   right: 0;
   top: 0;
 }
-/* line 33, ../scss/_shame.scss */
+/* line 53, ../scss/_shame.scss */
 .data p {
   margin-bottom: 0;
 }
-/* line 37, ../scss/_shame.scss */
+/* line 57, ../scss/_shame.scss */
 .data .progress {
   -webkit-box-shadow: transparent 0 0 0;
   -moz-box-shadow: transparent 0 0 0;
   box-shadow: transparent 0 0 0;
   margin-bottom: 10px;
 }
-/* line 42, ../scss/_shame.scss */
+/* line 62, ../scss/_shame.scss */
 .data .progress-bar {
   margin-right: 10px;
   text-align: left;
@@ -3712,38 +3765,31 @@ body {
   font-weight: bold;
   font-family: "Dosis", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-/* line 50, ../scss/_shame.scss */
-.data .Mb-10 {
-  margin-bottom: 10px;
-}
-/* line 54, ../scss/_shame.scss */
-.data .Mb-20 {
-  margin-bottom: 20px;
-}
-/* line 58, ../scss/_shame.scss */
+/* line 70, ../scss/_shame.scss */
 .data .section {
   border-top: 1px solid #31395b;
   padding: 12px 24px;
 }
-/* line 62, ../scss/_shame.scss */
+/* line 74, ../scss/_shame.scss */
 .data .section:first-child {
   border-top: none;
 }
-/* line 67, ../scss/_shame.scss */
+/* line 79, ../scss/_shame.scss */
 .data .lead {
   color: white;
   font-size: 50px;
   font-weight: bold;
 }
-/* line 73, ../scss/_shame.scss */
+/* line 85, ../scss/_shame.scss */
 .data ul {
   margin-bottom: 0;
 }
-/* line 77, ../scss/_shame.scss */
+/* line 89, ../scss/_shame.scss */
 .data li {
   color: #A6CEF2;
+  margin-top: 4px;
 }
-/* line 81, ../scss/_shame.scss */
+/* line 94, ../scss/_shame.scss */
 .data .heading {
   color: #A6CEF2;
   font-weight: bold;
