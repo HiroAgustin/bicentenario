@@ -3724,13 +3724,16 @@ body {
   color: white;
   font-size: 50px;
   font-weight: bold;
-  margin-bottom: 10px;
 }
-/* line 67, ../scss/_shame.scss */
+/* line 66, ../scss/_shame.scss */
+.data ul {
+  margin-bottom: 0;
+}
+/* line 70, ../scss/_shame.scss */
 .data li {
   color: #A6CEF2;
 }
-/* line 71, ../scss/_shame.scss */
+/* line 74, ../scss/_shame.scss */
 .data .heading {
   color: #A6CEF2;
   font-weight: bold;
