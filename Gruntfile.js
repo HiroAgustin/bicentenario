@@ -32,6 +32,13 @@ module.exports = function (grunt)
                     livereload: true
                 }
             }
+        // ,   express: {
+        //         files: ['server/**/*.js']
+        //     ,   tasks: ['express']
+        //     ,   options: {
+        //             spawn: false
+        //         }
+        //     }
         }
     ,   copy: {
             bootstrapIcons: {
