@@ -10,8 +10,9 @@ module.exports = function (grunt)
                 options: {
                     sassDir: 'public/scss'
                 ,   cssDir: 'public/styles'
-                ,   importPath: ['public/bower_components/sass-bootstrap/lib/']
+                ,   importPath: ['public/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/']
                 ,   specify: ['public/scss/main.scss']
+                ,   outputStyle: 'compressed'
                 }
             }
         }
