@@ -61,9 +61,17 @@
     .progress {
         @include box-shadow(transparent 0 0 0);
         margin-bottom: 10px;
+
+        &:nth-child(2n) {
+
+            .progress-bar {
+                background-color: #2D3F93;
+            }
+        }
     }
 
     .progress-bar {
+        background-color: #C31425;
         margin-right: 10px;
         text-align: left;
         text-indent: 10px;
