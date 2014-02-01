@@ -36,6 +36,7 @@ app.get('/mis-leyes', function (req, res)
     };
 
     api.title = 'Leyes de ' + api.nombre;
+    api.comparten = (api.comparten + '').replace(/\B(?=(\d{3})+(?!\d))/g, ".")
 
     var agrupados = _.groupBy(api.leyes, 'year')
     ,   max = _.max(agrupados, _.size).length;
