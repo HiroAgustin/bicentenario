@@ -23,8 +23,8 @@
         // ,   height: 62
         // });
 
-        // background = new confetti.Context('js-confetti-background');
-        // background.start();
+        background = new confetti.Context('js-confetti-background');
+        background.start();
 
     });
 

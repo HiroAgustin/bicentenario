@@ -9,6 +9,8 @@ body {
     @include box-orient(vertical);
     min-height: 100%;
     -webkit-font-smoothing: antialiased;
+    // FireFox Fix
+    width: 100%;
 }
 
 .main {
@@ -18,8 +20,19 @@ body {
     z-index: 2; // higher than background
 }
 
+// The following is NASTY!
 .site-header .container {
+
     @media (max-width: $screen-md-min) {
         width: 100%;
+
+        @media (min-width: $grid-float-breakpoint)
+        {
+            padding: 0;
+
+            .navbar-right {
+                margin-right: 0;
+            }
+        }
     }
 }
