@@ -9,6 +9,11 @@
         meny && meny.open();
     });
 
+    win.addEventListener('resize', function ()
+    {
+        background && background.resize();
+    });
+
     win.addEventListener('load', function ()
     {
         meny = Meny.create({
@@ -21,11 +26,6 @@
         background = new confetti.Context('js-confetti-background');
         background.start();
 
-    }, false);
-
-    win.addEventListener('resize', function ()
-    {
-        background && background.resize();
-    }, false);
+    });
 
 }(window, document))
