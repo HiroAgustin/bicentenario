@@ -17,3 +17,9 @@ body {
     padding-bottom: $line-height-computed * 2;
     z-index: 2; // higher than background
 }
+
+.site-header .container {
+    @media (max-width: $screen-md-min) {
+        width: 100%;
+    }
+}

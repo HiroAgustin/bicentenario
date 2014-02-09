@@ -16,15 +16,15 @@
 
     win.addEventListener('load', function ()
     {
-        meny = Meny.create({
-            menuElement: doc.getElementById('js-meny-header')
-        ,   contentsElement: doc.getElementById('js-meny-body')
-        ,   position: 'top'
-        ,   height: 62
-        });
+        // meny = Meny.create({
+        //     menuElement: doc.getElementById('js-meny-header')
+        // ,   contentsElement: doc.getElementById('js-meny-body')
+        // ,   position: 'top'
+        // ,   height: 62
+        // });
 
-        background = new confetti.Context('js-confetti-background');
-        background.start();
+        // background = new confetti.Context('js-confetti-background');
+        // background.start();
 
     });
 

@@ -1,13 +1,13 @@
-.meny-header {
-    height: $navbar-height;
-    position: fixed;
-    width: 100%;
-    z-index: 3; // 1 is background, 2 is body
-}
+// .meny-header {
+//     height: $navbar-height;
+//     position: fixed;
+//     width: 100%;
+//     z-index: 3; // 1 is background, 2 is body
+// }
 
-.meny-body {
-    padding-top: $navbar-height / 2 - 2;
-}
+// .meny-body {
+//     padding-top: $navbar-height / 2 - 2;
+// }
 
 .meny-indicator {
     cursor: pointer;
