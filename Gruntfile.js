@@ -33,50 +33,42 @@ module.exports = function (grunt)
                     livereload: true
                 }
             }
-        // ,   express: {
-        //         files: ['server/**/*.js']
-        //     ,   tasks: ['express']
-        //     ,   options: {
-        //             spawn: false
-        //         }
-        //     }
         }
     ,   copy: {
-            bootstrapIcons: {
-                files: [{
-                    expand: true
-                ,   src: ['public/bower_components/sass-bootstrap/fonts/**']
-                ,   dest: 'public/fonts/'
-                ,   flatten: true
-                ,   filter: 'isFile'
-                }]
-            }
-        ,   fontAwesomeIcons: {
-                files: [{
-                    expand: true
-                ,   flatten: true
-                ,   filter: 'isFile'
-                ,   src: ['public/bower_components/font-awesome/fonts/**']
-                ,   dest: 'public/fonts/'
-                }]
-            }
-        ,   fontAwesomeStlyes: {
-                files: [{
-                    expand: true
-                ,   flatten: true
-                ,   filter: 'isFile'
-                ,   src: ['public/bower_components/font-awesome/css/font-awesome.css']
-                ,   dest: 'public/styles/'
-                }]
-            }
-        ,   jsLibs: {
-                files: [{
-                    expand: true
-                ,   flatten: true
-                ,   filter: 'isFile'
-                ,   src: ['public/bower_components/meny/js/meny.js']
-                ,   dest: 'public/scripts/'
-                }]
+            main: {
+                files: [
+                    // Fontawesome Icons
+                    {
+                        expand: true
+                    ,   flatten: true
+                    ,   filter: 'isFile'
+                    ,   src: ['public/bower_components/font-awesome/fonts/**']
+                    ,   dest: 'public/fonts/'
+                    }
+                ,   {
+                        expand: true
+                    ,   flatten: true
+                    ,   filter: 'isFile'
+                    ,   src: ['public/bower_components/font-awesome/css/font-awesome.css']
+                    ,   dest: 'public/styles/'
+                    }
+                    // Js Libs
+                ,   {
+                        expand: true
+                    ,   flatten: true
+                    ,   filter: 'isFile'
+                    ,   src: ['public/bower_components/meny/js/meny.js']
+                    ,   dest: 'public/scripts/'
+                    }
+                    // Bootstrap Scripts
+                // ,   {
+                //         expand: true
+                //     ,   flatten: true
+                //     ,   filter: 'isFile'
+                //     ,   src: ['public/bower_components/bootstrap-sass/vendor/assets/javascripts/bootstrap/collapse.js']
+                //     ,   dest: 'public/scripts/'
+                //     }
+                ]
             }
         }
     ,   buildcontrol: {
@@ -98,9 +90,7 @@ module.exports = function (grunt)
     grunt.registerTask('build', [
         'clean'
     ,   'compass'
-    ,   'copy:fontAwesomeIcons'
-    ,   'copy:fontAwesomeStlyes'
-    ,   'copy:jsLibs'
+    ,   'copy'
     ]);
 
     grunt.registerTask('deploy', [
