@@ -10,8 +10,9 @@ module.exports = function (grunt)
                 options: {
                     sassDir: 'public/scss'
                 ,   cssDir: 'public/styles'
-                ,   importPath: ['public/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/']
-                ,   specify: ['public/scss/main.scss']
+                ,   importPath: [
+                        'public/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/'
+                    ]
                 ,   outputStyle: 'compressed'
                 }
             }
@@ -27,7 +28,7 @@ module.exports = function (grunt)
         }
     ,   watch: {
             compass: {
-                files: ['public/scss/*.scss', 'public/scripts/*.js', 'server/**/*.ejs']
+                files: ['public/scss/**/*.scss', 'public/scripts/*.js', 'server/**/*.ejs']
             ,   tasks: ['compass']
             ,   options: {
                     livereload: true
@@ -60,14 +61,6 @@ module.exports = function (grunt)
                     ,   src: ['public/bower_components/meny/js/meny.js']
                     ,   dest: 'public/scripts/'
                     }
-                    // Bootstrap Scripts
-                // ,   {
-                //         expand: true
-                //     ,   flatten: true
-                //     ,   filter: 'isFile'
-                //     ,   src: ['public/bower_components/bootstrap-sass/vendor/assets/javascripts/bootstrap/collapse.js']
-                //     ,   dest: 'public/scripts/'
-                //     }
                 ]
             }
         }
@@ -98,13 +91,13 @@ module.exports = function (grunt)
     ,   'buildcontrol'
     ]);
 
-    grunt.registerTask('server', [
+    grunt.registerTask('serve', [
         'build'
     ,   'express'
     ,   'watch'
     ]);
 
     grunt.registerTask('default', [
-        'server'
+        'serve'
     ]);
 };

@@ -1,71 +1,73 @@
 <% layout('../../../layouts/default') %>
 
-<section class="container mis-leyes">
-
-    <div class="text-center" style="padding-top: 1em;">
-        <p class="lead Tt-u">Este es el legado del Bicentenario para:</p>
-        <h1 class="nombre"><%= nombre %></h1>
-    </div>
-
-    <div class="circle circle-red circle-sm text-center" style="left: 150px; top: 100px;">
-        <i class="fa fa-user-md"></i>
-    </div>
-
-    <div class="circle circle-pink circle-m" style="left: 300px; top: 250px;">
-        <svg class="center-block" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="60px" height="192px" viewBox="0 0 38.846 100" enable-background="new 0 0 38.846 100" xml:space="preserve">
-            <path fill="#fff" d="M8.499,22.047c2.115-0.8,1.625-5.852,1.625-5.852c0-3.845,3.122-6.96,6.977-6.96c3.844,0,6.971,3.115,6.971,6.96 c0,3.861-3.127,6.982-6.971,6.982c-1.294,0-2.441-0.457-3.469-1.055C10.75,22.331,7.188,22.537,8.499,22.047z"/>
-            <path fill="#fff" d="M36.075,45.867c0-5.515-3.965-10.082-9.191-11.062c-1.778-5.639-4.666-9.832-9.402-9.832c-6.412,0-6.656,2.153-8.391,5.721 c0,0-0.005,0-0.005,0.007v0.01c-1.741,3.562-5.4,24.472-5.4,24.472c-0.277,1.202,0.472,2.398,1.67,2.681 c0.174,0.032,0.342,0.055,0.505,0.055c1.017,0,1.937-0.701,2.175-1.729l4.949-20.719l-2.366,29.41h3.659l1.437,26.212 c0,0.913,0.75,1.675,1.664,1.675c0.941,0,1.681-0.762,1.681-1.675l1.429-26.212h8.848c0,0,0.245-3.698,0.201-8.811 C33.387,54.274,36.075,50.391,36.075,45.867z M28.212,50.038c0,0-4.852-2.638-4.852-5.606c0-1.408,1.142-2.55,2.557-2.55 c1.164,0,1.984,0.854,2.295,1.931c0.314-1.077,1.131-1.931,2.295-1.931c1.412,0,2.561,1.142,2.561,2.55 C33.067,47.4,28.212,50.038,28.212,50.038z"/>
-        </svg>
-    </div>
-
-    <div class="circle circle-green circle-sm text-center" style="left: 150px; top: 420px;">
-        <i class="fa fa-wheelchair"></i>
-    </div>
-
-    <img class="minita" src="images/minita.png" alt="minita">
-
-    <p class="text-center lead Mt-20 Tt-u" style="margin-bottom: 0;">Compartí tu legado <a class="circle" href="#" style="margin-left: 10px;"><i class="fa fa-fw fa-facebook"></i></a> <a class="circle" href="#" style="margin-left: 10px;"><i class="fa fa-fw fa-twitter"></i></a></p>
-
-</section>
-
-<aside class="data">
-    <div class="section text-center">
-        <img src="images/bicentenario.png" alt="Bicentenario" width="190px">
-    </div>
-
-    <div class="section">
-        <p class="heading">Tenes más derechos gracias a:</p>
-        <p class="lead text-center"><%= leyes.length %> leyes</p>
-        <a href="#" class="btn btn-kry btn-inverse"><i class="fa fa-bookmark"></i> Conocé el resto de las leyes</a>
-    </div>
-
-    <div class="section">
-        <p class="heading Mb-10">Tus nuevos derechos abarcan:</p>
-
-        <ul class="list-unstyled">
-        <% leyes.forEach(function (ley) { %>
-            <li><i class="fa fa-circle-o" style="color: <%= ley.color %>;"></i> <%= ley.title %></li>
-        <% }); %>
-        </ul>
-    </div>
-
-    <div class="section">
-        <p class="heading text-center">Asi como vos, hay otros</p>
-        <p class="lead text-center"><%= comparten %></p>
-        <p class="heading text-center">Ciudadanos que adquirieron <br> estos mismos derechos</p>
-    </div>
-
-    <div class="section">
-        <p class="heading text-center Mb-20">Cuando adquiriste <br> estos derechos?</p>
-
-        <% fechas.forEach(function (fecha) { %>
-        <div class="progress">
-            <div class="progress-bar" style="width: <%= fecha.percentage %>%;">
-                <span><%= fecha.year %></span>
-            </div>
-            <span class="pull-left"><%= fecha.quantity %></span>
+<section class="HolyGrail-body" style="z-index: 2;">
+    <div class="HolyGrail-content" style="position: relative;">
+        <div class="text-center jumbotron">
+            <p class="lead">Este es el legado del Bicentenario para:</p>
+            <h1 class="nombre"><%= nombre %></h1>
         </div>
-        <% }); %>
+
+        <div class="clock">
+            <div class="circle circle-red hour hour-md hour2">
+                <i class="fa fa-user-md"></i>
+            </div>
+
+            <div class="circle circle-pink hour hour-lg hour10">
+                <svg class="center-block" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="60px" height="142px" viewBox="0 0 38.846 100" enable-background="new 0 0 38.846 100" xml:space="preserve">
+                    <path fill="#fff" d="M8.499,22.047c2.115-0.8,1.625-5.852,1.625-5.852c0-3.845,3.122-6.96,6.977-6.96c3.844,0,6.971,3.115,6.971,6.96 c0,3.861-3.127,6.982-6.971,6.982c-1.294,0-2.441-0.457-3.469-1.055C10.75,22.331,7.188,22.537,8.499,22.047z"/>
+                    <path fill="#fff" d="M36.075,45.867c0-5.515-3.965-10.082-9.191-11.062c-1.778-5.639-4.666-9.832-9.402-9.832c-6.412,0-6.656,2.153-8.391,5.721 c0,0-0.005,0-0.005,0.007v0.01c-1.741,3.562-5.4,24.472-5.4,24.472c-0.277,1.202,0.472,2.398,1.67,2.681 c0.174,0.032,0.342,0.055,0.505,0.055c1.017,0,1.937-0.701,2.175-1.729l4.949-20.719l-2.366,29.41h3.659l1.437,26.212 c0,0.913,0.75,1.675,1.664,1.675c0.941,0,1.681-0.762,1.681-1.675l1.429-26.212h8.848c0,0,0.245-3.698,0.201-8.811 C33.387,54.274,36.075,50.391,36.075,45.867z M28.212,50.038c0,0-4.852-2.638-4.852-5.606c0-1.408,1.142-2.55,2.557-2.55 c1.164,0,1.984,0.854,2.295,1.931c0.314-1.077,1.131-1.931,2.295-1.931c1.412,0,2.561,1.142,2.561,2.55 C33.067,47.4,28.212,50.038,28.212,50.038z"/>
+                </svg>
+            </div>
+
+            <div class="circle circle-green hour hour-md hour4">
+                <i class="fa fa-wheelchair"></i>
+            </div>
+        </div>
+
+        <div class="u-marginBl" style="margin-left: -40px">
+            <img class="img-responsive center-block" src="images/minita.png" alt="minita">
+        </div>
+
+        <p class="text-center lead">Compartí tu legado <a class="circle" href="#"><i class="fa fa-fw fa-facebook"></i></a> <a class="circle" href="#"><i class="fa fa-fw fa-twitter"></i></a></p>
     </div>
 
-</aside>
+    <div class="HolyGrail-right" style="background-color: #1F243A;">
+        <img class="img-responsive center-block u-paddingAl" src="images/bicentenario.png" alt="Bicentenario">
+
+        <div class="section text-center">
+            <p class="h3">Tenes más derechos gracias a:</p>
+            <p class="h1"><%= leyes.length %> leyes</p>
+            <a href="#" class="btn btn-primary"><i class="fa fa-bookmark"></i> Conocé el resto de las leyes</a>
+        </div>
+
+        <div class="section">
+            <p class="h3 text-center u-marginBl">Tus nuevos derechos abarcan:</p>
+
+            <ul class="list-unstyled u-marginBn">
+            <% leyes.forEach(function (ley) { %>
+                <li><i class="fa fa-circle-o" style="color: <%= ley.color %>;"></i> <%= ley.title %></li>
+            <% }); %>
+            </ul>
+        </div>
+
+        <div class="section text-center">
+            <p class="h3">Asi como vos, hay otros</p>
+            <p class="h1"><%= comparten %></p>
+            <p class="h3">Ciudadanos que adquirieron <br> estos mismos derechos</p>
+        </div>
+
+        <div class="section">
+            <p class="h3 text-center u-marginBl">Cuando adquiriste <br> estos derechos?</p>
+
+            <% fechas.forEach(function (fecha) { %>
+            <div class="progress">
+                <div class="progress-bar" style="width: <%= fecha.percentage %>%;">
+                    <span><%= fecha.year %></span>
+                </div>
+                <span class="pull-left"><%= fecha.quantity %></span>
+            </div>
+            <% }); %>
+        </div>
+
+    </div>
+</section>

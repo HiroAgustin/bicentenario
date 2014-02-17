@@ -12,17 +12,15 @@
     <link rel="stylesheet" href="styles/main.css">
     <link href='http://fonts.googleapis.com/css?family=Dosis' rel='stylesheet' type='text/css'>
 </head>
-<body>
+<body class="Site">
     <!--[if lt IE 10]>
         <p class="browsehappy">Usted esta usando un navegador <strong>viejo</strong>. Por favor <a href="http://browsehappy.com/">actualize su navegador</a> para mejorar su experiencia.</p>
     <![endif]-->
 
-    <div id="js-confetti-background" class="confetti-background"></div>
-
     <% include header %>
 
-    <main id="js-meny-body" class="main meny-body" role="main">
-        <% include caret-down %>        
+    <main id="js-meny-body" class="HolyGrail Site-content meny-body confetti-container" role="main">
+        <div id="js-confetti-background" class="confetti-background"></div>
 
         <%- body -%>
     </main>

@@ -1,36 +1,27 @@
-@import "vars";
-@import "bootstrap";
 @import "base";
 
-a {
-    // text-transform: uppercase;
-}
+@import "vendor/bootstrap";
+@import "vendor/suit/space";
 
-.link {
-    border-bottom: 1px solid $link-color;
+@import "vendor/aligner";
+@import "vendor/site";
+@import "vendor/holy-grail";
 
-    &:hover {
-        border-bottom: none;
-        text-decoration: none;
-    }
-}
+@import "utils/breakpoints";
 
-.external {
-    background: #0E1124;
-}
+@import "components/links";
+@import "components/circles";
+@import "components/clock";
+@import "components/section";
+@import "components/progress-bars";
+@import "components/buttons";
+@import "components/jumbotron";
 
-.site-footer {
-    background: #2F3452;
-    padding: $padding-base-vertical * 2 0;
-    position: relative;
-    z-index: 2;
-}
+@import "header";
+@import "footer";
 
-@import "container";
-@import "confetti";
-@import "btns";
-@import "circle";
-@import "meny";
+@import "vendor/confetti";
+@import "vendor/meny";
 
-
-@import "shame";
+@import "utils/tweeks";
+@import "utils/shame";

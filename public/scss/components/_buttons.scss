@@ -1,0 +1,29 @@
+// Social Buttons
+// -------------------------
+$btn-border-width: 5px;
+
+@mixin btn-custom($background) {
+    @include button-variant(white, $background, darken($background, 5%));
+}
+
+.btn-facebook {
+    @include btn-custom($brand-facebook);
+}
+
+.btn-twitter {
+    @include btn-custom($brand-twitter);
+}
+
+.btn {
+    border-width: 0 0 $btn-border-width;
+
+    &:hover {
+        border-bottom-width: $btn-border-width - 2;
+        margin-top: 2px;
+    }
+
+    &:active {
+        border-bottom-width: 0;
+        margin-top: $btn-border-width;
+    }
+}

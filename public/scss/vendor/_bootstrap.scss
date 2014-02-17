@@ -1,10 +1,11 @@
-// Core variables and mixins
-@import "variables";
+// Customized Bootstrap Variables
+@import "vars";
+
 @import "mixins";
 
 // Reset
 @import "normalize";
-// @import "print";
+@import "print";
 
 // Core CSS
 @import "scaffolding";
@@ -18,7 +19,7 @@
 // Components
 // @import "component-animations";
 // @import "glyphicons";
-// @import "dropdowns";
+@import "dropdowns";
 // @import "button-groups";
 // @import "input-groups";
 @import "navs";
@@ -28,7 +29,7 @@
 // @import "pager";
 // @import "labels";
 // @import "badges";
-// @import "jumbotron";
+@import "jumbotron";
 // @import "thumbnails";
 // @import "alerts";
 @import "progress-bars";
@@ -46,4 +47,4 @@
 
 // Utility classes
 @import "utilities";
-// @import "responsive-utilities";
+@import "responsive-utilities";

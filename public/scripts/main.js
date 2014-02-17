@@ -4,7 +4,7 @@
     ,   background = null
     ,   latch = doc.getElementById('js-meny-indicator');
 
-    latch.addEventListener('click', function ()
+    latch && latch.addEventListener('click', function ()
     {
         meny && meny.open();
     });
@@ -27,5 +27,8 @@
         background.start();
 
     });
+
+    // http://css-tricks.com/snippets/css/remove-gray-highlight-when-tapping-links-in-mobile-safari/
+    doc.addEventListener('touchstart', function(){}, true);
 
 }(window, document))
