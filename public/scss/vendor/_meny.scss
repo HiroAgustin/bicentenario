@@ -17,5 +17,8 @@
 
     @include breakpoint("small") {
         display: block;
+        left: 50%;
+        position: absolute;
+        @include transform(translateX(-50%));
     }
 }
