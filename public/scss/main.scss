@@ -7,10 +7,10 @@
 @import "vendor/solved-by-flexbox/aligner";
 @import "vendor/solved-by-flexbox/site";
 
-@import "vendor/bootstrap";
-@import "vendor/bootstrap/progress-bars";
-@import "vendor/bootstrap/jumbotron";
-@import "vendor/bootstrap/buttons";
+@import "vendor/bootstrap/index";
+@import "vendor/bootstrap/extend-progress-bars";
+@import "vendor/bootstrap/extend-jumbotron";
+@import "vendor/bootstrap/extend-buttons";
 
 @import "base";
 @import "header";
