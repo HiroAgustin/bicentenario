@@ -48,6 +48,10 @@
     }
 
     .HolyGrail-content {
+        -webkit-box-flex: 1;
+        -webkit-flex: 1;
+        -moz-box-flex: 1;
+        -ms-flex: 1;
         flex: 1;
         // the `flex` rule above should be applied but it's causing
         // problems in IE10 and IE11. Not specifying a `flex` property
