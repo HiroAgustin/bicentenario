@@ -1,9 +1,10 @@
-// .meny-header {
+.meny-header {
 // //     height: $navbar-height;
 // //     position: fixed;
 // //     width: 100%;
 //     z-index: 3; // 1 is background, 2 is body
-// }
+    overflow: auto;
+}
 
 // .meny-body {
 //     // padding-top: $navbar-height / 2 - 2;
