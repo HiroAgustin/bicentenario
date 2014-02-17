@@ -1,8 +1,11 @@
 @import "compass/css3/transform";
 @import "compass/css3/transition";
 
-@media (max-width: $screen-sm-min - 1) {
-    .meny-header {
+.meny-header {
+    z-index: 3 !important;
+    width: 100%;
+
+    @media (max-width: $screen-sm-min - 1) {
         height: auto !important;
         position: static !important;
         @include transform(none !important);

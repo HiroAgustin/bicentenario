@@ -1,27 +1,28 @@
-@import "base";
+@import "config";
 
-@import "vendor/bootstrap";
 @import "vendor/suit/space";
 
+@import "vendor/solved-by-flexbox/breakpoints";
+@import "vendor/solved-by-flexbox/holy-grail";
 @import "vendor/solved-by-flexbox/aligner";
 @import "vendor/solved-by-flexbox/site";
-@import "vendor/solved-by-flexbox/holy-grail";
 
-@import "utils/breakpoints";
+@import "vendor/bootstrap";
+@import "vendor/bootstrap/progress-bars";
+@import "vendor/bootstrap/jumbotron";
+@import "vendor/bootstrap/buttons";
 
-@import "components/links";
-@import "components/circles";
-@import "components/clock";
-@import "components/section";
-@import "components/progress-bars";
-@import "components/buttons";
-@import "components/jumbotron";
-
+@import "base";
 @import "header";
 @import "footer";
 
 @import "vendor/confetti";
 @import "vendor/meny";
+
+@import "components/links";
+@import "components/circles";
+@import "components/clock";
+@import "components/section";
 
 @import "utils/tweeks";
 @import "utils/shame";
