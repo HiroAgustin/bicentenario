@@ -52,9 +52,9 @@ $angle: 360deg / $elementsCount;
 
 @include breakpoint("small") {
     @for $i from 0 through $elementsCount - 1 {
-        .hour#{$i} {
+        .hour-#{$i} {
             $rotation: $i * $angle - 90deg;
-            @include transform(rotate($rotation) translateX(200px) translateZ(0));
+            @include transform(rotate($rotation) translateX(160px) translateZ(0));
 
             > * {
                 @include transform(rotate(-$rotation));
