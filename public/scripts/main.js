@@ -6,7 +6,7 @@
 
     latch && latch.addEventListener('click', function ()
     {
-        meny && meny.open();
+        meny && (meny.isOpen() ? meny.close() : meny.open());
     });
 
     win.addEventListener('resize', function ()
@@ -22,6 +22,7 @@
         ,   position: 'top'
         ,   height: 50
         ,   touch: false
+        ,   mouse: false
         });
 
         background = new confetti.Context('js-confetti-background');
