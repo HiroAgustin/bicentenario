@@ -47,7 +47,7 @@ $sizes: (
 }
 
 // Position in a circle
-$elementsCount: 12;
+$elementsCount: 24;
 $angle: 360deg / $elementsCount;
 
 @include breakpoint("small") {
