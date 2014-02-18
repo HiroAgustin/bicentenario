@@ -1,7 +1,5 @@
 @import "config";
 
-@import "vendor/suit/space";
-
 @import "vendor/solved-by-flexbox/breakpoints";
 @import "vendor/solved-by-flexbox/holy-grail";
 @import "vendor/solved-by-flexbox/aligner";
@@ -11,6 +9,8 @@
 @import "vendor/bootstrap/extend-progress-bars";
 @import "vendor/bootstrap/extend-jumbotron";
 @import "vendor/bootstrap/extend-buttons";
+
+@import "vendor/suit/space";
 
 @import "base";
 @import "header";
