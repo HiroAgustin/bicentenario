@@ -4,7 +4,7 @@ module.exports = function (grunt)
     require('load-grunt-tasks')(grunt);
 
     grunt.initConfig({
-        clean: ['public/styles', 'public/fonts']
+        clean: ['.sass-cache', 'public/styles']
     ,   compass: {
             main: {
                 options: {
@@ -38,7 +38,7 @@ module.exports = function (grunt)
     ,   copy: {
             main: {
                 files: [
-                    // Fontawesome Icons
+                    // Fontawesome
                     {
                         expand: true
                     ,   flatten: true
