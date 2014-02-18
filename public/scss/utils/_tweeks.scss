@@ -1,6 +1,7 @@
 body {
-    // http://maxvoltar.com/archive/-webkit-font-smoothing/
+    // http://maximilianhoffmann.com/posts/better-font-rendering-on-osx
     -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     // http://johanbrook.com/browsers/native-momentum-scrolling-ios-5/
     -webkit-overflow-scrolling: touch;
 }
