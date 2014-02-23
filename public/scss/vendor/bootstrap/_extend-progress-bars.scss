@@ -5,13 +5,13 @@
 
     &:nth-child(2n) {
         .progress-bar {
-            background-color: #2D3F93;
+            background-color: $blue;
         }
     }
 }
 
 .progress-bar {
-    background-color: #C31425;
+    background-color: $red;
     font-weight: bold;
     font-family: $headings-font-family;
     margin-right: 10px;
