@@ -5,6 +5,7 @@ app.use(express.static(__dirname + '/../public'));
 
 app.enable('verbose errors');
 
+app.use(require('./controllers/facebook'));
 app.use(require('./controllers/landing'));
 app.use(require('./controllers/law'));
 app.use(require('./controllers/error'));
