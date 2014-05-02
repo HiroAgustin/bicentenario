@@ -1,8 +1,11 @@
 (function (win, doc, undefined)
 {
-    var meny = null
+    var $ = function $ (selector) {
+            return doc.getElementById(selector)
+        }
+    ,   meny = null
     ,   background = null
-    ,   latch = doc.getElementById('js-meny-indicator');
+    ,   latch = $('js-meny-indicator');
 
     latch && latch.addEventListener('click', function ()
     {
@@ -17,8 +20,8 @@
     win.addEventListener('load', function ()
     {
         meny = Meny.create({
-            menuElement: doc.getElementById('js-meny-header')
-        ,   contentsElement: doc.getElementById('js-meny-body')
+            menuElement: $('js-meny-header')
+        ,   contentsElement: $('js-meny-body')
         ,   position: 'top'
         ,   height: 50
         ,   touch: false
