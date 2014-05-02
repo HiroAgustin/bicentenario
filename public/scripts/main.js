@@ -36,14 +36,4 @@
     // http://css-tricks.com/snippets/css/remove-gray-highlight-when-tapping-links-in-mobile-safari/
     doc.addEventListener('touchstart', function(){}, true);
 
-    // https://developers.facebook.com/docs/javascript/quickstart/v2.0#loading
-    win.fbAsyncInit = function ()
-    {
-        FB.init({
-            appId: '144441392317207'
-        ,   xfbml: true
-        ,   version: 'v2.0'
-        });
-    };
-
 }(window, document))
