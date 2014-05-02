@@ -1,5 +1,5 @@
 /*!
- * meny 1.3
+ * meny 1.4
  * http://lab.hakim.se/meny
  * MIT licensed
  *
@@ -76,6 +76,9 @@ var Meny = {
 				contentsTransformOpened,
 				contentsStyleClosed,
 				contentsStyleOpened;
+
+			var originalStyles = {},
+				addedEventListeners = [];
 
 			// Ongoing animations (for fallback mode)
 			var menuAnimation,
@@ -177,6 +180,8 @@ var Meny = {
 				// position
 				Meny.addClass( dom.wrapper, 'meny-' + config.position );
 
+				originalStyles.wrapper = dom.wrapper.style.cssText;
+
 				dom.wrapper.style[ Meny.prefix( 'perspective' ) ] = '800px';
 				dom.wrapper.style[ Meny.prefix( 'perspectiveOrigin' ) ] = contentsTransformOrigin;
 			}
@@ -250,6 +255,8 @@ var Meny = {
 						break;
 				}
 
+				originalStyles.menu = style.cssText;
+
 				style.position = 'fixed';
 				style.display = 'block';
 				style.zIndex = 1;
@@ -271,6 +278,8 @@ var Meny = {
 			function setupContents() {
 				// Shorthand
 				var style = dom.contents.style;
+
+				originalStyles.contents = style.cssText;
 
 				if( supports3DTransforms ) {
 					style[ Meny.prefix( 'transform' ) ] = contentsTransformClosed;
@@ -325,6 +334,11 @@ var Meny = {
 
 					// Use transforms and transitions if available...
 					if( supports3DTransforms ) {
+						// 'webkitAnimationEnd oanimationend msAnimationEnd animationend transitionend'
+						Meny.bindEventOnce( dom.wrapper, 'transitionend', function() {
+							Meny.dispatchEvent( dom.menu, 'opened' );
+						} );
+
 						dom.cover.style.opacity = 1;
 
 						dom.contents.style[ Meny.prefix( 'transform' ) ] = contentsTransformOpened;
@@ -355,6 +369,11 @@ var Meny = {
 
 					// Use transforms and transitions if available...
 					if( supports3DTransforms ) {
+						// 'webkitAnimationEnd oanimationend msAnimationEnd animationend transitionend'
+						Meny.bindEventOnce( dom.wrapper, 'transitionend', function() {
+							Meny.dispatchEvent( dom.menu, 'closed' );
+						} );
+
 						dom.cover.style.visibility = 'hidden';
 						dom.cover.style.opacity = 0;
 
@@ -368,11 +387,39 @@ var Meny = {
 						contentsAnimation && contentsAnimation.stop();
 						contentsAnimation = Meny.animate( dom.contents, contentsStyleClosed, 500 );
 						coverAnimation && coverAnimation.stop();
-						coverAnimation = Meny.animate( dom.cover, { opacity: 0 }, 500, function() { dom.cover.style.visibility = 'hidden'; } );
+						coverAnimation = Meny.animate( dom.cover, { opacity: 0 }, 500, function() {
+							dom.cover.style.visibility = 'hidden';
+							Meny.dispatchEvent( dom.menu, 'closed' );
+						} );
 					}
-
 					Meny.dispatchEvent( dom.menu, 'close' );
 				}
+			}
+
+			/**
+			 * Unbinds Meny and resets the DOM to the state it
+			 * was at before Meny was initialized.
+			 */
+			function destroy() {
+				dom.wrapper.style.cssText = originalStyles.wrapper
+				dom.menu.style.cssText = originalStyles.menu;
+				dom.contents.style.cssText = originalStyles.contents;
+
+				if( dom.cover && dom.cover.parentNode ) {
+					dom.cover.parentNode.removeChild( dom.cover );
+				}
+
+				Meny.unbindEvent( document, 'touchstart', onTouchStart );
+				Meny.unbindEvent( document, 'touchend', onTouchEnd );
+				Meny.unbindEvent( document, 'mousedown', onMouseDown );
+				Meny.unbindEvent( document, 'mouseup', onMouseUp );
+				Meny.unbindEvent( document, 'mousemove', onMouseMove );
+
+				for( var i in addedEventListeners ) {
+					this.removeEventListener( addedEventListeners[i][0], addedEventListeners[i][1] );
+				}
+
+				addedEventListeners = [];
 			}
 
 
@@ -546,6 +593,7 @@ var Meny = {
 
 				open: open,
 				close: close,
+				destroy: destroy,
 
 				isOpen: function() {
 					return isOpen;
@@ -555,6 +603,7 @@ var Meny = {
 				 * Forward event binding to the menu DOM element.
 				 */
 				addEventListener: function( type, listener ) {
+					addedEventListeners.push( [type, listener] );
 					dom.menu && Meny.bindEvent( dom.menu, type, listener );
 				},
 				removeEventListener: function( type, listener ) {
@@ -687,6 +736,15 @@ var Meny = {
 		else {
 			element.detachEvent( 'on' + ev, fn );
 		}
+	},
+
+	bindEventOnce: function ( element, ev, fn ) {
+		var me = this;
+		var listener = function() {
+			me.unbindEvent( element, ev, listener );
+			fn.apply( this, arguments );
+		};
+		this.bindEvent( element, ev, listener );
 	},
 
 	/**
