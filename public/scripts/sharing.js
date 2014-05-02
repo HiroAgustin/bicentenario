@@ -1,4 +1,4 @@
-(function (win, doc, s, fb, tw)
+(function (win, doc, s, fb, tw, ggl)
 {
     var js, fjs = doc.getElementsByTagName(s)[0];
 
@@ -26,4 +26,22 @@
     fjs.parentNode.insertBefore(js,fjs);
     // <!-- End Twitter Button -->
 
-}(window, document, 'script', 'facebook-jssdk', 'twitter-wjs'));
+    // <!-- Google Analytics -->
+    win['GoogleAnalyticsObject'] = 'ga';
+
+    win.ga = function ()
+    {
+        (win.ga.q = win.ga.q || []).push(arguments);
+    };
+
+    win.ga.l = 1 * new Date();
+        
+    js.async = 1;
+    js.src = ggl;
+    fjs.parentNode.insertBefore(js, fjs)
+
+    ga('create', 'UA-XXXX-Y', 'auto');
+    ga('send', 'pageview');
+    // <!-- End Google Analytics -->
+
+}(window, document, 'script', 'facebook-jssdk', 'twitter-wjs', '//www.google-analytics.com/analytics.js'))
