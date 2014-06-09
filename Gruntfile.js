@@ -58,7 +58,7 @@ module.exports = function (grunt)
                         expand: true
                     ,   flatten: true
                     ,   filter: 'isFile'
-                    ,   src: ['public/bower_components/meny/js/meny.js']
+                    ,   src: []
                     ,   dest: 'public/scripts/'
                     }
                     // Bootstrap Libs

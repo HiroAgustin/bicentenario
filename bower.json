@@ -3,10 +3,11 @@
   "version": "0.0.0",
   "dependencies": {
     "font-awesome": "*",
-    "meny": "*"
+    "normalize-css": "~3.0.1"
   },
   "devDependencies": {
     "bootstrap-sass": "https://github.com/twbs/bootstrap-sass.git",
-    "suit": "*"
+    "suit": "*",
+    "normalize-css": "~3.0.1"
   }
 }
