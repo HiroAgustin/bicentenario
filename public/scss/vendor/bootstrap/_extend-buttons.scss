@@ -10,10 +10,6 @@ $btn-border-width: 5px;
     @include btn-custom($brand-facebook);
 }
 
-.btn-twitter {
-    @include btn-custom($brand-twitter);
-}
-
 .btn {
     border-width: 0 0 $btn-border-width;
 
