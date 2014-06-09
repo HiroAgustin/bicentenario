@@ -61,14 +61,6 @@ module.exports = function (grunt)
                     ,   src: []
                     ,   dest: 'public/scripts/'
                     }
-                    // Bootstrap Libs
-                // ,   {
-                //         expand: true
-                //     ,   flatten: true
-                //     ,   filter: 'isFile'
-                //     ,   src: ['public/bower_components/bootstrap-sass/vendor/assets/javascripts/bootstrap/collapse.js']
-                //     ,   dest: 'public/scripts/'
-                //     }
                 ]
             }
         }
