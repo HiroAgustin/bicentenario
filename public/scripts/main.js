@@ -13,7 +13,4 @@
         background.start();
     });
 
-    // http://css-tricks.com/snippets/css/remove-gray-highlight-when-tapping-links-in-mobile-safari/
-    doc.addEventListener('touchstart', function(){}, true);
-
 }(window, document))
