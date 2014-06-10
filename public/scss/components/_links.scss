@@ -1,5 +1,6 @@
 .link {
     border-bottom: 1px solid $link-color;
+    padding-bottom: $padding-small-vertical;
 
     &:hover {
         border-bottom: none;
