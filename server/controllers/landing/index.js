@@ -3,8 +3,13 @@ var controller = require(__dirname + '/../../lib/controller.js')
 
 app.get('/', function (req, res)
 {
-    res.render('home', {
-        title: 'Bicentenario'
+    res.render('home');
+});
+
+app.get('/ingresar', function (req, res)
+{
+    res.render('form', {
+        title: 'Ingresar mi informacón'
     });
 });
 

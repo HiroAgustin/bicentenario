@@ -1,4 +1,6 @@
-body {
+@import "compass/css3/transform";
+
+body, input, select {
     // http://maximilianhoffmann.com/posts/better-font-rendering-on-osx
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -9,4 +11,12 @@ body {
 a {
     // http://css-tricks.com/snippets/css/remove-gray-highlight-when-tapping-links-in-mobile-safari/
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/* Double-sized Checkboxes */
+input[type=checkbox] {
+    margin-right: 15px;
+    outline: none;
+    padding: 10px;
+    @include scale(2);
 }
