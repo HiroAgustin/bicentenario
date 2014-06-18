@@ -8,6 +8,7 @@ module.exports = function (dirname)
     app.configure(function ()
     {
         app.set('views', dirname + '/views');
+        app.set('view engine', 'ejs');
         app.engine('ejs', engine);
 
         app.use(express.logger());
