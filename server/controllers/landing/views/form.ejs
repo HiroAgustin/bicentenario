@@ -22,8 +22,8 @@
                             <select name="edad" class="form-control" id="edad">
                                 <option value=""></option>
                                 <option value="">Niño</option>
-                                <option value="">Joven</option>
-                                <option value="">Adulto</option>
+                                <option value="" <%= user.isYoung ? 'selected' : '' %>>Joven</option>
+                                <option value="" <%= user.isAdult ? 'selected' : '' %>>Adulto</option>
                                 <option value="">Mayor</option>
                             </select>
                         </div>

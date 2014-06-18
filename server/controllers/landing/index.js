@@ -9,12 +9,14 @@ var controller = require(__dirname + '/../../lib/controller.js')
 ,   parseUser = function parseUser (user)
     {
         var gender = getAttr(user, 'gender')
-        ,   birthday = getAttr(user, 'birthday');
+        ,   ageRange = getAttr(user, 'age_range');
 
         return {
             name: getAttr(user, 'first_name')
         ,   isMale: gender === 'male'
         ,   isFemale: gender === 'female'
+        ,   isYoung: ageRange.max === 17
+        ,   isAdult: ageRange.min >= 18
         }
     };
 
