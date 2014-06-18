@@ -21,10 +21,10 @@
                             <label for="edad">Edad</label>
                             <select name="edad" class="form-control" id="edad">
                                 <option value=""></option>
-                                <option value="">Niño</option>
-                                <option value="" <%= user.isYoung ? 'selected' : '' %>>Joven</option>
-                                <option value="" <%= user.isAdult ? 'selected' : '' %>>Adulto</option>
-                                <option value="">Mayor</option>
+                                <option value="nino">Niño</option>
+                                <option value="joven" <%= user.isYoung ? 'selected' : '' %>>Joven</option>
+                                <option value="adulto" <%= user.isAdult ? 'selected' : '' %>>Adulto</option>
+                                <option value="mayor">Mayor</option>
                             </select>
                         </div>
                     </div>
@@ -35,9 +35,9 @@
                             <label for="sexo">Sexo</label>
                             <select name="sexo" class="form-control" id="sexo">
                                 <option value=""></option>
-                                <option value="" <%= user.isMale ? 'selected' : '' %>>Hombre</option>
-                                <option value="" <%= user.isFemale ? 'selected' : '' %>>Mujer</option>
-                                <option value="">Otro</option>
+                                <option value="hombre" <%= user.isMale ? 'selected' : '' %>>Hombre</option>
+                                <option value="mujer" <%= user.isFemale ? 'selected' : '' %>>Mujer</option>
+                                <option value="otro">Otro</option>
                             </select>
                         </div>
                     </div>
@@ -46,10 +46,10 @@
                             <label for="estado-civil">Estado civil</label>
                             <select name="estado-civil" class="form-control" id="estado-civil">
                                 <option value=""></option>
-                                <option value="">Casado</option>
-                                <option value="">Soltero</option>
-                                <option value="">Concubinato</option>
-                                <option value="">Viudo</option>
+                                <option value="casado">Casado</option>
+                                <option value="soltero">Soltero</option>
+                                <option value="concubinato">Concubinato</option>
+                                <option value="viudo">Viudo</option>
                             </select>
                         </div>
                     </div>
@@ -59,8 +59,8 @@
                         <div class="form-group">
                             <label for="residencia">País de residencia</label>
                             <select name="residencia" class="form-control" id="residencia">
-                                <option value="">Uruguay</option>
-                                <option value="">Extranjero</option>
+                                <option value="uruguay">Uruguay</option>
+                                <option value="extranjero">Extranjero</option>
                             </select>
                         </div>
                     </div>
@@ -68,25 +68,25 @@
 
                 <div class="checkbox">
                     <label>
-                        <input type="checkbox" value="">
+                        <input type="checkbox" name="dicapacidad" value="si">
                         Incluir leyes sobre discapacidad.
                     </label>
                 </div>
                 <div class="checkbox">
                     <label>
-                        <input type="checkbox" value="">
+                        <input type="checkbox" name="identidad-genero" value="si">
                         Incluir leyes de identidad de genero.
                     </label>
                 </div>
                 <div class="checkbox">
                     <label>
-                        <input type="checkbox" value="">
+                        <input type="checkbox" name="identidad-racial" value="si">
                         Incluir leyes sobre identidad racial.
                     </label>
                 </div>
                 <div class="checkbox">
                     <label>
-                        <input type="checkbox" value="">
+                        <input type="checkbox" name="hijos" value="si">
                         Incluir leyes sobre hijos.
                     </label>
                 </div>
