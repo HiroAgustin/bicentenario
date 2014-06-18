@@ -26,17 +26,16 @@ passport.use(new FacebookStrategy(
     {
         clientID: 144441392317207
     ,   clientSecret: 'a82599dde1be3f8ad3986d203125e9f3'
-    ,   callbackURL: 'http://localhost:9000/auth/facebook/callback'
-    // ,   profileFields: ['id', 'displayName']
+    ,   callbackURL: '/auth/facebook/callback'
+    ,   profileFields: ['id', 'displayName']
     }
 ,   function (accessToken, refreshToken, profile, done)
     {
         // asynchronous verification, for effect...
         process.nextTick(function ()
         {
-            console.log(this, arguments);
             // To keep the example simple, the user's Facebook profile is returned to
-            // represent the logged-in user.  In a typical application, you would want
+            // represent the logged-in user. In a typical application, you would want
             // to associate the Facebook account with a user record in your database,
             // and return that user instead.
             return done(null, profile);
@@ -44,16 +43,17 @@ passport.use(new FacebookStrategy(
     }
 ));
 
-var controller = require('express')
+var controller = require(__dirname + '/../../lib/controller.js')
 ,   app = module.exports = controller();
 
 app.use(passport.initialize());
 app.use(passport.session());
 
 app.get('/auth/facebook', passport.authenticate('facebook', {
+    display: 'page'
 }));
 
 app.get('/auth/facebook/callback', passport.authenticate('facebook', {
-    failureRedirect: '/' 
-,   successRedirect: 'http://localhost:9000/mis-leyes'
+    failureRedirect: '/'
+,   successRedirect: '/ingresar'
 }));
