@@ -1,7 +1,10 @@
 var express = require('express')
 ,   app = module.exports = express();
 
-app.use(express.static(__dirname + '/../public'));
+app.use(express.static(__dirname + '/../public'), {
+    // One week in miliseconds
+    maxAge: 604800000
+});
 
 app.enable('verbose errors');
 
