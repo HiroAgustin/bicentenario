@@ -33,6 +33,8 @@ $brand-twitter: #4099FF;
 $red: #ed1c24;
 $blue: #024594;
 $lightBlue: #006cb7;
+$purple: #1F243A;
+$darkPurple: #13182c;
 
 
 // Scaffolding
@@ -299,7 +301,7 @@ $navbar-margin-bottom: 0;
 //
 // Reset inverted navbar basics
 $navbar-inverse-color: #fff;
-$navbar-inverse-bg: #13182C;
+$navbar-inverse-bg: $darkPurple;
 // $navbar-inverse-border:                     darken($navbar-inverse-bg, 10%);
 
 // Inverted navbar links
@@ -378,7 +380,7 @@ $navbar-inverse-toggle-border-color: $navbar-inverse-toggle-hover-bg;
 
 // $jumbotron-padding:              30px !default;
 // $jumbotron-color:                inherit !default;
-$jumbotron-bg: $body-bg;
+// $jumbotron-bg: $body-bg;
 // $jumbotron-heading-color:        inherit !default;
 // $jumbotron-font-size:            ceil($font-size-base * 1.5) !default;
 
