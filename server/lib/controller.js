@@ -11,7 +11,6 @@ module.exports = function (dirname)
         app.set('view engine', 'ejs');
         app.engine('ejs', engine);
 
-        app.use(express.logger());
         app.use(express.compress());
 
         app.use(express.json());
