@@ -35,8 +35,8 @@
                             <label for="sexo">Sexo</label>
                             <select name="sexo" class="form-control" id="sexo">
                                 <option value=""></option>
-                                <option value="">Hombre</option>
-                                <option value="">Mujer</option>
+                                <option value="" <%= user.isMale ? 'selected' : '' %>>Hombre</option>
+                                <option value="" <%= user.isFemale ? 'selected' : '' %>>Mujer</option>
                                 <option value="">Otro</option>
                             </select>
                         </div>
