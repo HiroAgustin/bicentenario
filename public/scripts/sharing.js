@@ -1,6 +1,6 @@
-(function (win, doc, s, fb, tw, ggl)
+(function (win, doc, s, fb, tw, ggl, js, fjs)
 {
-    var js, fjs = doc.getElementsByTagName(s)[0];
+    fjs = doc.getElementsByTagName(s)[0];
 
     // https://developers.facebook.com/docs/javascript/quickstart/v2.0#loading
     win.fbAsyncInit = function ()
@@ -23,7 +23,7 @@
     js = doc.createElement(s);
     js.id = tw;
     js.src = '//platform.twitter.com/widgets.js';
-    fjs.parentNode.insertBefore(js,fjs);
+    fjs.parentNode.insertBefore(js, fjs);
     // <!-- End Twitter Button -->
 
     // <!-- Google Analytics -->
