@@ -4,19 +4,23 @@ module.exports = function (dirname)
     ,   engine = require('ejs-locals')
     ,   app = express();
 
-    app.engine('ejs', engine);
-    app.set('views', dirname + '/views');
-    app.set('view engine', 'ejs');
+    // configure Express
+    app.configure(function ()
+    {
+        app.set('views', dirname + '/views');
+        app.engine('ejs', engine);
 
-    app.use(express.json());
-    app.use(express.urlencoded());
+        app.use(express.logger());
+        app.use(express.compress());
 
-    app.use(express.cookieParser());
+        app.use(express.json());
+        app.use(express.urlencoded());
 
-    app.use(express.session({
-        secret: 'Apples are red'
-    }));
-
+        app.use(express.cookieParser());
+        app.use(express.session({
+            secret: 'Apples are red'
+        }));
+    });
 
     return app;
 };
