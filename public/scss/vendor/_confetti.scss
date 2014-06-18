@@ -14,4 +14,8 @@
     @include breakpoint("small") {
         display: block;
     }
+
+    + section {
+        z-index: 2;
+    }
 }
