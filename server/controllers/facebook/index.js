@@ -27,7 +27,7 @@ passport.use(new FacebookStrategy(
         clientID: 144441392317207
     ,   clientSecret: 'a82599dde1be3f8ad3986d203125e9f3'
     ,   callbackURL: '/auth/facebook/callback'
-    ,   profileFields: ['id', 'displayName']
+    ,   profileFields: ['first_name', 'gender', 'birthday']
     }
 ,   function (accessToken, refreshToken, profile, done)
     {
