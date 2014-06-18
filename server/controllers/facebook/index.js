@@ -49,9 +49,7 @@ var controller = require(__dirname + '/../../lib/controller.js')
 app.use(passport.initialize());
 app.use(passport.session());
 
-app.get('/auth/facebook', passport.authenticate('facebook', {
-    display: 'page'
-}));
+app.get('/auth/facebook', passport.authenticate('facebook'));
 
 app.get('/auth/facebook/callback', passport.authenticate('facebook', {
     failureRedirect: '/'
