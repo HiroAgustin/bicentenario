@@ -1,6 +1,19 @@
 var controller = require(__dirname + '/../../lib/controller.js')
 ,   app = module.exports = controller(__dirname)
-,   _ = require('underscore');
+,   _ = require('underscore')
+
+,   request = require('superagent')
+
+,   parseData = function parseData (data)
+    {
+        return {
+        };
+    }
+
+,   fetchLaws = function fetchLaws (data, callback)
+    {
+        request.get('').data(data).end(callback);
+    }
 
 app.get('/mis-leyes', function (req, res)
 {
@@ -51,5 +64,8 @@ app.get('/mis-leyes', function (req, res)
         };
     });
 
-    res.render('user', api);
+    // fetchLaws(parseData(req.query), function (laws)
+    // {
+        res.render('user', api);
+    // });
 });
