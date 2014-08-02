@@ -3,18 +3,18 @@
 $btn-border-width: 5px;
 
 @mixin btn-custom($background) {
-    @include button-variant(white, $background, darken($background, 5%));
+	@include button-variant(white, $background, darken($background, 5%));
 }
 
 .btn-facebook {
-    @include btn-custom($brand-facebook);
+	@include btn-custom($brand-facebook);
 }
 
 .btn {
-    border-width: 0 0 $btn-border-width;
+	border-width: 0 0 $btn-border-width;
 
-    &:active {
-        border-bottom-width: 0;
-        margin-top: $btn-border-width;
-    }
+	&:active {
+		border-bottom-width: 0;
+		margin-top: $btn-border-width;
+	}
 }

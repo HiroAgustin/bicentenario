@@ -1,16 +1,16 @@
 $breakpoints: (
-    "(min-width: #{$screen-xs-min})" "xsmall"
+	"(min-width: #{$screen-xs-min})" "xsmall"
 ,   "(min-width: #{$screen-sm-min})" "small"
 ,   "(min-width: #{$screen-md-min})" "med"
 ,   "(min-width: #{$screen-lg-min})" "large"
 );
 
 @mixin breakpoint($point) {
-    @each $breakpoint in $breakpoints {
-        $query: nth($breakpoint, 1);
-        $name: nth($breakpoint, 2);
-        @if ($name == $point) {
-            @media #{$query} { @content }
-        }
-    }
+	@each $breakpoint in $breakpoints {
+		$query: nth($breakpoint, 1);
+		$name: nth($breakpoint, 2);
+		@if ($name == $point) {
+			@media #{$query} { @content }
+		}
+	}
 }

@@ -1,21 +1,21 @@
 .confetti-container {
-    position: relative;
+	position: relative;
 }
 
 .confetti-background {
-    bottom: 0;
-    display: none;
-    left: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-    z-index: 1;
+	bottom: 0;
+	display: none;
+	left: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+	z-index: 1;
 
-    @include breakpoint("small") {
-        display: block;
-    }
+	@include breakpoint("small") {
+		display: block;
+	}
 
-    + section {
-        z-index: 2;
-    }
+	+ section {
+		z-index: 2;
+	}
 }

@@ -1,5 +1,5 @@
 var passport = require('passport')
-,   FacebookStrategy = require('passport-facebook').Strategy;
+,	FacebookStrategy = require('passport-facebook').Strategy;
 
 // Passport session setup.
 //   To support persistent login sessions, Passport needs to be able to
@@ -10,12 +10,12 @@ var passport = require('passport')
 //   and deserialized.
 passport.serializeUser(function (user, done)
 {
-    done(null, user);
+	done(null, user);
 });
 
 passport.deserializeUser(function (obj, done)
 {
-    done(null, obj);
+	done(null, obj);
 });
 
 // Use the FacebookStrategy within Passport.
@@ -23,35 +23,38 @@ passport.deserializeUser(function (obj, done)
 //   credentials (in this case, an accessToken, refreshToken, and Facebook
 //   profile), and invoke a callback with a user object.
 passport.use(new FacebookStrategy(
-    {
-        clientID: 144441392317207
-    ,   clientSecret: 'a82599dde1be3f8ad3986d203125e9f3'
-    ,   callbackURL: '/auth/facebook/callback'
-    ,   profileFields: ['first_name', 'gender', 'age_range']
-    }
-,   function (accessToken, refreshToken, profile, done)
-    {
-        // asynchronous verification, for effect...
-        process.nextTick(function ()
-        {
-            // To keep the example simple, the user's Facebook profile is returned to
-            // represent the logged-in user. In a typical application, you would want
-            // to associate the Facebook account with a user record in your database,
-            // and return that user instead.
-            return done(null, profile);
-        });
-    }
+	{
+		clientID: 144441392317207
+	,	clientSecret: 'a82599dde1be3f8ad3986d203125e9f3'
+	,	callbackURL: '/auth/facebook/callback'
+	,	profileFields: ['first_name', 'gender', 'birthday', 'relationship_status', 'location']
+	}
+,	function (accessToken, refreshToken, profile, done)
+	{
+		// asynchronous verification, for effect...
+		process.nextTick(function ()
+		{
+			// To keep the example simple, the user's Facebook profile is returned to
+			// represent the logged-in user. In a typical application, you would want
+			// to associate the Facebook account with a user record in your database,
+			// and return that user instead.
+			return done(null, profile);
+		});
+	}
 ));
 
 var controller = require(__dirname + '/../../lib/controller.js')
-,   app = module.exports = controller();
+,	app = module.exports = controller();
 
 app.use(passport.initialize());
 app.use(passport.session());
 
-app.get('/auth/facebook', passport.authenticate('facebook'));
+app.get('/auth/facebook', passport.authenticate('facebook', {
+	scope: ['user_relationships', 'user_birthday', 'user_location']
+,	display: 'touch'
+}));
 
 app.get('/auth/facebook/callback', passport.authenticate('facebook', {
-    failureRedirect: '/'
-,   successRedirect: '/ingresar'
+	failureRedirect: '/'
+,	successRedirect: '/ingresar'
 }));

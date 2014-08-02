@@ -1,68 +1,68 @@
 .HolyGrail {
-    min-height: 100%;
+	min-height: 100%;
 }
 
 .HolyGrail, .HolyGrail-body {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-    -moz-box-orient: vertical;
-    -moz-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	-moz-box-orient: vertical;
+	-moz-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
 }
 
 .HolyGrail-left {
-    -webkit-box-ordinal-group: 0;
-    -webkit-order: -1;
-    -moz-box-ordinal-group: 0;
-    -ms-flex-order: -1;
-    order: -1;
+	-webkit-box-ordinal-group: 0;
+	-webkit-order: -1;
+	-moz-box-ordinal-group: 0;
+	-ms-flex-order: -1;
+	order: -1;
 }
 
 @include breakpoint("small") {
 
-    .HolyGrail-body {
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-        -webkit-flex-direction: row;
-        -moz-box-orient: horizontal;
-        -moz-box-direction: normal;
-        -ms-flex-direction: row;
-        flex-direction: row;
-        -webkit-box-flex: 1;
-        -webkit-flex: 1;
-        -moz-box-flex: 1;
-        -ms-flex: 1;
-        flex: 1;
+	.HolyGrail-body {
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		-webkit-flex-direction: row;
+		-moz-box-orient: horizontal;
+		-moz-box-direction: normal;
+		-ms-flex-direction: row;
+		flex-direction: row;
+		-webkit-box-flex: 1;
+		-webkit-flex: 1;
+		-moz-box-flex: 1;
+		-ms-flex: 1;
+		flex: 1;
 
-        /* stupid IE10 tweener syntax */
-        -ms-flex-preferred-size: auto;
-    }
+		/* stupid IE10 tweener syntax */
+		-ms-flex-preferred-size: auto;
+	}
 
-    .HolyGrail-content {
-        -webkit-box-flex: 1;
-        -webkit-flex: 1;
-        -moz-box-flex: 1;
-        -ms-flex: 1;
-        flex: 1;
-        // the `flex` rule above should be applied but it's causing
-        // problems in IE10 and IE11. Not specifying a `flex` property
-        // and using the `-ms-flex` property here seems to make it
-        // work in all browsers for whatever reason
-        -ms-flex: 1 1 auto;
-    }
+	.HolyGrail-content {
+		-webkit-box-flex: 1;
+		-webkit-flex: 1;
+		-moz-box-flex: 1;
+		-ms-flex: 1;
+		flex: 1;
+		// the `flex` rule above should be applied but it's causing
+		// problems in IE10 and IE11. Not specifying a `flex` property
+		// and using the `-ms-flex` property here seems to make it
+		// work in all browsers for whatever reason
+		-ms-flex: 1 1 auto;
+	}
 
-    .HolyGrail-left, .HolyGrail-right {
-        -webkit-box-flex: 0;
-        -webkit-flex: 0 0 24em;
-        -moz-box-flex: 0;
-        -ms-flex: 0 0 24em;
-        flex: 0 0 24em;
-    }
+	.HolyGrail-left, .HolyGrail-right {
+		-webkit-box-flex: 0;
+		-webkit-flex: 0 0 24em;
+		-moz-box-flex: 0;
+		-ms-flex: 0 0 24em;
+		flex: 0 0 24em;
+	}
 }

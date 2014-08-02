@@ -1,9 +1,9 @@
 .link {
-    border-bottom: 1px solid $link-color;
-    padding-bottom: $padding-small-vertical;
+	border-bottom: 1px solid $link-color;
+	padding-bottom: $padding-small-vertical;
 
-    &:hover {
-        border-bottom: none;
-        text-decoration: none;
-    }
+	&:hover {
+		border-bottom: none;
+		text-decoration: none;
+	}
 }

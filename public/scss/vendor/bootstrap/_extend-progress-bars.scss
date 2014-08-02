@@ -1,24 +1,24 @@
 @import "compass/css3/box-shadow";
 
 .progress {
-    @include box-shadow(transparent 0 0 0);
+	@include box-shadow(transparent 0 0 0);
 
-    height: $font-size-base * 2;
-    line-height: $font-size-base * 2;
+	height: $font-size-base * 2;
+	line-height: $font-size-base * 2;
 
-    &:nth-child(2n) {
-        .progress-bar {
-            background-color: $blue;
-        }
-    }
+	&:nth-child(2n) {
+		.progress-bar {
+			background-color: $blue;
+		}
+	}
 }
 
 .progress-bar {
-    background-color: $red;
-    font-weight: bold;
-    font-family: $headings-font-family;
-    line-height: $font-size-base * 2;
-    margin-right: 10px;
-    text-align: left;
-    text-indent: 10px;
+	background-color: $red;
+	font-weight: bold;
+	font-family: $headings-font-family;
+	line-height: $font-size-base * 2;
+	margin-right: 10px;
+	text-align: left;
+	text-indent: 10px;
 }

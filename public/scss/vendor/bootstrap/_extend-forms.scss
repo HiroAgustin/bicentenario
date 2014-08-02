@@ -1,14 +1,14 @@
 legend {
-    border-bottom: none;
-    border-top: 1px solid $legend-border-color;
-    padding-top: $padding-large-vertical;
+	border-bottom: none;
+	border-top: 1px solid $legend-border-color;
+	padding-top: $padding-large-vertical;
 }
 
 label {
-    font-weight: normal;
+	font-weight: normal;
 }
 
 .form-control:focus {
-    border-color: $input-border;
-    box-shadow: none;
+	border-color: $input-border;
+	box-shadow: none;
 }

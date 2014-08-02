@@ -11,7 +11,7 @@ module.exports = function (grunt)
                     sassDir: 'public/scss'
                 ,   cssDir: 'public/styles'
                 ,   importPath: [
-                        'public/bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/'
+                        'public/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/'
                     ]
                 ,   outputStyle: 'compressed'
                 }

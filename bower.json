@@ -2,12 +2,11 @@
   "name": "bicentenario",
   "version": "0.0.0",
   "dependencies": {
-    "font-awesome": "*",
-    "normalize-css": "~3.0.1"
   },
   "devDependencies": {
-    "bootstrap-sass": "https://github.com/twbs/bootstrap-sass.git",
-    "suit": "*",
-    "normalize-css": "~3.0.1"
+    "suit": "~0.4.0",
+    "wtf-forms": "~2.2.0",
+    "font-awesome": "~4.0.3",
+    "bootstrap-sass-official": "~3.2.0"
   }
 }
