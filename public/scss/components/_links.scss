@@ -1,3 +1,5 @@
+@import "compass/css3/transition";
+
 .link {
 	border-bottom: 1px solid $link-color;
 	padding-bottom: $padding-small-vertical;
@@ -5,5 +7,30 @@
 	&:hover {
 		border-bottom: none;
 		text-decoration: none;
+	}
+}
+
+.share-link {
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+
+	@include single-transition(background-color, 0.25s, ease-in);
+
+	&:hover {
+		border-color: $body-bg;
+		color: $link-color;
+	}
+}
+
+.share-facebook {
+	&:hover {
+		background-color: $brand-facebook;
+	}
+}
+
+.share-twitter {
+	&:hover {
+		background-color: $brand-twitter;
 	}
 }
