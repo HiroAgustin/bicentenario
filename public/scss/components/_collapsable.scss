@@ -1,0 +1,13 @@
+@import "compass/css3/transition";
+
+.collapsable {
+	display: block;
+
+	&:hover {
+		display: block;
+	}
+}
+
+.collapsed {
+	display: none;
+}

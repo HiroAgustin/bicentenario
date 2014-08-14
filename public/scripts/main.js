@@ -1,6 +1,21 @@
 (function (win, doc, undefined)
 {
-	var background = null;
+	var background = null
+
+	,	$ = function $ (selector)
+		{
+			return doc.querySelectorAll(selector);
+		};
+
+	Array.prototype.forEach.call($('[data-toggle="collapse"]'), function (button)
+	{
+		button.addEventListener('click', function (event)
+		{
+			event.preventDefault();
+
+			$(this.getAttribute('href'))[0].classList.toggle('collapsed');
+		});
+	});
 
 	win.addEventListener('resize', function ()
 	{
