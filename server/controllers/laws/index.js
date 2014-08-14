@@ -105,6 +105,6 @@ app.get('/mis-leyes', function (req, res)
 	fetchLaws(parseQuery(req.query), function (result)
 	{
 		if (result.ok)
-			res.render('laws', parseResutls(req, result.body));
+			res.render('user', parseResutls(req, result.body));
 	});
 });
