@@ -9,8 +9,8 @@
 
     win.addEventListener('load', function ()
     {
-        background = new confetti.Context('js-confetti-background');
-        background.start();
+        // background = new confetti.Context('js-confetti-background');
+        // background.start();
     });
 
 }(window, document))

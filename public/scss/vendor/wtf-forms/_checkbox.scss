@@ -50,7 +50,7 @@
 /* Checked state */
 .control input:checked ~ .control-indicator {
   color: #fff;
-  background-color: #0074d9;
+  background-color: $purple;
 }
 
 /* Active */

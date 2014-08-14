@@ -4,6 +4,14 @@ var controller = require(__dirname + '/../../lib/controller.js')
 
 ,	request = require('superagent')
 
+,   _ = require('underscore')
+
+,	categories = {
+		0: 'Indefinido'
+	,	1: 'Igualdad'
+	,	2: 'Trabajo'
+	}
+
 ,	getCivil = function getCivil (estado)
 	{
 		switch (estado)
@@ -20,6 +28,7 @@ var controller = require(__dirname + '/../../lib/controller.js')
 ,	parseQuery = function parseQuery (query)
 	{
 		var sexo = query.sexo
+
 		,	estado = query['estado-civil'];
 
 		return {
@@ -35,7 +44,7 @@ var controller = require(__dirname + '/../../lib/controller.js')
 		};
 	}
 
-	fetchLaws = function fetchLaws (query, callback)
+,	fetchLaws = function fetchLaws (query, callback)
 	{
 		request
 			.get('http://bicente.itsu.com.uy/bicentenario.php')
@@ -43,23 +52,59 @@ var controller = require(__dirname + '/../../lib/controller.js')
 			.end(callback);
 	}
 
-	parseResutls = function parseResutls (nombre, laws)
+,	parseLaw = function parseLaw (law)
 	{
 		return {
-			nombre: nombre
-		,	leyes: []
-		,	fechas: []
-		,	comparten: ''
+			id: law.id
+		,	category: law.categoria
+		,	year: (new Date(law.fecha)).getFullYear()
+		};
+	}
+
+,	getCategory = function getCategory (category)
+	{
+		return {
+			id: category
+		,	title: categories[category]
+		};
+	}
+
+,	parseResutls = function parseResutls (req, laws)
+	{
+		var query = req.query
+
+		,	leyes = _.map(laws, parseLaw)
+
+		,	byYear = _.groupBy(leyes, 'year')
+
+		,	max = _.max(byYear, _.size).length
+
+		,	fechas = _.map(byYear, function (leyes, year)
+			{
+				return {
+					percentage: leyes.length * 90 / max
+				,	year: year
+				,	quantity: leyes.length
+				};
+			});
+
+		return {
+			title: 'Mi legado de Bicentenario'
+		,	nombre: query.nombre
+		,	sexo: (query.sexo ||  '').toLowerCase()
+		,	leyes: leyes
+		,	comparten: 1
+		,	fechas: fechas
+		,	categorias: _.map(_.uniq(_.pluck(leyes, 'category')), getCategory)
+		,	url: encodeURIComponent('http://bicentenario.herokuapp.com' + req.url)
 		};
 	};
 
 app.get('/mis-leyes', function (req, res)
 {
-	var query = req.query;
-
-	fetchLaws(parseQuery(query), function (result)
+	fetchLaws(parseQuery(req.query), function (result)
 	{
 		if (result.ok)
-			res.render('laws', parseResutls(query.nombre, result.body));
+			res.render('laws', parseResutls(req, result.body));
 	});
 });
