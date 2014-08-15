@@ -1,13 +1,28 @@
 @import "compass/css3/transition";
 
 .collapsable {
-	display: block;
+	overflow-y: hidden;
+	max-height: 150px;
 
-	&:hover {
-		display: block;
+	@include single-transition(max-height, .5s, cubic-bezier(0, 1, 0.5, 1));
+
+	@include breakpoint("xsmall") {
+		max-height: 125px;
+	}
+
+	@include breakpoint("small") {
+		max-height: 85px;
+	}
+
+	@include breakpoint("medium") {
+		max-height: 70px;
+	}
+
+	@include breakpoint("large") {
+		max-height: 50px;
 	}
 }
 
 .collapsed {
-	display: none;
+	max-height: 0;
 }
