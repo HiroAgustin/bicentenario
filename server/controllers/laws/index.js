@@ -56,16 +56,20 @@ var controller = require(__dirname + '/../../lib/controller.js')
 	{
 		return {
 			id: law.id
+		,	fecha: law.fecha
 		,	category: law.categoria
+		,	priority: law.prioridad
+		,	description: law.nombre
 		,	year: (new Date(law.fecha)).getFullYear()
 		};
 	}
 
-,	getCategory = function getCategory (category)
+,	parseCategory = function parseCategory (leyes, id)
 	{
 		return {
-			id: category
-		,	title: categories[category]
+			id: id
+		,	title: categories[id]
+		,	leyes: leyes
 		};
 	}
 
@@ -91,11 +95,11 @@ var controller = require(__dirname + '/../../lib/controller.js')
 		return {
 			title: 'Mi legado de Bicentenario'
 		,	nombre: query.nombre
-		,	sexo: (query.sexo ||  '').toLowerCase()
+		,	sexo: (query.sexo || '').toLowerCase()
 		,	leyes: leyes
 		,	comparten: 1
 		,	fechas: fechas
-		,	categorias: _.map(_.uniq(_.pluck(leyes, 'category')), getCategory)
+		,	categorias: _.map(_.groupBy(leyes, 'category'), parseCategory)
 		,	url: encodeURIComponent('http://bicentenario.herokuapp.com' + req.url)
 		};
 	};

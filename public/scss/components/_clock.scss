@@ -2,7 +2,16 @@
 	position: relative;
 
 	.circle {
+		font-size: $font-size-base * 1.25;
+		cursor: pointer;
 		padding: 0;
 		position: absolute;
+
+		left: 250px;
+
+		&:hover {
+			color: $link-color;
+			text-decoration: none;
+		}
 	}
 }

@@ -1,0 +1,21 @@
+.category-0 {
+
+	&.circle {
+		background: $red;
+	}
+	
+	.fa-circle-o {
+		color: $red;
+	}
+}
+
+.category-1 {
+
+	&.circle {
+		background: $blue;
+	}
+	
+	.fa-circle-o {
+		color: $blue;
+	}
+}

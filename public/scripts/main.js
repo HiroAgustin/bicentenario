@@ -1,19 +1,36 @@
 (function (win, doc, undefined)
 {
-	var background = null
+	'use strict';
 
-	,	$ = function $ (selector)
+	var $ = function $ (selector)
 		{
 			return doc.querySelectorAll(selector);
-		};
+		}
 
-	Array.prototype.forEach.call($('[data-toggle="collapse"]'), function (button)
-	{
-		button.addEventListener('click', function (event)
+	,	forEach = function forEach (collection, callback)
 		{
-			event.preventDefault();
+			return Array.prototype.forEach.call(collection, callback);
+		}
 
-			$(this.getAttribute('href'))[0].classList.toggle('collapsed');
+	,	listen = function listen (selector, event, callback)
+		{
+			return forEach($(selector), function (element)
+			{
+				element.addEventListener(event, callback);
+			});
+		}
+
+	,	background = null;
+
+	listen('[data-toggle]', 'click', function (event)
+	{
+		var className = this.dataset.toggle;
+
+		event.preventDefault();
+
+		forEach($(this.getAttribute('href')), function (element)
+		{
+			element.classList.toggle(className);
 		});
 	});
 

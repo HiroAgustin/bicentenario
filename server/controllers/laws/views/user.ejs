@@ -1,6 +1,23 @@
 <% layout('../../../layouts/default') %>
 <section class="HolyGrail-body">
-	<div class="HolyGrail-content">
+	<div class="HolyGrail-content alt-body u-paddingAl js-category hidden">
+		<a href=".js-category" class="btn btn-default pull-right" data-toggle="hidden">&times;</a>
+		<% categorias.forEach(function (category) { %>
+		<div class="category" data-id="<%= category.id %>">
+			<p class="h1 u-marginTn"><%= category.title %></p>
+			<ul class="list-unstyled">
+			<% category.leyes.forEach(function (ley) { %>
+				<li>
+					<time><%= ley.fecha %></time>
+					<p><%= ley.description %></p>
+				</li>
+			<% }) %>
+			</ul>
+		</div>
+		<% }); %>
+	</div>
+
+	<div class="HolyGrail-content js-category">
 		<div class="text-center jumbotron u-marginBn">
 			<p class="lead">Este es el legado del Bicentenario para:</p>
 			<h1><%= nombre %></h1>
@@ -9,8 +26,10 @@
 		<div class="clock">
 			<ul class="list-unstyled u-marginBn">
 			<% categorias.forEach(function (category) { %>
-				<li class="circle circle-md category-<%= category.id %> Aligner">
-					<i class="fa"></i> <%= category.title %>
+				<li>
+					<a href=".js-category" class="circle circle-md category-<%= category.id %> Aligner" data-type="category" data-toggle="hidden" data-id="<%= category.id %>">
+						<i class="fa"></i> <%= category.title %>
+					</a>
 				</li>
 			<% }); %>
 			</ul>
@@ -111,11 +130,10 @@
 				<polygon fill="#31271B" points="90.411,127.412 89.41,131.412 93.191,131.412 92.191,127.412 "/>
 				<circle fill="none" stroke="#E69F54" stroke-miterlimit="10" cx="132.408" cy="118.798" r="2.386"/>
 			</svg>
-
 			<% } %>
 		</div>
 
-		<p class="text-center lead">Compartí el legado <a class="circle share-link share-facebook" href="https://www.facebook.com/dialog/share?app_id=144441392317207&amp;display=popup&amp;href=<%= url %>&amp;redirect_uri=<%= url %>"><i class="fa fa-fw fa-facebook"></i></a> <a class="circle share-link share-twitter" href="https://twitter.com/intent/tweet?text=<%= title %>&amp;url=<%= url %>&amp;via=hiroagustin"><i class="fa fa-fw fa-twitter"></i></a></p>
+		<p class="text-center lead">Compartí el legado <a class="circle circle-bd share-link share-facebook" href="https://www.facebook.com/dialog/share?app_id=144441392317207&amp;display=popup&amp;href=<%= url %>&amp;redirect_uri=<%= url %>"><i class="fa fa-fw fa-facebook"></i></a> <a class="circle circle-bd share-link share-twitter" href="https://twitter.com/intent/tweet?text=<%= title %>&amp;url=<%= url %>&amp;via=hiroagustin"><i class="fa fa-fw fa-twitter"></i></a></p>
 		<p class="text-center">
 			<a href="/ingresar" class="btn btn-primary btn-lg">Conocé tú legado</a>
 		</p>
