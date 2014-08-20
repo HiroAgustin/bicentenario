@@ -2,27 +2,28 @@
 
 .collapsable {
 	overflow-y: hidden;
-	max-height: 150px;
+	max-height: 190px;
 
 	@include single-transition(max-height, .5s, cubic-bezier(0, 1, 0.5, 1));
 
 	@include breakpoint("xsmall") {
-		max-height: 125px;
+		max-height: 165px;
 	}
 
 	@include breakpoint("small") {
-		max-height: 85px;
+		max-height: 125px;
 	}
 
 	@include breakpoint("medium") {
-		max-height: 70px;
+		max-height: 110px;
 	}
 
 	@include breakpoint("large") {
-		max-height: 50px;
+		max-height: 90px;
 	}
 }
 
 .collapsed {
 	max-height: 0;
+	padding: 0;
 }
