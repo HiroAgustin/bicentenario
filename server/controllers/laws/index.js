@@ -46,10 +46,10 @@ var controller = require(__dirname + '/../../lib/controller.js')
 
 ,	fetchLaws = function fetchLaws (query, callback)
 	{
-		// request
-		// 	.get('http://bicente.itsu.com.uy/bicentenario.php')
-		// 	.query(query)
-		// 	.end(callback);
+		request
+			.get('http://bicente.itsu.com.uy/bicentenario.php')
+			.query(query)
+			.end(callback);
 	}
 
 ,	parseLaw = function parseLaw (law)
