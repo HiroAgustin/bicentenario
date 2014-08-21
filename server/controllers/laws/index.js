@@ -54,13 +54,15 @@ var controller = require(__dirname + '/../../lib/controller.js')
 
 ,	parseLaw = function parseLaw (law)
 	{
+		var date = new Date(law.fecha);
+
 		return {
 			id: law.id
-		,	fecha: law.fecha
+		,	fecha: date.getDate() + '/' + (date.getMonth() + 1) + '/' + date.getFullYear()
 		,	category: law.categoria
 		,	priority: law.prioridad
 		,	description: law.nombre
-		,	year: (new Date(law.fecha)).getFullYear()
+		,	year: date.getFullYear()
 		};
 	}
 

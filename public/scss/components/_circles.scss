@@ -21,7 +21,6 @@
 
 .circle-bd {
 	border: 1px solid white;
-
 	@include single-transition(background-color, .25s, ease-in);
 
 	&:hover {
