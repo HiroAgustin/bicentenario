@@ -1,0 +1,22 @@
+/**
+ * Display-type utilities
+ */
+
+.u-inline { display: inline; }
+
+/**
+ * 1. Fix for Firefox bug: an image styled `max-width:100%` within an
+ * inline-block will display at its default size, and not limit its width to
+ * 100% of an ancestral container.
+ */
+
+.u-inlineBlock {
+	display: inline-block;
+	max-width: 100%; /* 1 */
+}
+
+.u-block { display: block; }
+
+.u-table { display: table; }
+
+.u-tableCell { display: table-cell; }

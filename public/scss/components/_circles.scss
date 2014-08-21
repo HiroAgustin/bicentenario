@@ -4,21 +4,29 @@
 	text-align: center;
 }
 
-.circle-bd {
-	border: 1px solid white;
-}
-
 .circle-sm {
-	height: 50px;
-	width: 50px;
+	height: 40px;
+	width: 40px;
 }
 
 .circle-md {
-	height: 150px;
-	width: 150px;
+	height: 160px;
+	width: 160px;
 }
 
 .circle-lg {
-	height: 250px;
-	width: 250px;
+	height: 240px;
+	width: 240px;
+}
+
+.circle-bd {
+	border: 1px solid white;
+
+	@include single-transition(background-color, .25s, ease-in);
+
+	&:hover {
+		border-color: transparent;
+		color: $link-color;
+		text-decoration: none;
+	}
 }

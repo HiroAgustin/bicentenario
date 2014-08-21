@@ -1,15 +1,16 @@
 <% layout('../../../layouts/default') %>
 <section class="HolyGrail-body">
-	<div class="HolyGrail-content alt-body u-paddingAl js-category hidden">
-		<a href=".js-category" class="btn btn-default pull-right" data-toggle="hidden">&times;</a>
+	<div id="leyes-por-category" class="HolyGrail-content alt-body u-paddingAl js-category hidden">
+		<a href=".js-category" class="Aligner link-close circle circle-sm circle-bd pull-right" data-toggle="hidden"><i class="fa fa-fw fa-lg fa-times"></i></a>
 		<% categorias.forEach(function (category) { %>
 		<div class="category" data-id="<%= category.id %>">
-			<p class="h1 u-marginTn"><%= category.title %></p>
+			<p class="h1 u-marginVl"><%= category.title %></p>
 			<ul class="list-unstyled">
 			<% category.leyes.forEach(function (ley) { %>
-				<li>
-					<time><%= ley.fecha %></time>
-					<p><%= ley.description %></p>
+				<li class="u-marginVl u-paddingVm">
+					<time class="u-block u-marginBm"><%= ley.fecha %></time>
+					<p class="lead u-marginBm"><%= ley.description %></p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus enim velit nisi, asperiores laudantium maiores reiciendis perferendis ea ipsum eligendi voluptatibus, eos reprehenderit. Laboriosam, ullam, dolore quis maxime non tempora.</p>
 				</li>
 			<% }) %>
 			</ul>
@@ -133,7 +134,7 @@
 			<% } %>
 		</div>
 
-		<p class="text-center lead">Compartí el legado <a class="circle circle-bd share-link share-facebook" href="https://www.facebook.com/dialog/share?app_id=144441392317207&amp;display=popup&amp;href=<%= url %>&amp;redirect_uri=<%= url %>"><i class="fa fa-fw fa-facebook"></i></a> <a class="circle circle-bd share-link share-twitter" href="https://twitter.com/intent/tweet?text=<%= title %>&amp;url=<%= url %>&amp;via=hiroagustin"><i class="fa fa-fw fa-twitter"></i></a></p>
+		<p class="text-center lead">Compartí el legado <a class="circle circle-sm circle-bd u-inlineBlock link-facebook" href="https://www.facebook.com/dialog/share?app_id=144441392317207&amp;display=popup&amp;href=<%= url %>&amp;redirect_uri=<%= url %>"><i class="fa fa-fw fa-facebook"></i></a> <a class="circle circle-sm circle-bd u-inlineBlock link-twitter" href="https://twitter.com/intent/tweet?text=<%= title %>&amp;url=<%= url %>&amp;via=hiroagustin"><i class="fa fa-fw fa-twitter"></i></a></p>
 		<p class="text-center">
 			<a href="/ingresar" class="btn btn-primary btn-lg">Conocé tú legado</a>
 		</p>

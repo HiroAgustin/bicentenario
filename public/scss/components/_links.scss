@@ -10,27 +10,20 @@
 	}
 }
 
-.share-link {
-	display: inline-block;
-	height: 40px;
-	width: 40px;
-
-	@include single-transition(background-color, 0.25s, ease-in);
-
-	&:hover {
-		border-color: $body-bg;
-		color: $link-color;
-	}
-}
-
-.share-facebook {
+.link-facebook {
 	&:hover {
 		background-color: $brand-facebook;
 	}
 }
 
-.share-twitter {
+.link-twitter {
 	&:hover {
 		background-color: $brand-twitter;
+	}
+}
+
+.link-close {
+	&:hover {
+		background-color: $brand-primary;
 	}
 }
