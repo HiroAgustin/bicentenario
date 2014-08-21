@@ -108,9 +108,9 @@ var controller = require(__dirname + '/../../lib/controller.js')
 
 app.get('/mis-leyes', function (req, res)
 {
-	fetchLaws(parseQuery(req.query), function (result)
-	{
-		if (result.ok)
-			res.render('user', parseResutls(req, result.body));
-	});
+	// fetchLaws(parseQuery(req.query), function (result)
+	// {
+	// 	if (result.ok)
+	// 		res.render('user', parseResutls(req, result.body));
+	// });
 });
