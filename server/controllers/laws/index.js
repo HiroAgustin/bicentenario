@@ -12,31 +12,18 @@ var controller = require(__dirname + '/../../lib/controller.js')
 	,	2: 'Trabajo'
 	}
 
-,	getCivil = function getCivil (estado)
-	{
-		switch (estado)
-		{
-			case 'soltero': estado = 1;
-				break;
-			default:
-				estado = 0;
-		}
-
-		return estado;
-	}
-
 ,	parseQuery = function parseQuery (query)
 	{
-		var sexo = query.sexo
+		var genero = query.genero
 
 		,	estado = query['estado-civil'];
 
 		return {
 			tipo: 'leyes'
-		,	sexo: sexo === 'hombre' ? 1 : sexo === 'mujer' ? 2 : 0
+		,	genero: genero.toUpperCase()
 		,	edad: query.edad || 0
-		,	civil: getCivil(estado)
-		,	uruguay: query.residencia === 'uruguay' ? 1 : 0
+		,	civil: estado
+		,	uruguay: query.residencia === 'extranjero' ? 1 : 0
 		,	discapacidad: query.discapacidad ? 1 : 0
 		,	racial: query['identidad-racial'] ? 1 : 0
 		,	hijos: query.hijos ? 1 : 0
@@ -97,7 +84,7 @@ var controller = require(__dirname + '/../../lib/controller.js')
 		return {
 			title: 'Mi legado de Bicentenario'
 		,	nombre: query.nombre
-		,	sexo: (query.sexo || '').toLowerCase()
+		,	genero: (query.genero || '').toLowerCase()
 		,	leyes: leyes
 		,	comparten: 1
 		,	fechas: fechas

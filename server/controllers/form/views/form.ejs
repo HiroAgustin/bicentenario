@@ -26,11 +26,11 @@
 				<div class="row">
 					<div class="col-sm-6">
 						<div class="form-group">
-							<label for="sexo">Sexo</label>
-							<select name="sexo" class="form-control" id="sexo">
+							<label for="genero">Genero</label>
+							<select name="genero" class="form-control" id="genero">
 								<option value=""></option>
-								<option value="hombre" <%= user.gender === 'male' ? 'selected' : '' %>>Hombre</option>
-								<option value="mujer" <%= user.gender === 'female' ? 'selected' : '' %>>Mujer</option>
+								<option value="m" <%= user.gender === 'male' ? 'selected' : '' %>>Hombre</option>
+								<option value="f" <%= user.gender === 'female' ? 'selected' : '' %>>Mujer</option>
 								<option value="otro">Otro</option>
 							</select>
 						</div>
