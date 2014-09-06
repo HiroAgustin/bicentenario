@@ -12,3 +12,10 @@ app.get('/timeline', function (req, res)
 		title: 'Timeline'
 	});
 });
+
+app.get('/info', function (req, res)
+{
+	res.render('info', {
+		title: '¿Cómo van a manejar mi información?'
+	});
+});
