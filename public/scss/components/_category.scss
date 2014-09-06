@@ -1,21 +1,29 @@
-.category-0 {
+$categories: (
+	"1" "Adultos Mayores" "#835F6F"
+,	"12" "Discapacidad" "#7583A1"
+,	"13" "Educación" "#F7783F"
+,	"14" "Estado Civil" "#BF6B84"
+,	"5" "Maternidad" "#F0BFE3"
+,	"16" "Niñez y Adolescencia" "#02BFF1"
+,	"7" "Salud" "#4AD6B6"
+,	"18" "Salud Sexual" "#E52F5A"
+,	"19" "Seguridad" "#F3C135"
+,	"10" "Trabajo" "#BE5452"
+,	"11" "Tributos" "#BEC8C4"
+);
 
-	&.circle {
-		background: $red;
-	}
-	
-	.fa-circle-o {
-		color: $red;
-	}
-}
+@each $category in $categories {
+	$id: nth($category, 1);
+	$color: nth($category, 3);
 
-.category-1 {
+	.category-#{$id} {
 
-	&.circle {
-		background: $blue;
-	}
-	
-	.fa-circle-o {
-		color: $blue;
+		&.circle {
+			background: #{$color};
+		}
+
+		.fa-circle-o {
+			color: $color;
+		}
 	}
 }
