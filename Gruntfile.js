@@ -4,7 +4,9 @@ module.exports = function (grunt)
 	require('load-grunt-tasks')(grunt);
 
 	grunt.initConfig({
+
 		clean: ['.sass-cache', 'public/styles']
+
 	,	compass: {
 			main: {
 				options: {
@@ -17,15 +19,20 @@ module.exports = function (grunt)
 				}
 			}
 		}
+
 	,	express: {
-			serve: {
+			options: {
+				port: 9000
+			,	delay: 5
+			}
+
+		,	dev: {
 				options: {
 					script: 'server'
-				,	port: 9000
-				,	delay: 5
 				}
 			}
 		}
+
 	,	watch: {
 			compass: {
 				files: ['public/scss/**/*.scss', 'public/scripts/*.js', 'server/**/*.ejs']
@@ -35,6 +42,7 @@ module.exports = function (grunt)
 				}
 			}
 		}
+
 	,	copy: {
 			main: {
 				files: [
@@ -64,6 +72,7 @@ module.exports = function (grunt)
 				]
 			}
 		}
+
 	,	buildcontrol: {
 			options: {
 				commit: true
@@ -78,6 +87,7 @@ module.exports = function (grunt)
 				}
 			}
 		}
+
 	// ,	svgmin: {
 	// 		dist: {
 	// 			files: [{
@@ -89,6 +99,12 @@ module.exports = function (grunt)
 	// 			}]
 	// 		}
 	// 	}
+
+	,	open: {
+			server: {
+				url: 'http://localhost:<%= express.options.port %>'
+			}
+		}
 	});
 
 	grunt.registerTask('build', [
@@ -105,11 +121,8 @@ module.exports = function (grunt)
 
 	grunt.registerTask('serve', [
 		'build'
-	,	'express'
+	,	'express:dev'
+	,	'open'
 	,	'watch'
-	]);
-
-	grunt.registerTask('default', [
-		'serve'
 	]);
 };
