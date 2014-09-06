@@ -1,8 +1,8 @@
 $breakpoints: (
 	"(min-width: #{$screen-xs-min})" "xsmall"
-,   "(min-width: #{$screen-sm-min})" "small"
-,   "(min-width: #{$screen-md-min})" "medium"
-,   "(min-width: #{$screen-lg-min})" "large"
+,	"(min-width: #{$screen-sm-min})" "small"
+,	"(min-width: #{$screen-md-min})" "medium"
+,	"(min-width: #{$screen-lg-min})" "large"
 );
 
 @mixin breakpoint($point) {
