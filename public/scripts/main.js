@@ -3,24 +3,24 @@
 	'use strict';
 
 	var $ = function $ (selector)
-		{
-			return doc.querySelectorAll(selector);
-		}
-
-	,	forEach = function forEach (collection, callback)
-		{
-			return Array.prototype.forEach.call(collection, callback);
-		}
-
-	,	listen = function listen (selector, event, callback)
-		{
-			return forEach($(selector), function (element)
 			{
-				element.addEventListener(event, callback);
-			});
-		}
+				return doc.querySelectorAll(selector);
+			}
 
-	,	background = null;
+		,	forEach = function forEach (collection, callback)
+			{
+				return Array.prototype.forEach.call(collection, callback);
+			}
+
+		,	listen = function listen (selector, event, callback)
+			{
+				return forEach($(selector), function (element)
+				{
+					element.addEventListener(event, callback);
+				});
+			}
+
+		,	background = null;
 
 	listen('[data-toggle]', 'click', function (event)
 	{

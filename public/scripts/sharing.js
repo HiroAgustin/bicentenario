@@ -5,11 +5,11 @@
     // https://developers.facebook.com/docs/javascript/quickstart/v2.0#loading
     win.fbAsyncInit = function ()
     {
-        FB.init({
-            appId: '144441392317207'
-        ,   xfbml: true
-        ,   version: 'v2.0'
-        });
+      FB.init({
+        appId: '144441392317207'
+      , xfbml: true
+      , version: 'v2.0'
+      });
     };
 
     // <!-- Facebook Share Button -->
@@ -31,11 +31,11 @@
 
     win.ga = function ()
     {
-        (win.ga.q = win.ga.q || []).push(arguments);
+      (win.ga.q = win.ga.q || []).push(arguments);
     };
 
     win.ga.l = 1 * new Date();
-        
+
     js.async = 1;
     js.src = ggl;
     fjs.parentNode.insertBefore(js, fjs)
