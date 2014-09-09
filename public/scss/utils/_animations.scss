@@ -1,0 +1,10 @@
+@import "compass/css3/transition";
+@import "compass/css3/transform";
+
+.slider {
+  @include single-transition(transform, .5s, cubic-bezier(0.645, 0.045, 0.355, 1.000));
+}
+
+.slide-left {
+  @include translateX(-100%);
+}

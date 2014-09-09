@@ -1,41 +1,23 @@
 <% layout('../../../layouts/default') %>
 <section class="HolyGrail-body">
-	<div id="leyes-por-category" class="HolyGrail-content alt-body u-paddingAl js-category hidden">
-		<a href=".js-category" class="Aligner link-close circle circle-sm circle-bd pull-right" data-toggle="hidden"><i class="fa fa-fw fa-lg fa-times"></i></a>
-		<% categorias.forEach(function (category) { %>
-		<div class="category" data-id="<%= category.id %>">
-			<p class="h1 u-marginVl"><%= category.title %></p>
-			<ul class="list-unstyled">
-			<% category.leyes.forEach(function (ley) { %>
-				<li class="u-marginVl u-paddingVm">
-					<p class="u-marginBm">Promulgada &mdash; <time><%= ley.fecha %></time></p>
-					<p class="lead u-marginBm"><%= ley.description %></p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse nec enim lobortis, interdum nisi vel, feugiat metus. Suspendisse convallis, nisl sed sagittis aliquam, purus mi mollis felis, nec molestie ligula mi et felis. Vivamus purus ante, cursus in posuere at, bibendum eu tortor. Integer ut libero metus. Curabitur auctor mauris lorem. Sed nec nulla non nibh varius ultricies. Sed vitae felis sit amet tortor suscipit eleifend ut auctor purus. Vivamus interdum enim non libero faucibus, eget fringilla mi porttitor. Sed gravida ligula vel nunc malesuada rhoncus. In dignissim placerat quam nec ornare. Suspendisse varius dui et rhoncus pulvinar. Donec a enim massa. Mauris non facilisis orci. Sed varius sapien sed nunc suscipit hendrerit. Ut suscipit lacus justo, id scelerisque nulla elementum non. Sed eget pharetra magna, ut viverra sapien.</p>
-				</li>
-			<% }) %>
-			</ul>
-		</div>
-		<% }); %>
-	</div>
-
-	<div class="HolyGrail-content js-category">
+	<div class="HolyGrail-content u-posRelative" style="margin-right: 1px;">
 		<div class="text-center jumbotron u-marginBn">
 			<p class="lead">Este es el legado del Bicentenario para:</p>
 			<h1><%= nombre %></h1>
 		</div>
-		
+
 		<div class="clock">
 			<ul class="list-unstyled u-marginBn">
 			<% categorias.forEach(function (category) { %>
 				<li>
-					<a href=".js-category" class="circle circle-md category-<%= category.id %> Aligner" data-type="category" data-toggle="hidden" data-id="<%= category.id %>">
+					<a href="#js-law-list" class="circle circle-md category-<%= category.id %> Aligner" data-type="category" data-toggle="slide-left" data-id="<%= category.id %>">
 						<i class="fa"></i> <%= category.title %>
 					</a>
 				</li>
 			<% }); %>
 			</ul>
-			
-			<% if (sexo === 'mujer') { %>
+
+			<% if (sexo === 'f') { %>
 			<svg class="center-block" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="250px" height="450px" viewBox="0 0 165.703 305.412" enable-background="new 0 0 165.703 305.412" xml:space="preserve">
 				<path fill="#E79F3B" d="M134.136,152.146c0,0,1.093-79.445,0.848-92.265c-0.246-12.822,0.459-18.374-3.921-21.672 c-4.961-3.731-6.189-3.125-6.189-3.125s0.578-7.725-5.576-11.244c-6.157-3.519-38.124-7.427-54.444,1.178 c-14.686,7.741-14.686,7.741-15.669,28.606c-0.984,20.864-0.857,96.679-0.857,96.679"/>
 				<path fill="#111415" d="M76.97,281.856c0.377,0,16.403,0,16.403,0l-1.32-12.821l-6.882,0.378l1.226,7.352 c0,0-9.899-0.188-9.427,4.714"/>
@@ -68,7 +50,7 @@
 				<path fill="#EDD8D3" d="M117.953,216.035c-3.128,0-5.878-0.867-7.654-1.829l3.064-5.717c0.779,0.408,7.803,3.75,13.422-3.963 c6.624-9.097,3.94-16.291,0.693-18.688c-3.859-2.852-17.165-9.469-21.965-11.778l2.812-5.845 c0.726,0.351,17.869,8.61,23.006,12.405c6.584,4.862,9.065,16.233,0.696,27.725C127.731,214.239,122.451,216.035,117.953,216.035z"/>
 				<polyline fill="#D52879" points="74.598,167.032 60.082,187.68 72.713,195.313 84.041,178.804 104.01,178.804 114.681,184.566 121.43,169.291 102.517,165.055 "/>
 			</svg>
-			<% } else if (sexo === 'hombre') { %>
+			<% } else if (sexo === 'm') { %>
 			<svg class="center-block" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="250px" height="450px" viewBox="0 0 165.703 305.412" enable-background="new 0 0 165.703 305.412" xml:space="preserve">
 				<path fill="#4C4139" d="M110.271,126.098c0,0,16.473-58.211,16.228-71.031c-0.246-12.822,0.46-18.374-3.921-21.672 c-4.961-3.731-6.189-3.125-6.189-3.125s0.578-7.725-5.576-11.244c-6.156-3.519-38.123-7.427-54.443,1.178 c-14.686,7.741-14.686,7.741-15.67,28.606c-0.983,20.864,24.661,77.288,24.661,77.288"/>
 				<polygon fill="#EDD8D3" points="86.49,250.552 88.28,274.293 94.031,275.56 92.901,251.554"/>
@@ -138,6 +120,26 @@
 		<p class="text-center">
 			<a href="/ingresar" class="btn btn-primary btn-lg">Conocé tú legado</a>
 		</p>
+
+		<div id="js-law-list" class="alt-body slider slide-left u-posAbsoluteCenter">
+			<div class="u-paddingAl">
+				<a href="#js-law-list" class="Aligner link-close circle circle-sm circle-bd pull-right" data-toggle="slide-left"><i class="fa fa-fw fa-lg fa-times"></i></a>
+				<% categorias.forEach(function (category) { %>
+				<div class="category" data-id="<%= category.id %>">
+					<p class="h1 u-marginVl"><%= category.title %></p>
+					<ul class="list-unstyled">
+					<% category.leyes.forEach(function (ley) { %>
+						<li class="u-marginVl u-paddingVm">
+							<p class="u-marginBm">Promulgada &mdash; <time><%= ley.fecha %></time></p>
+							<p class="lead u-marginBm"><%= ley.description %></p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse nec enim lobortis, interdum nisi vel, feugiat metus. Suspendisse convallis, nisl sed sagittis aliquam, purus mi mollis felis, nec molestie ligula mi et felis. Vivamus purus ante, cursus in posuere at, bibendum eu tortor. Integer ut libero metus. Curabitur auctor mauris lorem. Sed nec nulla non nibh varius ultricies. Sed vitae felis sit amet tortor suscipit eleifend ut auctor purus. Vivamus interdum enim non libero faucibus, eget fringilla mi porttitor. Sed gravida ligula vel nunc malesuada rhoncus. In dignissim placerat quam nec ornare. Suspendisse varius dui et rhoncus pulvinar. Donec a enim massa. Mauris non facilisis orci. Sed varius sapien sed nunc suscipit hendrerit. Ut suscipit lacus justo, id scelerisque nulla elementum non. Sed eget pharetra magna, ut viverra sapien.</p>
+						</li>
+					<% }) %>
+					</ul>
+				</div>
+				<% }); %>
+			</div>
+		</div>
 	</div>
 
 	<div class="HolyGrail-right alt-body">
