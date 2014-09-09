@@ -41,6 +41,16 @@ module.exports = function (grunt)
 					livereload: true
 				}
 			}
+
+		,	express: {
+				files: ['server/**/*.{js,json}']
+			,	tasks: ['express:dev', 'wait']
+			,	options: {
+					livereload: true
+					// Without this option specified express won't be reloaded
+				,	spawn: false
+				}
+			}
 		}
 
 	,	copy: {
@@ -107,6 +117,20 @@ module.exports = function (grunt)
 		}
 	});
 
+	// Used for delaying livereload until after server has restarted
+	grunt.registerTask('wait', function ()
+	{
+		grunt.log.ok('Waiting for server reload...');
+
+		var done = this.async();
+
+		setTimeout(function ()
+		{
+			grunt.log.writeln('Done waiting!');
+			done();
+		}, 1500);
+	});
+
 	grunt.registerTask('build', [
 		'clean'
 	,	'compass'
@@ -122,6 +146,7 @@ module.exports = function (grunt)
 	grunt.registerTask('serve', [
 		'build'
 	,	'express:dev'
+	,	'wait'
 	,	'open'
 	,	'watch'
 	]);
