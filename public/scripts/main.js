@@ -2,9 +2,9 @@
 {
 	'use strict';
 
-	var $ = function $ (selector)
+	var $ = function $ (selector, context)
 			{
-				return doc.querySelectorAll(selector);
+				return (context || doc).querySelectorAll(selector);
 			}
 
 		,	forEach = function forEach (collection, callback)
@@ -20,6 +20,8 @@
 				});
 			}
 
+		,	lawList = $('#js-law-list')[0]
+
 		,	background = null;
 
 	listen('[data-toggle]', 'click', function (event)
@@ -32,6 +34,23 @@
 		{
 			element.classList.toggle(className);
 		});
+	});
+
+	listen('.js-category-circle', 'click', function (event)
+	{
+		var target = event.target;
+
+		if (!target.dataset.id)
+			target = target.parentNode;
+
+		lawList.classList.toggle('slide-left');
+
+		forEach($('.js-category-page:not(.hidden)', lawList), function (element)
+		{
+			element.classList.add('hidden');
+		});
+
+		$('#js-category-page-' + target.dataset.id, lawList)[0].classList.remove('hidden');
 	});
 
 	win.addEventListener('resize', function ()
