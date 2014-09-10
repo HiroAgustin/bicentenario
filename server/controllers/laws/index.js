@@ -8,7 +8,8 @@ var controller = require(__dirname + '/../../lib/controller.js')
 
 		// http://bicente.itsu.com.uy/bicentenario.php?tipo=categorias
 	,	categories = {
-			1: 'Adultos Mayores'
+			0: 'Undefined'
+		,	1: 'Adultos Mayores'
 		,	5: 'Maternidad'
 		,	7: 'Salud'
 		,	10: 'Trabajo'
@@ -61,6 +62,11 @@ var controller = require(__dirname + '/../../lib/controller.js')
 			};
 		}
 
+	,	getComparten = function getComparten (sex, age)
+		{
+			return 1;
+		}
+
 	,	parseCategory = function parseCategory (leyes, id)
 		{
 			return {
@@ -70,16 +76,38 @@ var controller = require(__dirname + '/../../lib/controller.js')
 			};
 		}
 
-	,	getComparten = function getComparten (sexo, edad)
+	,	getCategorySize = function setCategorySize (low, high, length)
 		{
-			return 1;
+			return length <= low ? 'small' : length > high ? 'large' : 'medium';
+		}
+
+	,	getCategories = function getCategories (laws)
+		{
+			var categories = _.map(_.groupBy(laws, 'category'), parseCategory)
+
+				,	avg = _.reduce(categories, function (memo, category)
+					{
+						return memo + category.leyes.length
+					}, 0) / categories.length
+
+				,	low = avg - avg / 2
+
+				,	high = avg + avg / 2;
+
+			categories.forEach(function (category)
+			{
+				category.size = getCategorySize(low, high, category.leyes.length)
+			});
+
+			return categories;
 		}
 
 	,	parseResutls = function parseResutls (req, laws)
 		{
 			var query = req.query
 
-				,	leyes = _.map(laws, parseLaw)
+				// ,	leyes = _.map(laws, parseLaw)
+				,	leyes = require('./mock.json')
 
 				,	byYear = _.groupBy(leyes, 'year')
 
@@ -92,7 +120,13 @@ var controller = require(__dirname + '/../../lib/controller.js')
 						,	year: year
 						,	quantity: leyes.length
 						};
-					});
+					})
+
+				,	categories = _.shuffle(getCategories(leyes))
+
+				,	length = categories.length
+
+				,	half = Math.floor(length / 2);
 
 			return {
 				title: 'Mi legado de Bicentenario'
@@ -101,7 +135,9 @@ var controller = require(__dirname + '/../../lib/controller.js')
 			,	leyes: leyes
 			,	comparten: getComparten(query.sexo, query.edad)
 			,	fechas: fechas
-			,	categorias: _.map(_.groupBy(leyes, 'category'), parseCategory)
+			,	categorias: categories
+			,	categoriesSet1: _.initial(categories, half)
+			,	categoriesSet2: _.rest(categories, length - half)
 			,	url: encodeURIComponent('http://bicentenario.herokuapp.com' + req.url)
 			};
 		};
