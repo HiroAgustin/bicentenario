@@ -10,6 +10,23 @@
 	}
 }
 
+.link-circle {
+	border: 1px solid white;
+	border-radius: 50%;
+	@include single-transition(background-color, .25s, ease-in);
+
+	&:hover {
+		border-color: transparent;
+		color: $link-color;
+		text-decoration: none;
+	}
+}
+
+.link-circle-sm {
+	height: 40px;
+	width: 40px;
+}
+
 .link-facebook {
 	&:hover {
 		background-color: $brand-facebook;

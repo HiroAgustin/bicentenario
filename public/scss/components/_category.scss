@@ -1,29 +1,71 @@
+@import "compass/css3/transition";
+@import "compass/css3/transform";
+@import "compass/css3/flexbox";
+
+// Category Circle Sizes
+$small: 140px;
+$medium: $small + 30;
+$large: $medium + 30;
+
+.category-circle {
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: $font-size-base * 1.25;
+  text-align: center;
+
+  @include display-flex();
+  @include flex-direction(column);
+  @include justify-content(center);
+  @include single-transition(transform, .25s, ease-out);
+
+  &:hover {
+    color: $link-color;
+    text-decoration: none;
+    @include scale(.8);
+  }
+}
+
+.category-circle-small {
+  height: $small;
+  width: $small;
+}
+
+.category-circle-medium {
+  height: $medium;
+  width: $medium;
+}
+
+.category-circle-large {
+  height: $large;
+  width: $large;
+}
+
 $categories: (
-	"1" "Adultos Mayores" "#835F6F"
-,	"12" "Discapacidad" "#7583A1"
-,	"13" "Educación" "#F7783F"
-,	"14" "Estado Civil" "#BF6B84"
-,	"5" "Maternidad" "#F0BFE3"
-,	"16" "Niñez y Adolescencia" "#02BFF1"
-,	"7" "Salud" "#4AD6B6"
-,	"18" "Salud Sexual" "#E52F5A"
-,	"19" "Seguridad" "#F3C135"
-,	"10" "Trabajo" "#BE5452"
-,	"11" "Tributos" "#BEC8C4"
+   "1" "#835F6F" // Adultos Mayores
+,	"12" "#7583A1" // Discapacidad
+,	"13" "#F7783F" // Educación
+,	"14" "#BF6B84" // Estado Civil
+,	 "5" "#F0BFE3" // Maternidad
+,	"16" "#02BFF1" // Niñez y Adolescencia
+,	 "7" "#4AD6B6" // Salud
+,	"18" "#E52F5A" // Salud Sexual
+,	"19" "#F3C135" // Seguridad
+,	"10" "#BE5452" // Trabajo
+,	"11" "#BEC8C4" // Tributos
 );
 
 @each $category in $categories {
-	$id: nth($category, 1);
-	$color: nth($category, 3);
+  $id: nth($category, 1);
+  $color: nth($category, 2);
 
-	.category-#{$id} {
+  .category-#{$id} {
 
-		&.circle {
-			background: #{$color};
-		}
+    &.category-circle {
+      background: #{$color};
+    }
 
-		.fa-circle-o {
-			color: #{$color};
-		}
-	}
+    .fa-circle-o {
+      color: #{$color};
+    }
+  }
 }
