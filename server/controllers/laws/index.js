@@ -64,7 +64,7 @@ var controller = require(__dirname + '/../../lib/controller.js')
 
 	,	getComparten = function getComparten (sex, age)
 		{
-			return 1;
+			return '22.000';
 		}
 
 	,	parseCategory = function parseCategory (leyes, id)
