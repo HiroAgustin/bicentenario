@@ -1,0 +1,6 @@
+<div class="category-<%= categoryListDetails.id %> category-page js-category-page hidden" data-id="<%= categoryListDetails.id %>">
+  <p class="h1 u-marginVl u-paddingBl category-title"><%= categoryListDetails.title %></p>
+  <ul class="list-unstyled">
+    <%- partial('categoryLaw', categoryListDetails.leyes)%>
+  </ul>
+</div>

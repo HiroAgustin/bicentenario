@@ -1,0 +1,24 @@
+<% if (type === 'item') { %>
+
+  <ul class="list-unstyled u-marginBn">
+    <%- partial('categoryListItem', categorias) %>
+  </ul>
+
+<% } else if (type === 'circle') { %>
+
+  <ul class="list-unstyled text-center clearfix">
+    <%- partial('categoryListCircle', categorias) %>
+  </ul>
+
+<% } else if (type === 'details') { %>
+
+  <div id="js-law-list" class="alt-body slider slide-left u-posAbsoluteCenter" style="overflow: auto;">
+    <div class="container u-paddingVl">
+      <a href="#js-law-list" class="Aligner link-circle link-circle-sm link-close pull-right" data-toggle="slide-left">
+        <i class="fa fa-fw fa-lg fa-times"></i>
+      </a>
+      <%- partial('categoryListDetails', categorias) %>
+    </div>
+  </div>
+
+<% } %>
