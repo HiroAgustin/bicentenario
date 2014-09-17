@@ -12,12 +12,18 @@
 				return Array.prototype.forEach.call(collection, callback);
 			}
 
-		,	listen = function listen (selector, event, callback)
+		,	on = function on (selector, event, callback)
 			{
 				return forEach($(selector), function (element)
 				{
 					element.addEventListener(event, callback);
 				});
+			}
+
+		,	listen = function listen (selector, events)
+			{
+				for (event in events)
+					on(selector, event, events[event]);
 			}
 
 		,	getTargetId = function getTargetId(target)
@@ -27,9 +33,11 @@
 
 		,	lawList = $('#js-law-list')[0]
 
+		,	body = $('body')[0]
+
 		,	background = null;
 
-	listen('[data-toggle]', 'click', function (event)
+	on('[data-toggle]', 'click', function (event)
 	{
 		var className = this.dataset.toggle;
 
@@ -41,26 +49,29 @@
 		});
 	});
 
-	listen('.js-category-item', 'mouseover', function (event)
-	{
-		$('body')[0].classList.add('category-body-' + getTargetId(event.target));
-	});
+	listen('.js-category-item', {
 
-	listen('.js-category-item', 'mouseout', function (event)
-	{
-		$('body')[0].classList.remove('category-body-' + getTargetId(event.target));
-	});
-
-	listen('.js-category-item', 'click', function (event)
-	{
-		lawList.classList.toggle('slide-left');
-
-		forEach($('.js-category-page:not(.hidden)', lawList), function (element)
+		mouseover: function (event)
 		{
-			element.classList.add('hidden');
-		});
+			body.classList.add('category-body-' + getTargetId(event.target));
+		}
 
-		$('.js-category-page[data-id="' + getTargetId(event.target) + '"]', lawList)[0].classList.remove('hidden');
+	,	mouseout: function (event)
+		{
+			body.classList.remove('category-body-' + getTargetId(event.target));
+		}
+
+	,	click: function (event)
+		{
+			lawList.classList.toggle('slide-left');
+
+			forEach($('.js-category-page:not(.hidden)', lawList), function (element)
+			{
+				element.classList.add('hidden');
+			});
+
+			$('.js-category-page[data-id="' + getTargetId(event.target) + '"]', lawList)[0].classList.remove('hidden');
+		}
 	});
 
 	win.addEventListener('resize', function ()
