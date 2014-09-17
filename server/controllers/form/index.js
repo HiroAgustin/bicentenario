@@ -5,9 +5,9 @@ var controller = require(__dirname + '/../../lib/controller.js')
 ,	getAge = function getAge (dateString)
 	{
 		var today = new Date()
-		,	birthDate = new Date(dateString)
-		,	years = today.getFullYear() - birthDate.getFullYear()
-		,	month = today.getMonth() - birthDate.getMonth();
+			,	birthDate = new Date(dateString)
+			,	years = today.getFullYear() - birthDate.getFullYear()
+			,	month = today.getMonth() - birthDate.getMonth();
 
 		if (month < 0 || (month === 0 && today.getDate() < birthDate.getDate()))
 			years--;
