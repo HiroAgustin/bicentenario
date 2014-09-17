@@ -1,28 +1,31 @@
 @import "compass/css3/transition";
-@import "compass/css3/transform";
-@import "compass/css3/flexbox";
 
 // Category Circle Sizes
-$small: 140px;
-$medium: $small + 30;
-$large: $medium + 30;
+$small: 30px;
+$medium: $small + 15;
+$large: $medium + 15;
+
+$categories: (
+   "1" "#835F6F" // Adultos Mayores
+,	"12" "#7583A1" // Discapacidad
+,	"13" "#F7783F" // Educación
+,	"14" "#BF6B84" // Estado Civil
+,	 "5" "#F0BFE3" // Maternidad
+,	"16" "#02BFF1" // Niñez y Adolescencia
+,	 "7" "#4AD6B6" // Salud
+,	"18" "#E52F5A" // Salud Sexual
+,	"19" "#F3C135" // Seguridad
+,	"10" "#BE5452" // Trabajo
+,	"11" "#BEC8C4" // Tributos
+);
+
+body {
+  @include single-transition(background, .5s, ease-out);
+}
 
 .category-circle {
   border-radius: 50%;
   cursor: pointer;
-  font-size: $font-size-base * 1.25;
-  text-align: center;
-
-  @include display-flex();
-  @include flex-direction(column);
-  @include justify-content(center);
-  @include single-transition(transform, .25s, ease-out);
-
-  &:hover {
-    color: $link-color;
-    text-decoration: none;
-    @include scale(.8);
-  }
 }
 
 .category-circle-small {
@@ -40,19 +43,9 @@ $large: $medium + 30;
   width: $large;
 }
 
-$categories: (
-   "1" "#835F6F" // Adultos Mayores
-,	"12" "#7583A1" // Discapacidad
-,	"13" "#F7783F" // Educación
-,	"14" "#BF6B84" // Estado Civil
-,	 "5" "#F0BFE3" // Maternidad
-,	"16" "#02BFF1" // Niñez y Adolescencia
-,	 "7" "#4AD6B6" // Salud
-,	"18" "#E52F5A" // Salud Sexual
-,	"19" "#F3C135" // Seguridad
-,	"10" "#BE5452" // Trabajo
-,	"11" "#BEC8C4" // Tributos
-);
+.category-list-item {
+  cursor: pointer;
+}
 
 @each $category in $categories {
   $id: nth($category, 1);
@@ -64,8 +57,33 @@ $categories: (
       background: #{$color};
     }
 
-    .fa-circle-o {
-      color: #{$color};
+    &.category-list-item {
+
+      .fa-circle {
+        color: #{$color};
+      }
+    }
+
+    &.category-page {
+
+      .category-title {
+        border-bottom: 2px solid #{$color};
+      }
+    }
+  }
+
+  .category-body-#{$id} {
+    background: #{$color};
+
+    .category-#{$id} {
+
+      &.category-list-item {
+        font-weight: bold;
+      }
+
+      &.category-circle {
+        background: white;
+      }
     }
   }
 }
