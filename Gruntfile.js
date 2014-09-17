@@ -35,7 +35,7 @@ module.exports = function (grunt)
 
 	,	watch: {
 			compass: {
-				files: ['public/scss/**/*.scss', 'public/scripts/*.js', 'server/**/*.ejs']
+				files: ['public/scss/**/*.scss', 'public/scripts/*.js', 'server/**/*.ejs', 'server/**/*.svg']
 			,	tasks: ['compass']
 			,	options: {
 					livereload: true
@@ -97,18 +97,6 @@ module.exports = function (grunt)
 				}
 			}
 		}
-
-	// ,	svgmin: {
-	// 		dist: {
-	// 			files: [{
-	// 				expand: true
-	// 			,	cwd: 'public/images'
-	// 			,	src: ['**/*.svg']
-	// 			,	dest: 'public/images'
-	// 			,	ext: '.min.svg'
-	// 			}]
-	// 		}
-	// 	}
 
 	,	open: {
 			server: {
