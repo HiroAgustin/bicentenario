@@ -2,75 +2,46 @@
 {
 	'use strict';
 
-	var $ = function $ (selector, context)
-			{
-				return (context || doc).querySelectorAll(selector);
-			}
+	var lawList = _.$('#js-law-list')[0]
 
-		,	forEach = function forEach (collection, callback)
-			{
-				return Array.prototype.forEach.call(collection, callback);
-			}
-
-		,	on = function on (selector, event, callback)
-			{
-				return forEach($(selector), function (element)
-				{
-					element.addEventListener(event, callback);
-				});
-			}
-
-		,	listen = function listen (selector, events)
-			{
-				for (event in events)
-					on(selector, event, events[event]);
-			}
-
-		,	getTargetId = function getTargetId(target)
-			{
-				return target.dataset.id || getTargetId(target.parentNode);
-			}
-
-		,	lawList = $('#js-law-list')[0]
-
-		,	body = $('body')[0]
+		,	body = _.$('body')[0]
 
 		,	background = null;
 
-	on('[data-toggle]', 'click', function (event)
+	_.on('[data-toggle]', 'click', function (event)
 	{
 		var className = this.dataset.toggle;
 
 		event.preventDefault();
 
-		forEach($(this.getAttribute('href')), function (element)
+		_.forEach(_.$(this.getAttribute('href')), function (element)
 		{
 			element.classList.toggle(className);
 		});
 	});
 
-	listen('.js-category-item', {
+	_.listen('.js-category-item', {
 
 		mouseover: function (event)
 		{
-			body.classList.add('category-body-' + getTargetId(event.target));
+			body.classList.add('category-body-' + _.getTargetId(event.target));
 		}
 
 	,	mouseout: function (event)
 		{
-			body.classList.remove('category-body-' + getTargetId(event.target));
+			body.classList.remove('category-body-' + _.getTargetId(event.target));
 		}
 
 	,	click: function (event)
 		{
 			lawList.classList.toggle('slide-left');
 
-			forEach($('.js-category-page:not(.hidden)', lawList), function (element)
+			_.forEach(_.$('.js-category-page:not(.hidden)', lawList), function (element)
 			{
 				element.classList.add('hidden');
 			});
 
-			$('.js-category-page[data-id="' + getTargetId(event.target) + '"]', lawList)[0].classList.remove('hidden');
+			_.$('.js-category-page[data-id="' + _.getTargetId(event.target) + '"]', lawList)[0].classList.remove('hidden');
 		}
 	});
 
