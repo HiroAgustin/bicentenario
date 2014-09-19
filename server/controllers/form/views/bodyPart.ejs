@@ -1,7 +1,7 @@
-<% for (i = 1; i <= count; i++) { %>
+<% items.forEach(function (name) { %>
   <div class="Aligner">
     <i class="fa fa-angle-left fa-2x"></i>
-    <%- partial('../../../characters/' + type + '/' + i + '.svg') %>
+    <%- partial('../../../characters/' + type + '/' + name) %>
     <i class="fa fa-angle-right fa-2x"></i>
   </div>
-<% } %>
+<% }) %>

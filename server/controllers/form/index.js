@@ -41,9 +41,9 @@ app.get('/ingresar', function (req, res)
 		title: 'Ingresar mi informacón'
 	,	user: parseUser(req.user)
 	,	bodyParts: {
-			heads: fs.readdirSync(charactersPath + 'heads/').length
-		,	bodys: fs.readdirSync(charactersPath + 'bodys/').length
-		,	legs: fs.readdirSync(charactersPath + 'legs/').length
+			heads: fs.readdirSync(charactersPath + 'heads/')
+		,	bodys: fs.readdirSync(charactersPath + 'bodys/')
+		,	legs: fs.readdirSync(charactersPath + 'legs/')
 		}
 	});
 });
