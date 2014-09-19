@@ -69,23 +69,14 @@
 					<div class="col-sm-6" style="padding: 0 80px;">
 						<h2 class="text-center u-marginBl">Armá tu avatar</h2>
 
-						<div class="Aligner">
-							<i class="fa fa-angle-left fa-2x"></i>
-							<% include ../../../characters/heads/1.svg %>
-							<i class="fa fa-angle-right fa-2x"></i>
-						</div>
+						<% for (limb in bodyParts) { %>
 
-						<div class="Aligner">
-							<i class="fa fa-angle-left fa-2x"></i>
-							<% include ../../../characters/bodys/1.svg %>
-							<i class="fa fa-angle-right fa-2x"></i>
-						</div>
+							<%- partial('bodyPart', {
+								type: limb
+							,	count: bodyParts[limb]
+							}) %>
 
-						<div class="Aligner">
-							<i class="fa fa-angle-left fa-2x"></i>
-							<% include ../../../characters/legs/1.svg %>
-							<i class="fa fa-angle-right fa-2x"></i>
-						</div>
+						<% } %>
 					</div>
 				</div>
 
