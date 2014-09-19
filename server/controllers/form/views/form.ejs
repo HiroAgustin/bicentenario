@@ -6,14 +6,21 @@
 				<div class="row u-marginBl">
 					<div class="col-sm-6">
 						<h2 class="u-marginBl">Completá tus datos</h2>
-						<div class="form-group">
-							<label for="nombre">Nombre</label>
-							<input type="text" name="nombre" class="form-control" id="nombre" value="<%= user.name %>">
-						</div>
-						<div class="form-group">
-							<label for="edad">Edad</label>
-							<input type="number" name="edad" class="form-control" id="edad" value="<%= user.age %>">
-						</div>
+
+						<%- partial('input', {
+							type: 'text'
+						,	name: 'nombre'
+						,	label: 'Nombre'
+						,	value: user.name
+						}) %>
+
+						<%- partial('input', {
+							type: 'number'
+						,	name: 'edad'
+						,	label: 'Edad'
+						,	value: user.age
+						}) %>
+
 						<div class="form-group">
 							<label for="sexo">Sexo</label>
 							<select name="sexo" class="form-control" id="sexo">
@@ -23,6 +30,7 @@
 								<option value="otro">Otro</option>
 							</select>
 						</div>
+
 						<div class="form-group">
 							<label for="estado-civil">Estado civil</label>
 							<select name="estado-civil" class="form-control" id="estado-civil">
@@ -33,6 +41,7 @@
 								<option value="viudo" <%= user.status === 'Widowed' ? 'selected' : '' %>>Viudo</option>
 							</select>
 						</div>
+
 						<div class="form-group">
 							<label for="residencia">País de residencia</label>
 							<select name="residencia" class="form-control" id="residencia">
@@ -41,29 +50,20 @@
 							</select>
 						</div>
 
-						<label class="control control-checkbox">
-							<input type="checkbox" name="discapacidad" value="si">
-							<span class="control-indicator"></span>
-							Incluir leyes sobre discapacidad.
-						</label>
+						<%- partial('checkbox', {
+							name: 'discapacidad'
+						,	label: 'Incluir leyes sobre discapacidad.'
+						}) %>
 
-						<label class="control control-checkbox">
-							<input type="checkbox" name="identidad-genero" value="si">
-							<span class="control-indicator"></span>
-							Incluir leyes de identidad de genero.
-						</label>
+						<%- partial('checkbox', {
+							name: 'identidad-racial'
+						,	label: 'Incluir leyes sobre identidad racial.'
+						}) %>
 
-						<label class="control control-checkbox">
-							<input type="checkbox" name="identidad-racial" value="si">
-							<span class="control-indicator"></span>
-							Incluir leyes sobre identidad racial.
-						</label>
-
-						<label class="control control-checkbox">
-							<input type="checkbox" name="hijos" value="si">
-							<span class="control-indicator"></span>
-							Incluir leyes sobre hijos.
-						</label>
+						<%- partial('checkbox', {
+							name: 'hijos'
+						,	label: 'Incluir leyes sobre hijos.'
+						}) %>
 					</div>
 
 					<div class="col-sm-6" style="padding: 0 80px;">

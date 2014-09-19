@@ -1,0 +1,16 @@
+<div class="form-group">
+  <label for="<%= name %>"><%= label %></label>
+
+  <% if (type === 'select') { %>
+    <select name="<%= name %>" class="form-control" id="<%= name %>">
+      <% options.forEach(function (option) { %>
+        <option value="<%= option.value %>" <%= option.isSelected ? 'selected' : '' %>>
+          <%= option.label %>
+        </option>
+      <% }) %>
+    </select>
+    
+  <% } else { %>
+    <input type="<%= type %>" name="<%= name %>" class="form-control" id="<%= name %>" value="<%= value %>">
+  <% } %>
+</div>
