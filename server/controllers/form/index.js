@@ -33,17 +33,20 @@ var controller = require(__dirname + '/../../lib/controller.js')
 			,	status: getAttr(user, 'relationship_status')
 			,	location: getAttr(user, 'location').name
 			}
-		};
+		}
+
+	,	bodyParts = {};
+
+fs.readdirSync(charactersPath).forEach(function (item)
+{
+	bodyParts[item] = fs.readdirSync(charactersPath + item);
+});
 
 app.get('/ingresar', function (req, res)
 {
 	res.render('form', {
 		title: 'Ingresar mi informacón'
 	,	user: parseUser(req.user)
-	,	bodyParts: {
-			heads: fs.readdirSync(charactersPath + 'heads/')
-		,	bodys: fs.readdirSync(charactersPath + 'bodys/')
-		,	legs: fs.readdirSync(charactersPath + 'legs/')
-		}
+	,	bodyParts: bodyParts
 	});
 });
