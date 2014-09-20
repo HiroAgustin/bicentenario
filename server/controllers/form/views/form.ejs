@@ -69,11 +69,16 @@
 					<div class="col-sm-6" style="padding: 0 80px;">
 						<h2 class="text-center u-marginBl">Armá tu avatar</h2>
 
+						<% var items = []; %>
+
 						<% for (limb in bodyParts) { %>
+
+							<% items = bodyParts[limb]; %>
 
 							<%- partial('bodyPart', {
 								type: limb
-							,	items: bodyParts[limb]
+							,	items: items
+							,	selected: items[Math.floor(Math.random() * items.length)]
 							}) %>
 
 						<% } %>

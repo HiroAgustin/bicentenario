@@ -18,3 +18,21 @@ $pink: #EDD8D3;
 .char-shirt-purple {
   fill: $purple;
 }
+
+.character-control {
+
+  > * {
+    display: none;
+  }
+
+  input:checked {
+
+    & ~ * {
+      display: block;
+    }
+  }
+}
+
+.character-control-nav {
+  cursor: pointer;
+}
