@@ -130,14 +130,16 @@ var controller = require(__dirname + '/../../lib/controller.js')
 
 			return {
 				title: 'Mi legado de Bicentenario'
-			,	nombre: query.nombre
-			,	sexo: (query.sexo || '').toLowerCase()
 			,	leyes: leyes
-			,	comparten: getComparten(query.sexo, query.edad)
 			,	fechas: fechas
+			,	nombre: query.nombre
+			,	personaje: {
+					cabeza: query.cabeza
+				,	cuerpo: query.cuerpo
+				,	piernas: query.piernas
+				}
 			,	categorias: categories
-			,	categoriesSet1: _.initial(categories, half)
-			,	categoriesSet2: _.rest(categories, length - half)
+			,	comparten: getComparten(query.sexo, query.edad)
 			,	url: encodeURIComponent('http://bicentenario.herokuapp.com' + req.url)
 			};
 		};

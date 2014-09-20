@@ -19,6 +19,10 @@ $pink: #EDD8D3;
   fill: $purple;
 }
 
+.character > svg {
+  @extend .center-block;
+}
+
 .character-control {
 
   > * {

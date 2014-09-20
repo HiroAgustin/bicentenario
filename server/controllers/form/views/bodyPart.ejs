@@ -10,7 +10,7 @@
   %>
   <div class="Aligner character-control">
 
-    <input type="radio" name="<%= type %>" id="<%= type %>-<%= index %>" value="<%= name %>" <%= name === selected ? 'checked' : '' %>>
+    <input type="radio" name="<%= type %>" id="<%= type %>-<%= index %>" value="<%= name.substring(0, name.length - 4) %>" <%= name === selected ? 'checked' : '' %>>
 
     <label class="character-control-nav" for="<%= type %>-<%= prev %>">
       <i class="fa fa-angle-left fa-2x"></i>
