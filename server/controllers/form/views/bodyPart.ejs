@@ -1,7 +1,22 @@
-<% items.forEach(function (name) { %>
+<% var length = items.length; %>
+<% items.forEach(function (name, index) { %>
   <div class="Aligner">
-    <i class="fa fa-angle-left fa-2x"></i>
-    <%- partial('../../../characters/' + type + '/' + name) %>
-    <i class="fa fa-angle-right fa-2x"></i>
+
+    <% if (index) { %>
+      <label for="<%= type %>-<%= index - 1 %>">
+        <i class="fa fa-angle-left fa-2x"></i>
+      </label>
+    <% } %>
+
+    <label for="<%= type %>-<%= index %>">
+      <input type="radio" name="<%= type %>" id="<%= type %>-<%= index %>" value="<%= name %>">
+      <%- partial('../../../characters/' + type + '/' + name) %>
+    </label>
+
+    <% if (index < length - 1) { %>
+      <label for="<%= type %>-<%= index + 1 %>">
+        <i class="fa fa-angle-right fa-2x"></i>
+      </label>
+    <% } %>
   </div>
 <% }) %>
