@@ -2,15 +2,15 @@
   <label for="<%= name %>"><%= label %></label>
 
   <% if (type === 'select') { %>
-    <select name="<%= name %>" class="form-control" id="<%= name %>">
+    <select name="<%= name %>" class="form-control" id="<%= name %>" <%= required ? 'required' : '' %>>
       <% options.forEach(function (option) { %>
         <option value="<%= option.value %>" <%= option.isSelected ? 'selected' : '' %>>
           <%= option.label %>
         </option>
       <% }) %>
     </select>
-    
+
   <% } else { %>
-    <input type="<%= type %>" name="<%= name %>" class="form-control" id="<%= name %>" value="<%= value %>">
+    <input type="<%= type %>" name="<%= name %>" class="form-control" id="<%= name %>" value="<%= value %>" <%= required ? 'required' : '' %>>
   <% } %>
 </div>

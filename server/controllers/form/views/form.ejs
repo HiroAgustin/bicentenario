@@ -12,6 +12,7 @@
 						,	name: 'nombre'
 						,	label: 'Nombre'
 						,	value: user.name
+						,	required: true
 						}) %>
 
 						<%- partial('input', {
@@ -19,11 +20,12 @@
 						,	name: 'edad'
 						,	label: 'Edad'
 						,	value: user.age
+						,	required: true
 						}) %>
 
 						<div class="form-group">
 							<label for="sexo">Sexo</label>
-							<select name="sexo" class="form-control" id="sexo">
+							<select name="sexo" class="form-control" id="sexo" required>
 								<option value=""></option>
 								<option value="m" <%= user.gender === 'male' ? 'selected' : '' %>>Hombre</option>
 								<option value="f" <%= user.gender === 'female' ? 'selected' : '' %>>Mujer</option>
@@ -33,7 +35,7 @@
 
 						<div class="form-group">
 							<label for="estado-civil">Estado civil</label>
-							<select name="estado-civil" class="form-control" id="estado-civil">
+							<select name="estado-civil" class="form-control" id="estado-civil" required>
 								<option value=""></option>
 								<option value="soltero" <%= user.status ? 'selected' : '' %>>Soltero</option>
 								<option value="concubinato" <%= user.status === 'Engaged' ? 'selected' : '' %>>Concubinato</option>
@@ -44,7 +46,7 @@
 
 						<div class="form-group">
 							<label for="residencia">País de residencia</label>
-							<select name="residencia" class="form-control" id="residencia">
+							<select name="residencia" class="form-control" id="residencia" required>
 								<option value="uruguay">Uruguay</option>
 								<option value="extranjero" <%= user.location && !~user.location.indexOf('Uruguay') ? 'selected' : '' %>>Extranjero</option>
 							</select>
