@@ -24,11 +24,10 @@
   {
     event.preventDefault();
 
-    FB.ui(
-      {
-        method: 'share'
-      , href: unescape(this.getAttribute('href'))
-      });
+    FB.ui({
+      method: 'share'
+    , href: location.href
+    });
   });
 
   // <!-- Facebook Share Button -->
