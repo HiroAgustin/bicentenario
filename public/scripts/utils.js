@@ -24,8 +24,10 @@
 
   ,	listen: function listen (selector, events)
     {
-      for (event in events)
-        _.on(selector, event, events[event]);
+      var evnt = '';
+
+      for (evnt in events)
+        _.on(selector, evnt, events[evnt]);
     }
 
   ,	getTargetId: function getTargetId(target)
