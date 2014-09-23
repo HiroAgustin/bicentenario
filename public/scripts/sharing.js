@@ -24,6 +24,8 @@
   {
     event.preventDefault();
 
+    console.log(this.getAttribute('href'));
+
     FB.ui(
       {
         method: 'share'
