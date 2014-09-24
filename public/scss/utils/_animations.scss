@@ -8,3 +8,32 @@
 .slide-left {
   @include translateX(-100%);
 }
+
+
+.display-content {
+  @include transition-property(opacity, transform);
+  @include transition-duration(.25s);
+  @include transition-timing-function(linear);
+
+  opacity: 0;
+}
+
+.display-content-top {
+  @include translateY(10px);
+}
+
+.display-content-bottom {
+  @include translateY(-10px);
+}
+
+.display-container {
+
+  &:hover {
+    text-decoration: none;
+
+    .display-content {
+      opacity: 1;
+      @include translateY(0);
+    }
+  }
+}
