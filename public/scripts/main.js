@@ -8,7 +8,7 @@
 
 		,	background = null;
 
-	_.on('[data-toggle]', 'click', function (event)
+	_.on('click', '[data-toggle]', function (event)
 	{
 		var className = this.dataset.toggle;
 

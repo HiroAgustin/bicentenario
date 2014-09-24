@@ -14,7 +14,7 @@
       return Array.prototype.forEach.call(collection, callback);
     }
 
-  ,	on: function on (selector, event, callback)
+  ,	on: function on (event, selector, callback)
     {
       return _.forEach(_.$(selector), function (element)
       {
@@ -27,7 +27,7 @@
       var evnt = '';
 
       for (evnt in events)
-        _.on(selector, evnt, events[evnt]);
+        _.on(evnt, selector, events[evnt]);
     }
 
   ,	getTargetId: function getTargetId(target)

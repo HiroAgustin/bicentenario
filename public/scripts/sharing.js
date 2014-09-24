@@ -20,7 +20,7 @@
     });
   };
 
-  _.on('[data-share="facebook"]', 'click', function (event)
+  _.on('click', '[data-share="facebook"]', function (event)
   {
     event.preventDefault();
 
