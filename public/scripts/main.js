@@ -4,7 +4,7 @@
 
 	var lawList = _.$('#js-law-list')[0]
 
-		,	body = _.$('body')[0]
+		,	body = _.$('#js-category-page')[0]
 
 		,	background = null;
 
@@ -24,12 +24,14 @@
 
 		mouseover: function (event)
 		{
+			background && background.stop();
 			body.classList.add('category-body-' + _.getTargetId(event.target));
 		}
 
 	,	mouseout: function (event)
 		{
 			body.classList.remove('category-body-' + _.getTargetId(event.target));
+			background && background.start();
 		}
 
 	,	click: function (event)

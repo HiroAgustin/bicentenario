@@ -1,4 +1,9 @@
-<li class="u-inlineBlock u-marginHm category-<%= categoryListCircle.id %> category-circle category-circle-<%= categoryListCircle.size %> js-category-item" data-id="<%= categoryListCircle.id %>">
-  <!-- <span><%= categoryListCircle.leyes.length %></span>
-  <span><%= categoryListCircle.title %></span> -->
+<li class="u-inlineBlock u-posRelative u-marginHm category-<%= categoryListCircle.id %>">
+  <span class="h2 u-marginVn u-posAbsolute category-content category-content-top display-content">
+    <%= categoryListCircle.leyes.length %>
+  </span>
+  <div class="center-block category-<%= categoryListCircle.id %> category-circle category-circle-<%= categoryListCircle.size %> js-category-item" data-id="<%= categoryListCircle.id %>"></div>
+  <span class="h4 u-marginVn u-posAbsolute category-content category-content-bottom display-content">
+    <%= categoryListCircle.title %>
+  </span>
 </li>

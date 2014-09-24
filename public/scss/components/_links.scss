@@ -41,3 +41,11 @@
 		background-color: $brand-primary;
 	}
 }
+
+.u-linkBlock {
+
+	&, &:hover, &:focus &:active {
+		display: block !important;
+		text-decoration: none !important;
+	}
+}

@@ -3,37 +3,32 @@
 
 .slider {
   @include single-transition(transform, .5s, cubic-bezier(0.645, 0.045, 0.355, 1.000));
+  @include translate3d(0, 0, 0);
+  will-change: transform;
 }
 
 .slide-left {
-  @include translateX(-100%);
+  @include translate3d(-100%, 0, 0);
 }
 
-
 .display-content {
+  opacity: 0;
+
   @include transition-property(opacity, transform);
   @include transition-duration(.25s);
   @include transition-timing-function(linear);
+  will-change: opacity, transform;
 
-  opacity: 0;
-}
-
-.display-content-top {
-  @include translateY(10px);
-}
-
-.display-content-bottom {
-  @include translateY(-10px);
-}
-
-.display-container {
-
-  &:hover {
-    text-decoration: none;
-
-    .display-content {
-      opacity: 1;
-      @include translateY(0);
-    }
+  .display-container:hover & {
+    opacity: 1;
+    @include translate3d(0, 0, 0);
   }
+}
+
+.display-content-up {
+  @include translate3d(0, 10px, 0);
+}
+
+.display-content-down {
+  @include translate3d(0, -10px, 0);
 }
