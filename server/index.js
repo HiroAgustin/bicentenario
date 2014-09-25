@@ -11,8 +11,9 @@ app.use(require('./controllers/landing'));
 app.use(require('./controllers/facebook'));
 
 app.use(require('./controllers/form'));
-
+app.use(require('./controllers/user'));
 app.use(require('./controllers/laws'));
+
 app.use(require('./controllers/error'));
 
 app.listen(process.env.PORT || 9000);

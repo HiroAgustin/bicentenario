@@ -6,16 +6,16 @@ app.get('/', function (req, res)
 	res.render('home');
 });
 
-app.get('/timeline', function (req, res)
+app.get('/linea-de-tiempo', function (req, res)
 {
 	res.render('timeline', {
-		title: 'Timeline'
+		title: 'Linea de tiempo'
 	});
 });
 
-app.get('/info', function (req, res)
+app.get('/que-es-este-proyecto', function (req, res)
 {
 	res.render('info', {
-		title: '¿Cómo van a manejar mi información?'
+		title: '¿Qué es este proyecto?'
 	});
 });

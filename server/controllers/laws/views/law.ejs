@@ -1,0 +1,7 @@
+<article class="u-marginVl u-paddingVm">
+  <p class="u-marginBm">Promulgada &mdash; <time><%= law.fecha %></time></p>
+  <h1 class="h3 u-marginVm"><%= law.title %></h1>
+  <% law.articles.forEach(function (article) { %>
+  <p><%= article %></p>
+  <% }) %>
+</article>
