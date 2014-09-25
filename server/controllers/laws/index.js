@@ -25,6 +25,7 @@ var controller = require(__dirname + '/../../lib/controller.js')
         tipo: 'listado'
       ,	cantidad: 10
       ,	pagina: query.pagina || 1
+      ,	categoria: query.categoria
       };
     }
 
