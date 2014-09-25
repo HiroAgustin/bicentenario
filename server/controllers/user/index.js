@@ -8,8 +8,7 @@ var controller = require(__dirname + '/../../lib/controller.js')
 
 		// http://bicente.itsu.com.uy/bicentenario.php?tipo=categorias
 	,	categories = {
-			0: 'Undefined'
-		,	1: 'Adultos Mayores'
+			1: 'Adultos Mayores'
 		,	5: 'Maternidad'
 		,	7: 'Salud'
 		,	10: 'Trabajo'
@@ -54,11 +53,15 @@ var controller = require(__dirname + '/../../lib/controller.js')
 
 			return {
 				id: law.id
-			,	fecha: date.getDate() + '/' + (date.getMonth() + 1) + '/' + date.getFullYear()
+			,	title: law.nombre
 			,	category: law.categoria
 			,	priority: law.prioridad
-			,	description: law.nombre
+
+			// , articles: [law.art1[0]]
+			,	articles: ['Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.']
+
 			,	year: date.getFullYear()
+			,	fecha: date.getDate() + '/' + (date.getMonth() + 1) + '/' + date.getFullYear()
 			};
 		}
 
@@ -106,7 +109,7 @@ var controller = require(__dirname + '/../../lib/controller.js')
 		{
 			var query = req.query
 
-				// ,	leyes = _.map(laws, parseLaw)
+				// ,	leyes = laws.map(parseLaw)
 				,	leyes = require('./mock.json')
 
 				,	byYear = _.groupBy(leyes, 'year')
@@ -122,11 +125,7 @@ var controller = require(__dirname + '/../../lib/controller.js')
 						};
 					})
 
-				,	categories = _.shuffle(getCategories(leyes))
-
-				,	length = categories.length
-
-				,	half = Math.floor(length / 2);
+				,	categories = _.shuffle(getCategories(leyes));
 
 			return {
 				title: 'Mi legado de Bicentenario'
