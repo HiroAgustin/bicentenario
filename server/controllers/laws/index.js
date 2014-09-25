@@ -67,6 +67,6 @@ app.get('/conoce-las-leyes', function (req, res)
   fetchLaws(parseQuery(req.query), function (result)
   {
     if (result.ok)
-      res.render('laws', parseResutls(req, result.body));
+      res.render('lawList', parseResutls(req, result.body));
   });
 });
