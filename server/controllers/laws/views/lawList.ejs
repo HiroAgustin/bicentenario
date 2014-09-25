@@ -1,16 +1,17 @@
 <% layout('../../../layouts/default') %>
+<% var selectedCategory = selected.category; %>
 <section class="HolyGrail-body Aligner">
   <div class="container u-paddingVl">
 
     <img class="img-responsive u-block" src="images/Bicentenario.png" alt="Bicentenario">
     <h1 class="text-center u-marginTn u-marginBl">Conocé las leyes</h1>
 
-    <form class="form">
+    <form class="form" action="/conoce-las-leyes" method="GET">
       <div class="row">
         <div class="col-sm-6 col-md-4 col-md-offset-2">
           <div class="form-group">
             <label for="orden">Ordenar por</label>
-            <select id="orden" name="orden" class="form-control">
+            <select id="orden" name="orden" class="form-control js-form-nav">
               <option></option>
             </select>
           </div>
@@ -18,10 +19,12 @@
         <div class="col-sm-6 col-md-4">
           <div class="form-group">
             <label for="categoria">Filtrar por</label>
-            <select id="categoria" name="categoria" class="form-control">
+            <select id="categoria" name="categoria" class="form-control js-form-nav">
               <option value="">Todas</option>
               <% categorias.forEach(function (category) { %>
-                <option value="<%= category.id %>"><%= category.label %></option>
+                <option value="<%= category.id %>" <%= category.id === selectedCategory ? 'selected' : '' %>>
+                  <%= category.label %>
+                </option>
               <% }) %>
             </select>
           </div>

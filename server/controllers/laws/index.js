@@ -54,11 +54,16 @@ var controller = require(__dirname + '/../../lib/controller.js')
 
   ,	parseResutls = function parseResutls (req, laws)
     {
+      var query = req.query;
+
       return {
         title: 'Conocé las leyes'
       ,	leyes: laws.map(parseLaw)
       ,	categorias: categories
-      ,	url: encodeURIComponent('http://bicentenario.herokuapp.com' + req.url)
+      , selected: {
+          category: query.categoria
+        , order: query.orden
+        }
       };
     };
 

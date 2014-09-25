@@ -20,6 +20,11 @@
 		});
 	});
 
+	_.on('change', '.js-form-nav', function (event)
+	{
+		this.form.submit();
+	});
+
 	_.listen('.js-category-item', {
 
 		mouseover: function (event)
