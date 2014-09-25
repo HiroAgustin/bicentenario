@@ -56,10 +56,8 @@ var controller = require(__dirname + '/../../lib/controller.js')
 			,	title: law.nombre
 			,	category: law.categoria
 			,	priority: law.prioridad
-
 			// , articles: [law.art1[0]]
 			,	articles: ['Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.']
-
 			,	year: date.getFullYear()
 			,	fecha: date.getDate() + '/' + (date.getMonth() + 1) + '/' + date.getFullYear()
 			};
@@ -79,7 +77,7 @@ var controller = require(__dirname + '/../../lib/controller.js')
 			};
 		}
 
-	,	getCategorySize = function setCategorySize (low, high, length)
+	,	getCategorySize = function getCategorySize (low, high, length)
 		{
 			return length <= low ? 'small' : length > high ? 'large' : 'medium';
 		}
