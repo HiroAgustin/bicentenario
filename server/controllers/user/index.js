@@ -21,6 +21,23 @@ var controller = require(__dirname + '/../../lib/controller.js')
 		,	19: 'Seguridad'
 		}
 
+	,	comparten = {
+			m: {
+				nino: '312.263'
+			,	adolescente: '162.013'
+			,	joven: '257.092'
+			,	adulto: '592.015'
+			,	mayor: '254.033'
+			}
+		,	f: {
+				nino: '298.183'
+			,	adolescente: '155.835'
+			,	joven: '260.661'
+			,	adulto: '633.314'
+			,	mayor: '360.468'
+			}
+		}
+
 	,	parseQuery = function parseQuery (query)
 		{
 			var sexo = query.sexo
@@ -64,7 +81,20 @@ var controller = require(__dirname + '/../../lib/controller.js')
 
 	,	getComparten = function getComparten (sex, age)
 		{
-			return '22.000';
+			var group = '';
+
+			if (age <= 12)
+				group = 'nino';
+			else if (age <= 18)
+				group = 'adolescente';
+			else if (age <= 29)
+				group = 'joven';
+			else if (age <= 59)
+				group = 'adulto';
+			else
+				group = 'mayor';
+
+			return comparten[sex][group];
 		}
 
 	,	parseCategory = function parseCategory (leyes, id)
