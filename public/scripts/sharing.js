@@ -50,7 +50,7 @@
 
   win.ga.l = 1 * new Date();
 
-  ga('create', 'UA-XXXX-Y', 'auto');
+  ga('create', 'UA-34702401-8', 'auto');
   ga('send', 'pageview');
   // <!-- End Google Analytics -->
 
