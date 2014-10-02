@@ -1,13 +1,35 @@
+<% var title = typeof title !== 'undefined' ? title : 'Legado del Bicentenario'; %>
 <!doctype html>
-<!--[if lt IE 10]> <html class="no-js lt-ie10" lang="es"> <![endif]-->
-<!--[if gt IE 10]><!--> <html class="no-js" lang="es"> <!--<![endif]-->
+<!--[if lt IE 10]> <html class="no-js lt-ie10" lang="es" dir="ltr" itemscope itemtype="http://schema.org/WebSite"> <![endif]-->
+<!--[if gt IE 10]><!--> <html class="no-js" lang="es" dir="ltr" itemscope itemtype="http://schema.org/WebSite"> <!--<![endif]-->
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title><%= typeof title !== 'undefined' ? title : 'Legado del Bicentenario' %></title>
-	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- DNS Prefetchs -->
+	<link rel="dns-prefetch" href="//connect.facebook.net/">
+	<link rel="dns-prefetch" href="//platform.twitter.com/">
+	<link rel="dns-prefetch" href="//www.google-analytics.com/">
+
+	<title itemprop="name"><%= title %></title>
+	<!-- Open Graph -->
+	<meta property="og:description" name="description" itemprop="description" content="Conocé los avances legislativos concretados en este siglo, sobre todo los concebidos como ampliación de derechos, que impactan en la forma de vernos y pensarnos como sociedad.">
+	<meta property="og:title" content="<%= title %>">
+	<meta property="og:type" content="website">
+	<meta property="og:url" itemprop="url" content="http://bicentenario.herokuapp.com/">
+	<meta property="og:image" itemprop="image" content="http://bicentenario.herokuapp.com/banner.png">
+	<meta property="og:image:type" content="image/png">
+	<meta property="og:image:width" content="1200">
+	<meta property="og:image:height" content="627">
+	<meta property="og:site_name" content="Legado del Bicentenario">
+	<!-- Twitter Card -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@Bicentenario_uy">
+	<meta name="twitter:creator" content="@DATAuy">
+
 	<link rel="icon" href="favicon.png">
+
 	<link rel="stylesheet" href="styles/font-awesome.css">
 	<link rel="stylesheet" href="styles/main.css">
 </head>
