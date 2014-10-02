@@ -11,10 +11,18 @@
 			</div>
 			<div class="collapse navbar-collapse" id="navbar-collapse">
 				<ul class="nav navbar-nav">
-					<li><a href="/">Inicio</a></li>
-					<li><a href="/que-es-este-proyecto">¿Qué es este proyecto?</a></li>
-					<li><a href="/conoce-las-leyes">Conocé las leyes</a></li>
-					<li><a href="/linea-de-tiempo">Linea de tiempo</a></li>
+					<li class="<%= path === '/' ? 'active' : '' %>">
+						<a href="/">Inicio</a>
+					</li>
+					<li class="<%= path === '/que-es-este-proyecto' ? 'active' : '' %>">
+						<a href="/que-es-este-proyecto">¿Qué es este proyecto?</a>
+					</li>
+					<li class="<%= path === '/conoce-las-leyes' ? 'active' : '' %>">
+						<a href="/conoce-las-leyes">Conocé las leyes</a>
+					</li>
+					<li class="<%= path === '/linea-de-tiempo' ? 'active' : '' %>">
+						<a href="/linea-de-tiempo">Linea de tiempo</a>
+					</li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
 					<li class="external"><a href="http://www.sumar.uy/" target="_blank">Sumá derechos en Sumar.uy</a></li>

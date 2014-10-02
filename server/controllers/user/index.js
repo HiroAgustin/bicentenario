@@ -126,6 +126,7 @@ var controller = require(__dirname + '/../../lib/controller.js')
 
 			return {
 				title: 'Mi legado de Bicentenario'
+			,	path: req.path
 			,	leyes: leyes
 			,	fechas: fechas
 			,	nombre: query.nombre

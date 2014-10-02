@@ -58,6 +58,7 @@ var controller = require(__dirname + '/../../lib/controller.js')
 
       return {
         title: 'Conocé las leyes'
+      ,	path: req.path
       ,	leyes: laws.map(parseLaw)
       ,	categorias: categories
       , selected: {
