@@ -1,3 +1,4 @@
+<% var uri = typeof path !== 'undefined' ? path : '' %>
 <header class="site-header">
 	<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
 		<div class="container-fluid">
@@ -11,16 +12,16 @@
 			</div>
 			<div class="collapse navbar-collapse" id="navbar-collapse">
 				<ul class="nav navbar-nav">
-					<li class="<%= path === '/' ? 'active' : '' %>">
+					<li class="<%= uri === '/' ? 'active' : '' %>">
 						<a href="/">Inicio</a>
 					</li>
-					<li class="<%= path === '/que-es-este-proyecto' ? 'active' : '' %>">
+					<li class="<%= uri === '/que-es-este-proyecto' ? 'active' : '' %>">
 						<a href="/que-es-este-proyecto">¿Qué es este proyecto?</a>
 					</li>
-					<li class="<%= path === '/conoce-las-leyes' ? 'active' : '' %>">
+					<li class="<%= uri === '/conoce-las-leyes' ? 'active' : '' %>">
 						<a href="/conoce-las-leyes">Conocé las leyes</a>
 					</li>
-					<li class="<%= path === '/linea-de-tiempo' ? 'active' : '' %>">
+					<li class="<%= uri === '/linea-de-tiempo' ? 'active' : '' %>">
 						<a href="/linea-de-tiempo">Linea de tiempo</a>
 					</li>
 				</ul>

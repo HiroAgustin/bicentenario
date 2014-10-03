@@ -46,7 +46,6 @@ app.get('/ingresar', function (req, res)
 {
 	res.render('form', {
 		title: 'Ingresar mi informacón'
-	,	path: req.path
 	,	user: parseUser(req.user)
 	,	bodyParts: bodyParts
 	});
