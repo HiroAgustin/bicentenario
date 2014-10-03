@@ -1,4 +1,7 @@
-<% var title = typeof title !== 'undefined' ? title : 'Legado del Bicentenario'; %>
+<%
+	var title = typeof title !== 'undefined' ? title : 'Legado del Bicentenario'
+		,	description = typeof title !== 'undefined' ? title : 'Conocé los avances legislativos concretados en este siglo, sobre todo los concebidos como ampliación de derechos, que impactan en la forma de vernos y pensarnos como sociedad.';
+%>
 <!doctype html>
 <!--[if lt IE 10]> <html class="no-js lt-ie10" lang="es" dir="ltr" itemscope itemtype="http://schema.org/WebSite"> <![endif]-->
 <!--[if gt IE 10]><!--> <html class="no-js" lang="es_LA" dir="ltr" itemscope itemtype="http://schema.org/WebSite"> <!--<![endif]-->
@@ -17,6 +20,7 @@
 	<!-- Schema.org -->
 	<meta name="url" itemprop="url" content="http://bicentenario.herokuapp.com/">
 	<meta name="image" itemprop="image" content="http://bicentenario.herokuapp.com/images/banner.png">
+	<meta name="description" itemprop="description" content="<%= description %>">
 
 	<!-- Open Graph -->
 	<meta property="og:type" content="website">
@@ -24,7 +28,7 @@
 	<meta property="og:title" content="<%= title %>">
 	<meta property="og:site_name" content="Legado del Bicentenario">
 	<meta property="og:url" content="http://bicentenario.herokuapp.com/">
-	<meta property="og:description" name="description" itemprop="description" content="Conocé los avances legislativos concretados en este siglo, sobre todo los concebidos como ampliación de derechos, que impactan en la forma de vernos y pensarnos como sociedad.">
+	<meta property="og:description" content="<%= description %>">
 	<meta property="og:image" content="http://bicentenario.herokuapp.com/images/banner.png">
 	<meta property="og:image:type" content="image/png">
 	<meta property="og:image:width" content="1200">
