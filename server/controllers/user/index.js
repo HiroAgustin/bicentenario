@@ -154,6 +154,13 @@ var controller = require(__dirname + '/../../lib/controller.js')
 
 				,	categories = _.shuffle(getCategories(leyes));
 
+			categories.map(function (item, index)
+			{
+				item.index = index;
+				
+				return item;
+			});
+
 			return {
 				title: 'Mi legado de Bicentenario'
 			,	leyes: leyes
