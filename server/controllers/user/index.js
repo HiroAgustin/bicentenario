@@ -156,8 +156,11 @@ var controller = require(__dirname + '/../../lib/controller.js')
 
 			categories.map(function (item, index)
 			{
-				item.index = index;
-				
+				if (index === 6)
+					item.index = 11;
+				else
+					item.index = index;
+
 				return item;
 			});
 
