@@ -55,6 +55,18 @@ module.exports = function (grunt)
 			}
 		}
 
+	,	svgmin: {
+			options: {}
+		,	dist: {
+        files: [{
+          expand: true
+        ,	cwd: 'server/characters'
+				,	src: '{,*/}*.svg'
+        ,	dest: 'server/characters/min'
+        }]
+			}
+		}
+
 	,	copy: {
 			main: {
 				files: [
