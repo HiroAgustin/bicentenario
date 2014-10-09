@@ -1,5 +1,7 @@
 module.exports = function (grunt)
 {
+	'use strict';
+
 	// Load all Grunt tasks
 	require('load-grunt-tasks')(grunt);
 
@@ -123,7 +125,6 @@ module.exports = function (grunt)
 		'clean'
 	,	'compass'
 	,	'copy'
-	// ,	'svgmin'
 	]);
 
 	grunt.registerTask('deploy', [
