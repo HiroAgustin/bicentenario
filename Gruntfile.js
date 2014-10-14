@@ -55,12 +55,24 @@ module.exports = function (grunt)
 			}
 		}
 
+	,	svgclean: {
+			options: {}
+		,	dist: {
+				files: [{
+					expand: true
+				,	cwd: 'server/characters'
+				,	src: '{,*/}*.svg'
+				,	dest: '.tmp/characters'
+				}]
+			}
+		}
+
 	,	svgmin: {
 			options: {}
 		,	dist: {
         files: [{
           expand: true
-        ,	cwd: 'server/characters'
+        ,	cwd: '.tmp/characters'
 				,	src: '{,*/}*.svg'
         ,	dest: 'server/characters/min'
         }]
