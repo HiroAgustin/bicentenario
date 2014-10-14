@@ -62,7 +62,7 @@ module.exports = function (grunt)
 					expand: true
 				,	cwd: 'server/characters'
 				,	src: '{,*/}*.svg'
-				,	dest: '.tmp/characters'
+				,	dest: 'server/characters/min'
 				}]
 			}
 		}
@@ -72,7 +72,7 @@ module.exports = function (grunt)
 		,	dist: {
         files: [{
           expand: true
-        ,	cwd: '.tmp/characters'
+        ,	cwd: 'server/characters/min'
 				,	src: '{,*/}*.svg'
         ,	dest: 'server/characters/min'
         }]
