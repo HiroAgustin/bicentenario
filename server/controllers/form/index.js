@@ -2,7 +2,7 @@
 {
 	'use strict';
 
-	var charactersPath = __dirname + '/../../characters/'
+	var charactersPath = __dirname + '/../../characters/min/'
 
 		,	app = module.exports = controller(__dirname)
 
