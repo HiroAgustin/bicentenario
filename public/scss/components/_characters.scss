@@ -30,8 +30,12 @@
   fill: #ffffff;
 }
 
-.character-limb > svg {
-  @extend .center-block;
+.character-limb-cabeza {
+
+  > svg {
+    height: 100px;
+    width: 120px;
+  }
 }
 
 .character-control {
