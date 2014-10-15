@@ -1,25 +1,36 @@
-$red: #900;
-$brown: #321f16;
-$green: #009D90;
-$pink: #EDD8D3;
-
-.char-arm-pink {
-  fill: $pink;
+.hair-1 {
+  fill: #cc3b17;
 }
 
-.char-arm-brown {
-  fill: $brown;
+.hair-2 {
+  fill: #422918;
 }
 
-.char-shirt-green {
-  fill: $green;
+.skin-1 {
+  fill: #eec1b5;
 }
 
-.char-shirt-purple {
-  fill: $purple;
+.skin-2 {
+  fill: #9d6e63;
 }
 
-.character > svg {
+.eyes-1 {
+  fill: #060809;
+}
+
+.nose-1 {
+  fill: #dcaa9d;
+}
+
+.nose-2 {
+  fill: #875047;
+}
+
+.white-1 {
+  fill: #ffffff;
+}
+
+.character-limb > svg {
   @extend .center-block;
 }
 
@@ -32,7 +43,7 @@ $pink: #EDD8D3;
   input:checked {
 
     & ~ * {
-      display: block;
+      display: inherit;
     }
   }
 }
