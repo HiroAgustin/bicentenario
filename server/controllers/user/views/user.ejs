@@ -47,9 +47,15 @@
 		}) %>
 
 		<div class="character">
-			<%- partial('../../../characters/min/cabeza/' + personaje.cabeza + '.svg') %>
-			<%- partial('../../../characters/min/cuerpo/' + personaje.cuerpo + '.svg') %>
-			<%- partial('../../../characters/min/piernas/' + personaje.piernas + '.svg') %>
+			<span class="character-limb character-limb-cabeza">
+				<%- partial('../../../characters/min/cabeza/' + personaje.cabeza + '.svg') %>
+			</span>
+			<span class="character-limb character-limb-cuerpo">
+				<%- partial('../../../characters/min/cuerpo/' + personaje.cuerpo + '.svg') %>
+			</span>
+			<span class="character-limb character-limb-piernas">
+				<%- partial('../../../characters/min/piernas/' + personaje.piernas + '.svg') %>
+			</span>
 		</div>
 
 		<p class="text-center lead">
