@@ -22,7 +22,7 @@
             <select id="categoria" name="categoria" class="form-control js-form-nav">
               <option value="">Todas</option>
               <% categorias.forEach(function (category) { %>
-                <option value="<%= category.id %>" <%= category.id === selectedCategory ? 'selected' : '' %>>
+                <option value="<%= category.id %>" <%= category.id == parseInt(selectedCategory) ? 'selected' : '' %>>
                   <%= category.label %>
                 </option>
               <% }) %>
@@ -32,6 +32,20 @@
       </div>
     </form>
 
-    <%- partial('law', leyes)%>
+    <% if (leyes.length) { %>
+      <%- partial('law', leyes)%>
+
+      <ol class="pagination pull-right u-marginAn">
+        <li><a href="#">&laquo;</a></li>
+        <li><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">&raquo;</a></li>
+      </ol>
+    <% } else { %>
+      <div class="text-center jumbotron u-marginAn">
+        <p class="lead">No hay ninguna ley para mostrar.</p>
+      </div>
+    <% } %>
   </div>
 </section>

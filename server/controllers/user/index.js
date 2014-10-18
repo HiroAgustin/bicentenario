@@ -70,7 +70,7 @@
 				,	title: law.nombre
 				,	category: law.categoria
 				,	priority: law.prioridad
-				, articles: law.articles
+				, articles: law.articulos
 				,	year: date.getFullYear()
 				,	fecha: date.getDate() + '/' + (date.getMonth() + 1) + '/' + date.getFullYear()
 				};
