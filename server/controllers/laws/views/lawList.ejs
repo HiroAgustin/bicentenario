@@ -1,5 +1,5 @@
 <% layout('../../../layouts/default') %>
-<% var selectedCategory = selected.category; %>
+<% var selectedCategory = parseInt(selected.category); %>
 <section class="HolyGrail-body Aligner">
   <div class="container u-paddingVl">
 
@@ -22,7 +22,7 @@
             <select id="categoria" name="categoria" class="form-control js-form-nav">
               <option value="">Todas</option>
               <% categorias.forEach(function (category) { %>
-                <option value="<%= category.id %>" <%= category.id == parseInt(selectedCategory) ? 'selected' : '' %>>
+                <option value="<%= category.id %>" <%= category.id == selectedCategory ? 'selected' : '' %>>
                   <%= category.label %>
                 </option>
               <% }) %>
@@ -49,3 +49,6 @@
     <% } %>
   </div>
 </section>
+
+<% stylesheet('bower_components/timeline.js/build/css/timeline.css') -%>
+<% script('bower_components/timeline.js/build/js/timeline.js') -%>
