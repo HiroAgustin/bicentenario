@@ -129,7 +129,7 @@
 				return categories;
 			}
 
-		,	parseResutls = function parseResutls (req, laws)
+		,	parseResults = function parseResults (req, laws)
 			{
 				var query = req.query
 
@@ -183,7 +183,7 @@
 			fetchLaws(parseQuery(req.query), function (result)
 			{
 				if (result.ok)
-					res.render('user', parseResutls(req, result.body));
+					res.render('user', parseResults(req, result.body));
 			});
 		});
 
