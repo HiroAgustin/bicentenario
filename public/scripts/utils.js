@@ -16,7 +16,7 @@
 
   ,	on: function on (event, selector, callback)
     {
-      return _.forEach(_.$(selector), function (element)
+      return this.forEach(this.$(selector), function (element)
       {
         element.addEventListener(event, callback);
       });
@@ -27,10 +27,10 @@
       var evnt = '';
 
       for (evnt in events)
-        _.on(evnt, selector, events[evnt]);
+        this.on(evnt, selector, events[evnt]);
     }
 
-  ,	getTargetId: function getTargetId(target)
+  ,	getTargetId: function getTargetId (target)
     {
       return target.dataset.id || getTargetId(target.parentNode);
     }
