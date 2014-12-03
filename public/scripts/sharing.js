@@ -1,5 +1,7 @@
-(function (win, doc, s, js, fjs, inc)
+(function (win, doc, s, js, fjs, inc, ga)
 {
+  'use strict';
+
   fjs = doc.getElementsByTagName(s)[0];
 
   inc = function (src)
@@ -41,17 +43,17 @@
   // <!-- Google Analytics -->
   inc('//www.google-analytics.com/analytics.js');
 
-  win['GoogleAnalyticsObject'] = 'ga';
+  win.GoogleAnalyticsObject = 'ga';
 
-  win.ga = function ()
+  ga = win.ga = function ()
   {
     (win.ga.q = win.ga.q || []).push(arguments);
   };
 
-  win.ga.l = 1 * new Date();
+  ga.l = 1 * new Date();
 
   ga('create', 'UA-34702401-8', 'auto');
   ga('send', 'pageview');
   // <!-- End Google Analytics -->
 
-}(window, document, 'script'))
+}(window, document, 'script'));
