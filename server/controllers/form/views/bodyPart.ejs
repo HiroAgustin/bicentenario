@@ -2,26 +2,27 @@
   var length = items.length
     , prev = next = 0;
 %>
+<div class="body-part body-part-<%= type %>">
+  <% items.forEach(function (name, index) { %>
+    <%
+      prev = index ? index - 1 : length - 1;
+      next = index < length - 1 ? index + 1 : 0;
+    %>
+    <div class="Aligner character-control">
 
-<% items.forEach(function (name, index) { %>
-  <%
-    prev = index ? index - 1 : length - 1;
-    next = index < length - 1 ? index + 1 : 0;
-  %>
-  <div class="Aligner character-control">
+      <input type="radio" name="<%= type %>" id="<%= type %>-<%= index %>" value="<%= name.substring(0, name.length - 4) %>" <%= name === selected ? 'checked' : '' %>>
 
-    <input type="radio" name="<%= type %>" id="<%= type %>-<%= index %>" value="<%= name.substring(0, name.length - 4) %>" <%= name === selected ? 'checked' : '' %>>
+      <label class="character-control-nav" for="<%= type %>-<%= prev %>">
+        <i class="fa fa-angle-left fa-2x"></i>
+      </label>
 
-    <label class="character-control-nav" for="<%= type %>-<%= prev %>">
-      <i class="fa fa-angle-left fa-2x"></i>
-    </label>
+      <span class="character-limb character-limb-<%= type %>">
+        <%- partial('../../../characters/' + type + '/' + name) %>
+      </span>
 
-    <span class="character-limb character-limb-<%= type %>">
-      <%- partial('../../../characters/min/' + type + '/' + name) %>
-    </span>
-
-    <label class="character-control-nav" for="<%= type %>-<%= next %>">
-      <i class="fa fa-angle-right fa-2x"></i>
-    </label>
-  </div>
-<% }) %>
+      <label class="character-control-nav" for="<%= type %>-<%= next %>">
+        <i class="fa fa-angle-right fa-2x"></i>
+      </label>
+    </div>
+  <% }) %>
+</div>

@@ -1,8 +1,10 @@
-;(function (controller, fs)
+;(function (fs)
 {
 	'use strict';
 
-	var charactersPath = __dirname + '/../../characters/min/'
+	var controller = require(__dirname + '/../../lib/controller.js')
+
+		,	charactersPath = __dirname + '/../../characters/'
 
 		,	app = module.exports = controller(__dirname)
 
@@ -51,4 +53,4 @@
 		});
 	});
 
-}(require(__dirname + '/../../lib/controller.js'), require('fs')));
+}(require('fs')));

@@ -46,16 +46,22 @@
 		,	type: 'circle'
 		}) %>
 
-		<div class="character">
-			<span class="character-limb character-limb-cabeza">
-				<%- partial('../../../characters/min/cabeza/' + personaje.cabeza + '.svg') %>
-			</span>
-			<span class="character-limb character-limb-cuerpo">
-				<%- partial('../../../characters/min/cuerpo/' + personaje.cuerpo + '.svg') %>
-			</span>
-			<span class="character-limb character-limb-piernas">
-				<%- partial('../../../characters/min/piernas/' + personaje.piernas + '.svg') %>
-			</span>
+		<div class="character" style="margin-bottom: 90px;">
+			<div class="body-part body-part-cabeza">
+				<span class="character-limb character-limb-cabeza">
+					<%- partial('../../../characters/cabeza/' + personaje.cabeza + '.svg') %>
+				</span>
+			</div>
+			<div class="body-part body-part-cuerpo">
+				<span class="character-limb character-limb-cuerpo">
+					<%- partial('../../../characters/cuerpo/' + personaje.cuerpo + '.svg') %>
+				</span>
+			</div>
+			<div class="body-part body-part-piernas">
+				<span class="character-limb character-limb-piernas">
+					<%- partial('../../../characters/piernas/' + personaje.piernas + '.svg') %>
+				</span>
+			</div>
 		</div>
 
 		<p class="text-center lead">

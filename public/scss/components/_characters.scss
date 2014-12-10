@@ -7,6 +7,15 @@
 .nose-2 {fill: #875047;}
 .white-1 {fill: #ffffff;}
 
+.character-limb {
+  display: block;
+
+  > svg {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
 .character-limb-cabeza {
 
   > svg {
@@ -31,4 +40,16 @@
 
 .character-control-nav {
   cursor: pointer;
+}
+
+.body-part-cabeza {
+  margin-bottom: -6px;
+  margin-left: 6px;
+  position: relative;
+  z-index: 2;
+}
+
+.body-part-piernas {
+  margin-left: 1px;
+  margin-top: -12px;
 }
