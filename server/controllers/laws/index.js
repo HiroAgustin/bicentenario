@@ -56,11 +56,12 @@
         };
       }
 
-    ,	parseResutls = function parseResutls (req, laws)
+    ,	parseResults = function parseResults (req, laws)
       {
+        console.log(laws);
         var query = req.query;
 
-        if (!Array.isArray(laws.leyes))
+        if (!Array.isArray(laws))
           laws = [];
 
         return {
@@ -79,10 +80,8 @@
   {
     fetchLaws(parseQuery(req.query), function (result)
     {
-      console.log(result.body);
-
       if (result.ok)
-        res.render('lawList', parseResutls(req, result.body));
+        res.render('lawList', parseResults(req, result.body.leyes));
     });
   });
 
