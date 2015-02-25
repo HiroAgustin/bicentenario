@@ -1,4 +1,4 @@
-;(function (fs)
+;(function (fs, _)
 {
 	'use strict';
 
@@ -41,7 +41,7 @@
 
 	fs.readdirSync(charactersPath).forEach(function (item)
 	{
-		bodyParts[item] = fs.readdirSync(charactersPath + item);
+		bodyParts[item] = _.shuffle(fs.readdirSync(charactersPath + item));
 	});
 
 	app.get('/ingresar', function (req, res)
@@ -53,4 +53,4 @@
 		});
 	});
 
-}(require('fs')));
+}(require('fs'), require('underscore')));
