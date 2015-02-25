@@ -7,15 +7,15 @@
       // http://bicente.itsu.com.uy/bicentenario.php?tipo=categorias
     ,	categories = [
         {id: 1, label: 'Adultos Mayores'}
-      ,	{id: 5, label: 'Maternidad'}
+      ,	{id: 5, label: 'Medio Ambiente'}
       ,	{id: 7, label: 'Salud'}
       ,	{id: 10, label: 'Trabajo'}
-      ,	{id: 11, label: 'Tributos'}
+      ,	{id: 11, label: 'Desarrollo Social'}
       ,	{id: 12, label: 'Discapacidad'}
-      ,	{id: 13, label: 'Educación'}
-      ,	{id: 14, label: 'Estado Civil'}
+      ,	{id: 13, label: 'Educación y Cultura'}
+      ,	{id: 14, label: 'Igualdad'}
       ,	{id: 16, label: 'Niñez y Adolescencia'}
-      ,	{id: 18, label: 'Salud Sexual'}
+      ,	{id: 18, label: 'Salud Sexual y Reproductiva'}
       ,	{id: 19, label: 'Seguridad'}
       ]
 
