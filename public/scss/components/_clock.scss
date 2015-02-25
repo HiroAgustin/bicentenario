@@ -7,6 +7,7 @@ $cut: 360deg / $slices;
 
 .clock {
   position: relative;
+  z-index: 2;
 }
 
 .hour {
@@ -21,11 +22,8 @@ $cut: 360deg / $slices;
   }
 
   @for $i from 0 through ($slices - 1) {
-
+    $rotation: ($i * $cut) - 90;
     &.h-#{$i} {
-
-      $rotation: ($i * $cut) - 90;
-
       @include transform(rotate($rotation) translate3d(180px, 0, 0));
 
       > span {
