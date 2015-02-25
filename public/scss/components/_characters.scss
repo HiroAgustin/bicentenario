@@ -68,6 +68,12 @@ $piel-w: #EEC1B5;
   cursor: pointer;
 }
 
+.character {
+  margin-bottom: 90px;
+  position: relative;
+  z-index: 1;
+}
+
 .body-part-cabeza {
   margin-bottom: -6px;
   margin-left: 6px;
