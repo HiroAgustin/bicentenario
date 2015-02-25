@@ -38,8 +38,7 @@
 
 		,	parseQuery = function parseQuery (query)
 			{
-				var sexo = query.sexo
-					,	estado = query['estado-civil'];
+				var sexo = query.sexo;
 
 				return {
 					tipo: 'leyes'
@@ -71,7 +70,7 @@
 				,	title: law.nombre
 				,	category: law.categoria
 				,	priority: law.prioridad
-				, articles: [articulos[0], articulos[1]]
+				, articles: [articulos[1], articulos[2]]
 				,	year: date.getFullYear()
 				,	fecha: date.getDate() + '/' + (date.getMonth() + 1) + '/' + date.getFullYear()
 				};
