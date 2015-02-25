@@ -1,4 +1,4 @@
-(function (win, doc, s, js, fjs, inc, ga)
+(function (win, doc, s, js, fjs, inc, ga, UserVoice)
 {
   'use strict';
 
@@ -55,5 +55,24 @@
   ga('create', 'UA-34702401-8', 'auto');
   ga('send', 'pageview');
   // <!-- End Google Analytics -->
+
+  // <!-- UserVoice -->
+  inc('//widget.uservoice.com/e483fOHnPzZjIrtb0pkxDw.js');
+
+  UserVoice = win.UserVoice || [];
+
+  UserVoice.push(['showTab', 'classic_widget', {
+    mode: 'full'
+  , primary_color: '#1f2438'
+  , link_color: '#006eb2'
+  , default_mode: 'feedback'
+  , forum_id: 233162
+  , topic_id: 74722
+  , tab_label: 'Comentarios y soporte'
+  , tab_color: '#1f2438'
+  , tab_position: 'middle-right'
+  , tab_inverted: false
+  }]);
+  // <!-- End UserVoice -->
 
 }(window, document, 'script'));
