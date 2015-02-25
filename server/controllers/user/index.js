@@ -45,11 +45,11 @@
 					tipo: 'leyes'
 				,	sexo: sexo.toUpperCase()
 				,	edad: query.edad || 0
-				,	civil: estado
 				,	uruguay: query.residencia === 'extranjero' ? 1 : 0
 				,	discapacidad: query.discapacidad ? 1 : 0
 				,	racial: query['identidad-racial'] ? 1 : 0
 				,	hijos: query.hijos ? 1 : 0
+				,	genero: query.genero ? 1 : 0
 				};
 			}
 
