@@ -59,9 +59,9 @@
   // <!-- UserVoice -->
   inc('//widget.uservoice.com/e483fOHnPzZjIrtb0pkxDw.js');
 
-  UserVoice = win.UserVoice || [];
+  win.UserVoice = win.UserVoice || [];
 
-  UserVoice.push(['showTab', 'classic_widget', {
+  win.UserVoice.push(['showTab', 'classic_widget', {
     mode: 'full'
   , primary_color: '#1f2438'
   , link_color: '#006eb2'
