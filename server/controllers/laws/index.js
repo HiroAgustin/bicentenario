@@ -56,7 +56,7 @@
       {
         var query = req.query;
 
-        if (!Array.isArray(laws))
+        if (!Array.isArray(laws.leyes))
           laws = [];
 
         return {
