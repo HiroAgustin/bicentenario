@@ -21,12 +21,16 @@
 
     ,	parseQuery = function parseQuery (query)
       {
-        return {
+        var result = {
           tipo: 'listado'
         ,	cantidad: 10
         ,	pagina: query.pagina || 1
-        ,	categorias: query.categoria
         };
+
+        if (query.categoria)
+          result.categorias = query.categoria;
+
+        return result;
       }
 
     ,	fetchLaws = function fetchLaws (query, callback)
@@ -75,6 +79,8 @@
   {
     fetchLaws(parseQuery(req.query), function (result)
     {
+      console.log(result.body);
+
       if (result.ok)
         res.render('lawList', parseResutls(req, result.body));
     });
