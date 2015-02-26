@@ -25,10 +25,14 @@
           tipo: 'listado'
         ,	cantidad: 5
         ,	pagina: query.pagina || 1
+        , orden_dir: 'asc'
         };
 
         if (query.categoria)
           result.categorias = query.categoria;
+
+        if (query.orden)
+          result.orden = query.orden;
 
         return result;
       }

@@ -1,5 +1,8 @@
 <% layout('../../../layouts/default') %>
-<% var selectedCategory = parseInt(selected.category); %>
+<%
+  var selectedCategory = parseInt(selected.category)
+    , selectedOrder = selected.order;
+%>
 <section class="HolyGrail-body Aligner">
   <div class="container u-paddingVl">
 
@@ -12,7 +15,8 @@
           <div class="form-group">
             <label for="orden">Ordenar por</label>
             <select id="orden" name="orden" class="form-control js-form-nav">
-              <option></option>
+              <option value="fecha"<%= selectedOrder == 'fecha' ? 'selected' : '' %>>Fecha</option>
+              <option value="nombre"<%= selectedOrder == 'nombre' ? 'selected' : '' %>>Nombre</option>
             </select>
           </div>
         </div>
