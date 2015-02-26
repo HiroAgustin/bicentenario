@@ -58,7 +58,6 @@
 
     ,	parseResults = function parseResults (req, laws)
       {
-        console.log(laws);
         var query = req.query;
 
         if (!Array.isArray(laws))

@@ -31,9 +31,8 @@
         </div>
       </div>
     </form>
-
-    <% if (leyes.length) { %>
-      <%- partial('law', leyes)%>
+    <% if (leyes && leyes.length) { %>
+      <%- partial("law", leyes) %>
 
       <ol class="pagination pull-right u-marginAn">
         <li><a href="#">&laquo;</a></li>
