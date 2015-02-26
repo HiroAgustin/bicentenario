@@ -1,4 +1,4 @@
-;(function (controller, request)
+;(function (controller, request, _)
 {
   'use strict';
 
@@ -23,7 +23,7 @@
       {
         var result = {
           tipo: 'listado'
-        ,	cantidad: 10
+        ,	cantidad: 5
         ,	pagina: query.pagina || 1
         };
 
@@ -50,7 +50,7 @@
         ,	title: law.nombre
         ,	category: law.categoria
         ,	priority: law.prioridad
-        , articles: law.articulos
+        , articles: _.toArray(law.articulos)
         ,	year: date.getFullYear()
         ,	fecha: date.getDate() + '/' + (date.getMonth() + 1) + '/' + date.getFullYear()
         };
@@ -84,4 +84,4 @@
     });
   });
 
-}(require(__dirname + '/../../lib/controller.js'), require('superagent')));
+}(require(__dirname + '/../../lib/controller.js'), require('superagent'), require('underscore')));
