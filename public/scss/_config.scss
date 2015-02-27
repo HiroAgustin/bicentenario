@@ -357,8 +357,9 @@ $navbar-inverse-toggle-border-color: $navbar-inverse-toggle-hover-bg;
 // Pagination
 // -------------------------
 
-// $pagination-bg:						#fff;
-// $pagination-border:					#ddd;
+$pagination-color: $text-color;
+$pagination-bg: $body-bg;
+$pagination-border: $body-bg;
 
 // $pagination-hover-bg:				  $gray-lighter;
 
