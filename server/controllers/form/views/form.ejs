@@ -24,11 +24,11 @@
 						}) %>
 
 						<div class="form-group">
-							<label for="sexo">Sexo</label>
+							<label for="sexo">Género</label>
 							<select name="sexo" class="form-control" id="sexo" required>
 								<option value=""></option>
-								<option value="m" <%= user.gender === 'male' ? 'selected' : '' %>>Hombre</option>
-								<option value="f" <%= user.gender === 'female' ? 'selected' : '' %>>Mujer</option>
+								<option value="m" <%= user.gender === 'male' ? 'selected' : '' %>>Masculino</option>
+								<option value="f" <%= user.gender === 'female' ? 'selected' : '' %>>Femenino</option>
 								<option value="otro">Otro</option>
 							</select>
 						</div>
