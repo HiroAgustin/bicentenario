@@ -89,6 +89,7 @@ $categories: (
   }
 
   .category-body-#{$id} {
+    z-index: 2;
 
     .category-page-main {
       background: #{$color};

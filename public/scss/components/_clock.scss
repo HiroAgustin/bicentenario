@@ -17,10 +17,6 @@ $cut: 360deg / $slices;
   top: 120px;
   z-index: 1;
 
-  &:hover {
-    z-index: 2;
-  }
-
   @for $i from 0 through ($slices - 1) {
     $rotation: ($i * $cut) - 90;
     &.h-#{$i} {

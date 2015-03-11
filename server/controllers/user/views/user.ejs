@@ -23,6 +23,11 @@
 			<p class="h3">que adquirieron estos derechos</p>
 			<a href="/conoce-las-leyes" class="btn btn-lg btn-block btn-primary">Conocé el resto de las leyes</a>
 		</div>
+		
+		<div class="section">
+			<p class="h3 u-marginBl">¿Cuándo los adquiriste?</p>
+			<%- partial('fechaProgress', fechas) %>
+		</div>
 	</div>
 
 	<div class="HolyGrail-content u-posRelative category-page-main">
@@ -66,13 +71,6 @@
 				<i class="fa fa-fw fa-twitter"></i>
 			</a>
 		</p>
-	</div>
-
-	<div class="HolyGrail-right alt-body category-page-side">
-		<div class="section">
-			<p class="h3 u-marginBl">¿Cuándo los adquiriste?</p>
-			<%- partial('fechaProgress', fechas) %>
-		</div>
 	</div>
 
 	<%- partial('categoryList', {
