@@ -89,13 +89,13 @@ $categories: (
   }
 
   .category-body-#{$id} {
-    z-index: 2;
 
     .category-page-main {
       background: #{$color};
     }
 
     .category-#{$id} {
+      z-index: 2;
 
       &.category-circle {
         background: white;
