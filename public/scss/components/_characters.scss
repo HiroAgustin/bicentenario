@@ -60,12 +60,11 @@ $piel-w: #EEC1B5;
 
 .body-part {
   position: relative;
-  z-index: 1;
 }
 
 .body-part-cabeza {
   margin-left: -2px;
-  z-index: 2;
+  z-index: 3;
 }
 
 .character-limb-cabeza {
@@ -74,8 +73,10 @@ $piel-w: #EEC1B5;
 
 .body-part-cuerpo {
   margin-top: -28px;
+  z-index: 2;
 }
 
 .body-part-piernas {
   margin-top: -22px;
+  z-index: 1;
 }
