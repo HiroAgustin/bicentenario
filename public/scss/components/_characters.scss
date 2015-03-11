@@ -53,7 +53,7 @@ $piel-w: #EEC1B5;
 }
 
 .character {
-  margin-bottom: 90px;
+  /* margin-bottom: 90px; */
   position: relative;
   z-index: 1;
 }
@@ -63,20 +63,20 @@ $piel-w: #EEC1B5;
 }
 
 .body-part-cabeza {
-  margin-left: -2px;
+  margin-left: 12px;
   z-index: 3;
 }
 
 .character-limb-cabeza {
-  margin: 0 35px;
+  /* margin: 0 35px; */
 }
 
 .body-part-cuerpo {
-  margin-top: -28px;
+  margin-top: -18px;
   z-index: 2;
 }
 
 .body-part-piernas {
-  margin-top: -22px;
+  margin-top: -28px;
   z-index: 1;
 }
