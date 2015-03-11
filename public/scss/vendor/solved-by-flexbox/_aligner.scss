@@ -1,3 +1,5 @@
+@import "compass/css3/flexbox";
+
 .Aligner {
 	display: -webkit-box;
 	display: -webkit-flex;
@@ -26,4 +28,8 @@
 	-webkit-align-self: flex-end;
 	-ms-flex-item-align: end;
 	align-self: flex-end
+}
+
+.Aligner-item--left {
+	@include justify-content(start);
 }

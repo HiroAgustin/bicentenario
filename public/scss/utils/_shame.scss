@@ -1,14 +1,8 @@
-@import "compass/css3/flexbox";
 @import "compass/css3/user-interface";
 
 // Twitter button sux
 #twitter-widget-0 {
 	width: 110px !important
-}
-
-// Temp
-.site-footer {
-	@include justify-content(space-between);
 }
 
 // Double tap on control highlighted text
