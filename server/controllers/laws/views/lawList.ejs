@@ -1,12 +1,13 @@
 <% layout('../../../layouts/default') %>
 <%
   var selectedCategory = parseInt(selected.category)
-    , selectedOrder = selected.order;
+    , selectedOrder = selected.order
+    , selectedPage = selected.page;
 %>
 <section class="HolyGrail-body Aligner">
   <div class="container u-paddingVl">
 
-    <img class="img-responsive u-block" src="images/Bicentenario.png" alt="Bicentenario">
+    <img class="img-responsive center-block" src="images/Bicentenario.png" alt="Bicentenario">
     <h1 class="text-center u-marginTn u-marginBl">Conocé las leyes</h1>
 
     <form class="form" action="/conoce-las-leyes" method="GET">
@@ -35,20 +36,26 @@
         </div>
       </div>
     </form>
-    <% if (leyes && leyes.length) { %>
+    <% if (leyes.length) { %>
       <%- partial("law", leyes) %>
-
-      <ol class="pagination pagination-lg pull-right u-marginAn">
-        <li><a href="#"><i class="fa fa-angle-left"></i></a></li>
-        <li><a href="#">1</a></li>
-        <li><a href="#">2</a></li>
-        <li><a href="#">3</a></li>
-        <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
-      </ol>
     <% } else { %>
       <div class="text-center jumbotron u-marginAn">
         <p class="lead">No hay ninguna ley para mostrar.</p>
       </div>
+    <% } %>
+
+    <% if (paginas > 1) { %>
+      <ol class="pagination pagination-lg pull-right u-marginAn">
+        <% if (selectedPage > 1) { %>
+          <li><a href="#"><i class="fa fa-angle-left"></i></a></li>
+        <% } %>
+        <% for (var i = 1; i <= paginas; i++) { %>
+        <li class="<%= i == selectedPage ? 'active' : '' %>"><a href="#"><%= i %></a></li>
+        <% } %>
+        <% if (selectedPage < paginas) { %>
+          <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
+        <% } %>
+      </ol>
     <% } %>
   </div>
 </section>

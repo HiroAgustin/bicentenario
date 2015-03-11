@@ -60,9 +60,11 @@
         };
       }
 
-    ,	parseResults = function parseResults (req, laws)
+    ,	parseResults = function parseResults (req, body)
       {
-        var query = req.query;
+        var query = req.query
+          , laws = body.leyes
+          , total = body.total;
 
         if (!Array.isArray(laws))
           laws = [];
@@ -72,9 +74,12 @@
         ,	path: req.path
         ,	leyes: laws.map(parseLaw)
         ,	categorias: categories
+          // 5 is qty per page, should be a const.
+        , paginas: Math.ceil(total / 5)
         , selected: {
             category: query.categoria
           , order: query.orden
+          , page: query.pagina || 1
           }
         };
       };
@@ -83,8 +88,9 @@
   {
     fetchLaws(parseQuery(req.query), function (result)
     {
+      // console.log(result.req.path);
       if (result.ok)
-        res.render('lawList', parseResults(req, result.body.leyes));
+        res.render('lawList', parseResults(req, result.body));
     });
   });
 
