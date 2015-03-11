@@ -4,6 +4,8 @@
 
   var app = module.exports = controller(__dirname)
 
+    , lawsPerPage = 20
+
       // http://bicente.itsu.com.uy/bicentenario.php?tipo=categorias
     ,	categories = [
         {id: 1, label: 'Adultos Mayores'}
@@ -23,9 +25,9 @@
       {
         var result = {
           tipo: 'listado'
-        ,	cantidad: 5
+        ,	cantidad: lawsPerPage
         ,	pagina: query.pagina || 1
-        , orden_dir: 'asc'
+        , orden_dir: 'desc'
         };
 
         if (query.categoria)
@@ -71,11 +73,11 @@
 
         return {
           title: 'Conocé las leyes'
-        ,	path: req.path
+        ,	path: req.path + '?pagina={{number}}'
         ,	leyes: laws.map(parseLaw)
         ,	categorias: categories
           // 5 is qty per page, should be a const.
-        , paginas: Math.ceil(total / 5)
+        , paginas: Math.ceil(total / lawsPerPage)
         , selected: {
             category: query.categoria
           , order: query.orden

@@ -47,13 +47,13 @@
     <% if (paginas > 1) { %>
       <ol class="pagination pagination-lg pull-right u-marginAn">
         <% if (selectedPage > 1) { %>
-          <li><a href="#"><i class="fa fa-angle-left"></i></a></li>
+          <!--<li><a href="#"><i class="fa fa-angle-left"></i></a></li>-->
         <% } %>
         <% for (var i = 1; i <= paginas; i++) { %>
-        <li class="<%= i == selectedPage ? 'active' : '' %>"><a href="#"><%= i %></a></li>
+        <li class="<%= i == selectedPage ? 'active' : '' %>"><a href="<%= path.replace('{{number}}', i) %>"><%= i %></a></li>
         <% } %>
         <% if (selectedPage < paginas) { %>
-          <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
+          <!--<li><a href="#"><i class="fa fa-angle-right"></i></a></li>-->
         <% } %>
       </ol>
     <% } %>
