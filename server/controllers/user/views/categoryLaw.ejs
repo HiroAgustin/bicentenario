@@ -1,7 +1,7 @@
 <li class="u-marginVl u-paddingVm">
   <p class="u-marginBm">Promulgada &mdash; <time><%= categoryLaw.fecha %></time></p>
-  <p class="lead u-marginBm"><%= categoryLaw.title %></p>
+  <p class="lead u-marginBm">#<%= categoryLaw.id %> &ndash; <%= categoryLaw.title %></p>
   <% categoryLaw.articles.forEach(function (article) { %>
-  <p><%= article %></p>
+    <p><%= article %></p>
   <% }) %>
 </li>

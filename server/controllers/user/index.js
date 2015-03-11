@@ -63,14 +63,18 @@
 		,	parseLaw = function parseLaw (law)
 			{
 				var date = new Date(law.fecha)
-          , articulos = law.articulos;
+          , articulos = law.articulos
+          , articles = [];
+
+        for (var article in articulos)
+          articles.push(articulos[article]);
 
 				return {
 					id: law.id
 				,	title: law.nombre
 				,	category: law.categoria
 				,	priority: law.prioridad
-				, articles: [articulos[1], articulos[2]]
+				, articles: articles
 				,	year: date.getFullYear()
 				,	fecha: date.getDate() + '/' + (date.getMonth() + 1) + '/' + date.getFullYear()
 				};
