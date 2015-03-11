@@ -1,4 +1,4 @@
-;(function (controller, request, _)
+;(function (controller, request, _, querystring)
 {
   'use strict';
 
@@ -73,7 +73,9 @@
 
         return {
           title: 'Conocé las leyes'
-        ,	path: req.path + '?pagina={{number}}'
+        ,	path: req.path + '?' + querystring.stringify(_.extend({}, query, {
+            pagina: 'NUMBER'
+          }))
         ,	leyes: laws.map(parseLaw)
         ,	categorias: categories
           // 5 is qty per page, should be a const.
@@ -96,4 +98,4 @@
     });
   });
 
-}(require(__dirname + '/../../lib/controller.js'), require('superagent'), require('underscore')));
+}(require(__dirname + '/../../lib/controller.js'), require('superagent'), require('underscore'), require('querystring')));

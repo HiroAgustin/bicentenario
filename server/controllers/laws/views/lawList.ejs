@@ -50,7 +50,7 @@
           <!--<li><a href="#"><i class="fa fa-angle-left"></i></a></li>-->
         <% } %>
         <% for (var i = 1; i <= paginas; i++) { %>
-        <li class="<%= i == selectedPage ? 'active' : '' %>"><a href="<%= path.replace('{{number}}', i) %>"><%= i %></a></li>
+        <li class="<%= i == selectedPage ? 'active' : '' %>"><a href="<%= path.replace('NUMBER', i) %>"><%= i %></a></li>
         <% } %>
         <% if (selectedPage < paginas) { %>
           <!--<li><a href="#"><i class="fa fa-angle-right"></i></a></li>-->
