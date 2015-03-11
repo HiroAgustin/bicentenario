@@ -20,7 +20,7 @@
 		});
 	});
 
-	_.on('change', '.js-form-nav', function (event)
+	_.on('change', '.js-form-nav', function ()
 	{
 		this.form.submit();
 	});
@@ -29,14 +29,18 @@
 
 		mouseover: function (event)
 		{
-			background && background.stop();
+			if (background)
+				background.stop();
+
 			body.classList.add('category-body-' + _.getTargetId(event.target));
 		}
 
 	,	mouseout: function (event)
 		{
 			body.classList.remove('category-body-' + _.getTargetId(event.target));
-			background && background.start();
+
+			if (background)
+				background.start();
 		}
 
 	,	click: function (event)
@@ -54,7 +58,8 @@
 
 	win.addEventListener('resize', function ()
 	{
-		background && background.resize();
+		if (background)
+			background.resize();
 	});
 
 	win.addEventListener('load', function ()
@@ -63,4 +68,4 @@
 		background.start();
 	});
 
-}(window, document))
+}(window, document));
