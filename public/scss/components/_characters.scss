@@ -34,22 +34,6 @@ $piel-w: #EEC1B5;
   }
 }
 
-.character-limb-cabeza {
-
-  > svg {
-    height: 100px;
-    width: 120px;
-  }
-}
-
-.character-limb-cuerpo {
-
-  > svg {
-    height: 85px;
-    width: 200px;
-  }
-}
-
 .character-control {
 
   > * {
@@ -74,14 +58,24 @@ $piel-w: #EEC1B5;
   z-index: 1;
 }
 
-.body-part-cabeza {
-  margin-bottom: -6px;
-  margin-left: 6px;
+.body-part {
   position: relative;
+  z-index: 1;
+}
+
+.body-part-cabeza {
+  margin-left: -2px;
   z-index: 2;
 }
 
+.character-limb-cabeza {
+  margin: 0 35px;
+}
+
+.body-part-cuerpo {
+  margin-top: -28px;
+}
+
 .body-part-piernas {
-  margin-left: 1px;
-  margin-top: -12px;
+  margin-top: -22px;
 }
