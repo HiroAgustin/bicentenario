@@ -95,6 +95,9 @@
 				else
 					group = 'mayor';
 
+        if (!sex)
+          sex = 'm';
+
 				return comparten[sex][group];
 			}
 
