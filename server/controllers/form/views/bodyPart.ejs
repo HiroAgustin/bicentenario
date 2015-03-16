@@ -12,7 +12,7 @@
 
       <input type="radio" name="<%= type %>" id="<%= type %>-<%= index %>" value="<%= name.substring(0, name.length - 4) %>" <%= name === selected ? 'checked' : '' %>>
 
-      <label class="character-control-nav" for="<%= type %>-<%= prev %>">
+      <label class="character-control-nav u-paddingAs" for="<%= type %>-<%= prev %>">
         <i class="fa fa-angle-left fa-2x"></i>
       </label>
 
@@ -20,7 +20,7 @@
         <%- partial('../../../characters/' + type + '/' + name) %>
       </span>
 
-      <label class="character-control-nav" for="<%= type %>-<%= next %>">
+      <label class="character-control-nav u-paddingAs" for="<%= type %>-<%= next %>">
         <i class="fa fa-angle-right fa-2x"></i>
       </label>
     </div>
