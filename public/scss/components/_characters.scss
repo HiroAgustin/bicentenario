@@ -5,8 +5,16 @@ $piel-w: #EEC1B5;
   fill: $piel-b;
 }
 
+.stroke-piel-b {
+  stroke: $piel-b;
+}
+
 .fill-piel-w {
   fill: $piel-w;
+}
+
+.stroke-piel-w {
+  stroke: $piel-w;
 }
 
 .character-limb {
@@ -62,6 +70,6 @@ $piel-w: #EEC1B5;
 
 .body-part-piernas {
   margin-left: 4px;
-  margin-top: -28px;
+  margin-top: -30px;
   z-index: 1;
 }
