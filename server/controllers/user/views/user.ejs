@@ -1,9 +1,9 @@
 <% layout('../../../layouts/default') %>
 <section id="js-category-page" class="HolyGrail-body">
 	<div class="HolyGrail-left alt-body category-page-side">
-
-		<img class="center-block u-paddingAl" src="images/Bicentenario-White.png" alt="Bicentenario" width="50%">
-
+		<div class="section">
+			<img class="center-block" src="images/Bicentenario-White.png" alt="Bicentenario" width="34%">
+		</div>
 		<div class="section">
 			<p class="h3">Tenés más derechos gracias a:</p>
 			<p class="h2"><%= leyes.length %> leyes</p>
@@ -23,17 +23,9 @@
 			<p class="h3">que adquirieron estos derechos</p>
 			<a href="/conoce-las-leyes" class="btn btn-lg btn-block btn-primary">Conocé el resto de las leyes</a>
 		</div>
-
-		<div class="section">
-			<p class="h3 u-marginBl">¿Cuándo los adquiriste?</p>
-			<%- partial('fechaProgress', fechas) %>
-		</div>
 	</div>
 
 	<div class="HolyGrail-content u-posRelative category-page-main">
-
-		<% include createNewLink %>
-
 		<div class="text-center jumbotron u-paddingHn">
 			<p class="lead">Este es el legado del Bicentenario para:</p>
 			<h1><%= nombre %></h1>
@@ -71,6 +63,17 @@
 				<i class="fa fa-fw fa-twitter"></i>
 			</a>
 		</p>
+	</div>
+
+	<div class="HolyGrail-right alt-body category-page-side">
+		<div class="section">
+			<% include createNewLink %>
+		</div>
+
+		<div class="section">
+			<p class="h3 u-marginBl">¿Cuándo los adquiriste?</p>
+			<%- partial('fechaProgress', fechas) %>
+		</div>
 	</div>
 
 	<%- partial('categoryList', {
