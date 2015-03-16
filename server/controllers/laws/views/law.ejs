@@ -1,6 +1,8 @@
 <article class="u-marginVl u-paddingVm">
   <p class="u-marginBm">Promulgada &mdash; <time><%= law.fecha %></time></p>
-  <h1 class="h3 u-marginVm">#<%= law.id %> &ndash; <%= law.title %></h1>
+  <a class="u-Block lead u-marginBm" href="http://impo.com.uy/bases/leyes/<%= law.id %>-<%= law.year %>" target="_blank">
+    <h1 class="h3 u-marginVm">#<%= law.id %> &ndash; <%= law.title %></h1>
+  </a>
   <% law.articles.forEach(function (article, index) { %>
     <p class="<%= index > 2 ? 'hidden' : '' %>"><%= article %></p>
   <% }) %>

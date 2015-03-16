@@ -1,6 +1,8 @@
 <li class="u-marginVl u-paddingVm">
   <p class="u-marginBm">Promulgada &mdash; <time><%= categoryLaw.fecha %></time></p>
-  <p class="lead u-marginBm">#<%= categoryLaw.id %> &ndash; <%= categoryLaw.title %></p>
+  <a class="u-Block lead u-marginBm" href="http://impo.com.uy/bases/leyes/<%= categoryLaw.id %>-<%= categoryLaw.year %>" target="_blank">
+    #<%= categoryLaw.id %> &ndash; <%= categoryLaw.title %>
+  </a>
   <% categoryLaw.articles.forEach(function (article) { %>
     <p><%= article %></p>
   <% }) %>
