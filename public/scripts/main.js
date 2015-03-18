@@ -64,8 +64,11 @@
 
 	win.addEventListener('load', function ()
 	{
-		background = new confetti.Context('js-confetti-background');
-		background.start();
+		if (_.$('#js-confetti-background').length)
+		{
+			background = new confetti.Context('js-confetti-background');
+			background.start();
+		}
 	});
 
 }(window, document));
