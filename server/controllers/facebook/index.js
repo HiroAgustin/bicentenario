@@ -29,7 +29,7 @@
 		{
 			clientID: 144441392317207
 		,	clientSecret: 'a82599dde1be3f8ad3986d203125e9f3'
-		,	callbackURL: '/auth/facebook/callback'
+		,	callbackURL: '/legado/auth/facebook/callback'
 		,	profileFields: ['first_name', 'gender', 'birthday', 'relationship_status', 'location']
 		}
 	,	function (accessToken, refreshToken, profile, done)

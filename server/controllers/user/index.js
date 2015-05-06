@@ -184,7 +184,7 @@
 				};
 			};
 
-		app.get('/mis-leyes', function (req, res)
+		app.get('/legado/mis-leyes', function (req, res)
 		{
 			fetchLaws(parseQuery(req.query), function (result)
 			{
