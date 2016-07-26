@@ -179,7 +179,7 @@
 					}
 				,	categorias: categories
 				,	comparten: getComparten(query.sexo, query.edad)
-				,	url: encodeURIComponent('http://bicentenario.herokuapp.com' + req.url)
+				,	url: encodeURIComponent('http://bicentenario.gub.uy/legado' + req.url)
 				,	description: 'Este es mi legado del Bicentenario. Los avances legislativos concretados en este siglo que ampliaron mis derechos e impactan en la forma de vernos y pensarnos como sociedad.'
 				};
 			};

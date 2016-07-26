@@ -51,12 +51,12 @@
 	app.use(passport.initialize());
 	app.use(passport.session());
 
-	app.get('/auth/facebook', passport.authenticate('facebook', {
+	app.get('/legado/auth/facebook', passport.authenticate('facebook', {
 		scope: ['user_relationships', 'user_birthday', 'user_location']
 	,	display: 'touch'
 	}));
 
-	app.get('/auth/facebook/callback', passport.authenticate('facebook', {
+	app.get('/legado/auth/facebook/callback', passport.authenticate('facebook', {
 		failureRedirect: '/'
 	,	successRedirect: '/ingresar'
 	}));
