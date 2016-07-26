@@ -31,5 +31,5 @@
 }
 
 .Aligner-item--left {
-	@include justify-content(start);
+	@include justify-content(flex-start);
 }
